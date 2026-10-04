@@ -48,7 +48,7 @@ func configure(controller: Node) -> void:
 	reset()
 
 func reset() -> void:
-	s={"speed":0.0,"stretch":0.0,"punch":0.0,"punchV":0.0,"blast":0.0,"blastT":9.0,"chroma":0.0,"edgeInk":0.0,"aura":0.0,"auraPulse":0.0,"heart":0.0,"heartPh":0.0,"hurt":0.0,"urg":0.0,"urgBase":0.0,"swim":0.0,"focus":0.0,"chargePulse":0.0,"shimmer":0.0,"kill":0.0,"flash":0.0,"desat":0.0,"sat":1.0,"satPop":0.0,"flood":0.0,"floodDrip":0.0,"hole":0.0,"floodMode":"","floodT":0.0,"jumpCharge":0.0,"wasJump":false,"stepT":0.0,"rainT":0.0,"emergeT":0.0,"lastForm":"kid","dmgAcc":0.0,"dmgT":0.0,"fullCharge":false}
+	s={"speed":0.0,"stretch":0.0,"punch":0.0,"punchV":0.0,"blast":0.0,"blastT":9.0,"chroma":0.0,"edgeInk":0.0,"aura":0.0,"auraPulse":0.0,"heart":0.0,"heartPh":0.0,"hurt":0.0,"hurtImpulse":0.0,"urg":0.0,"urgBase":0.0,"swim":0.0,"focus":0.0,"chargePulse":0.0,"shimmer":0.0,"kill":0.0,"flash":0.0,"desat":0.0,"sat":1.0,"satPop":0.0,"flood":0.0,"floodDrip":0.0,"hole":0.0,"floodMode":"","floodT":0.0,"jumpCharge":0.0,"wasJump":false,"stepT":0.0,"rainT":0.0,"emergeT":0.0,"lastForm":"kid","dmgAcc":0.0,"dmgT":0.0,"fullCharge":false}
 	_damage_attacker=null
 	if lens:lens.clear()
 	enabled=false
@@ -88,7 +88,19 @@ func on_event(kind: String,data: Dictionary) -> void:
 			if float(s.dmgT)<=0:s.dmgT=.06
 			var k:float=clampf(amount/60.0,.1,1.0)
 			s.chroma=minf(.9,float(s.chroma)+.12+k*.4)
-			if amount>=40:_kick(-.005-.008*k)
+			if str(data.get("source","")) not in ["ink","storm"]:
+				# This edge pulse is immediate; the denser lens ink still batches
+				# for 60ms. Keep it separate from the sustained low-health state.
+				s.hurtImpulse=minf(.65,maxf(float(s.hurtImpulse),.18+.42*k))
+				_kick(-.005-.008*k)
+		"hit":
+			if not _is_local(data.get("attacker")) or bool(data.get("killed",false)):return
+			var amount:float=float(data.get("damage",0.0))
+			if amount<=0.0:return
+			var k:float=clampf(amount/60.0,.1,1.0)
+			# Reuse the existing composite and HUD marker; no extra pass or pool.
+			s.satPop=maxf(float(s.satPop),.10+.10*k)
+			_kick(.004+.004*k)
 		"splatted":
 			var victim=data.get("victim")
 			if _is_local(data.get("attacker")):
@@ -257,6 +269,8 @@ func _sim(dt: float,actor,state: String) -> void:
 				break
 	var low:float=clampf((.5-actor.hp/100.0)/.38,0,1) if alive else 0.0
 	_damp("hurt",low,4,dt)
+	s.hurtImpulse=float(s.hurtImpulse)*exp(-20.0*maxf(dt,0.0)) if alive else 0.0
+	if float(s.hurtImpulse)<.001:s.hurtImpulse=0.0
 	if low>0:
 		s.heartPh=fmod(float(s.heartPh)+dt*(80+70*low)/60.0,1.0)
 		s.heart=low*(exp(-pow((float(s.heartPh)-.04)/.05,2))+.7*exp(-pow((float(s.heartPh)-.24)/.055,2)))
@@ -339,7 +353,7 @@ func update(dt: float) -> void:
 	_local=game.get("local_player")
 	_camera=game.get("camera")
 	var size:Vector2=get_viewport().get_visible_rect().size
-	panel.size=size
+	# FULL_RECT anchors with zero offsets follow the viewport automatically.
 	_aspect=size.x/maxf(1,size.y)
 	lens.resize(size)
 	time+=dt
@@ -350,7 +364,7 @@ func update(dt: float) -> void:
 	_count=remaining
 	_sim(dt,_local,state)
 	lens.update(dt)
-	var intensity:float=clampf(float(settings.get("cameraShake",1.0)),0,1)*(.35 if bool(settings.get("reducedMotion",false)) else 1.0)
+	var intensity:float=clampf(float(settings.get("cameraShake",1.0)),0,1)*(.35 if bool(settings.get("reduce_motion",settings.get("reducedMotion",false))) else 1.0)
 	_set_uniform("uRes",size)
 	_set_uniform("uAspect",_aspect)
 	_set_uniform("uTime",time)
@@ -363,7 +377,7 @@ func update(dt: float) -> void:
 	_set_uniform("uBlastRing",_ease_out(float(s.blastT)/.55)*.9)
 	_set_uniform("uLensOn",0.0 if lens.parts.is_empty() else 1.0)
 	_set_uniform("uLensTexel",Vector2.ONE/Vector2(lens.target.size))
-	_set_uniform("uHurt",s.hurt)
+	_set_uniform("uHurt",maxf(float(s.hurt),float(s.hurtImpulse)))
 	_set_uniform("uFocus",s.focus)
 	_set_uniform("uDesat",s.desat)
 	_set_uniform("uSat",float(s.sat)+float(s.satPop)*.28)
@@ -390,7 +404,7 @@ func update(dt: float) -> void:
 		_uniform_color("uShimmer",Color(own.r+.3,own.g+.3,own.b+.3),float(s.shimmer))
 		_uniform_color("uCharge",Color(own.r+.5,own.g+.5,own.b+.5),float(s.chargePulse)*intensity)
 	var visible_effect:bool=not lens.parts.is_empty() or absf(float(s.punch))>.0004 or absf(float(s.sat)-1)>.002
-	for key in ["speed","stretch","blast","chroma","edgeInk","aura","heart","hurt","urg","swim","focus","chargePulse","shimmer","kill","flash","desat","satPop","flood"]:
+	for key in ["speed","stretch","blast","chroma","edgeInk","aura","heart","hurt","hurtImpulse","urg","swim","focus","chargePulse","shimmer","kill","flash","desat","satPop","flood"]:
 		if float(s[key])>.002:visible_effect=true
 	enabled=visible_effect
 	panel.visible=visible_effect and not use_compositor

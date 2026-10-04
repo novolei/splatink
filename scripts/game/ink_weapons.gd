@@ -839,11 +839,19 @@ func replay_ghost_special(data:Dictionary) -> void:
 	_spawn_bullet({"ghost":true,"pos":position_world,"velocity":velocity_world,"owner":actor,"team":actor.team_id,"kind":"storm_pod","life":1.1,"range":INF,"damage":0.0,"radius":0.0,"straight":0.0,"trail_radius":0.0,"trail_every":0.0,"attack":_attack_id,"gravity":24.0,"fuse":-1.0,"weapon":{}})
 
 func apply_hit(attacker, victim, amount: float, weapon: String) -> bool:
-	if not is_instance_valid(attacker) or not is_instance_valid(victim) or not victim.alive or victim.team_id == attacker.team_id or amount <= 0.0:
+	if not is_instance_valid(attacker) or not is_instance_valid(victim) or not victim.alive or victim.invuln > 0.0 or victim.team_id == attacker.team_id or amount <= 0.0:
 		return false
+	var hp_before:float=maxf(0.0,float(victim.hp))
 	var killed: bool = victim.damage(amount,attacker,weapon)
-	# Confirmation occurs even when native damage routes to another peer.
-	_event("hit",{"attacker":attacker,"victim":victim,"damage":amount,"killed":killed,"weaponId":weapon,"pos":victim.global_position})
+	var applied:float=maxf(0.0,hp_before-maxf(0.0,float(victim.hp)))
+	if applied>0.0:
+		_event("hit",{"attacker":attacker,"victim":victim,"damage":applied,"actual_damage":applied,"requested_damage":amount,"predicted":false,"killed":killed,"weaponId":weapon,"pos":victim.global_position})
+	else:
+		var network:Node=match_node.get("network") if is_instance_valid(match_node) else null
+		# Ordinary remote hits have no authority ACK in the existing protocol.
+		# Retain their immediate prediction without labelling requested HP actual.
+		var predicted:bool=is_instance_valid(network) and bool(network.get("active")) and not bool(network.get("applying")) and network.has_method("send_hit") and network.has_method("owns_actor") and not bool(network.call("owns_actor",victim))
+		if predicted:_event("hit",{"attacker":attacker,"victim":victim,"damage":amount,"requested_damage":amount,"predicted":true,"killed":false,"weaponId":weapon,"pos":victim.global_position})
 	return killed
 
 func spawn_storm(owner, pos: Vector3, direction: Vector3, ghost:bool = false) -> void:

@@ -6,6 +6,7 @@ extends Node3D
 const MANIFEST_PATH := "res://assets/characters/manifest.json"
 const AIM_FRAMES_PATH := "res://assets/characters/aim_frames.json"
 const MotionMatcher = preload("res://scripts/animation/ink_motion_matcher.gd")
+const FastMotionMatcher = preload("res://scripts/animation/ink_motion_matcher_fast.gd")
 const NativeMotionMatcher = preload("res://scripts/animation/native_motion_matcher.gd")
 const Inertializer = preload("res://scripts/animation/ink_inertializer.gd")
 const FootPlant = preload("res://scripts/animation/ink_foot_plant.gd")
@@ -13,6 +14,8 @@ const HairSprings = preload("res://scripts/animation/ink_hair_springs.gd")
 const CrabletAnimator = preload("res://scripts/animation/ink_crablet_animator.gd")
 const ArmAim = preload("res://scripts/animation/ink_arm_aim.gd")
 const HitResponse = preload("res://scripts/animation/ink_hit_response.gd")
+const HitRecoil = preload("res://scripts/animation/ink_hit_recoil.gd")
+const LandingResponse = preload("res://scripts/animation/ink_landing_response.gd")
 const CatchStep = preload("res://scripts/animation/ink_catch_step.gd")
 const PosePresentation = preload("res://scripts/animation/ink_pose_presentation.gd")
 const WEAPONS := ["shooter", "roller", "charger", "blaster", "dualies", "slosher", "splatling"]
@@ -88,6 +91,9 @@ var _inertializer: InkInertializer
 var _foot_plant: InkFootPlant
 var _arm_aim: InkArmAim
 var _hit := HitResponse.new()
+var _hit_recoil := HitRecoil.new()
+var _landing_response := LandingResponse.new()
+var landing_response_stage:String="after_inertial_before_hit_and_stance"
 var _catch_step:=CatchStep.new()
 var _presentation:InkPosePresentation
 var _presentation_ticks:=false
@@ -232,6 +238,8 @@ func _ensure_built() -> void:
 	_arm_aim = ArmAim.new()
 	_arm_aim.configure(_skeleton)
 	_hit.configure(_skeleton)
+	_hit_recoil.configure(_skeleton)
+	_landing_response.configure(_skeleton)
 	_catch_step.configure(_skeleton)
 	_tank_fill = _find_node(_body, "TankFill") as Node3D
 	for face_name in ["FaceMouth","FaceExpression","FaceMood","FaceLook","FaceGazeL","FaceGazeR","FaceLid"]:
@@ -418,7 +426,9 @@ func _build_animation_graph() -> void:
 	_tree.tree_root = _blend_graph
 	_update_graph_clips()
 	_tree.active = true
-	_motion = NativeMotionMatcher.new() if _native_motion_active else MotionMatcher.new()
+	# Integer-loop search is a QA experiment; measured query times do not yet
+	# justify enabling it by default despite exact pose/decision equivalence.
+	_motion = NativeMotionMatcher.new() if _native_motion_active else (FastMotionMatcher.new() if OS.get_cmdline_user_args().has("--portable-mm-fast") else MotionMatcher.new())
 	if not _motion.configure(_skeleton,weapon_id,int(get_instance_id()%3)):
 		if _native_motion_active:
 			_native_motion_active=false
@@ -536,6 +546,8 @@ func animate(dt: float, state: Dictionary) -> void:
 	var smooth := 1.0 - exp(-delta * 16.0)
 	_update_form_scales()
 	_hit.step(delta,dry_squid,_kid.visible)
+	_hit_recoil.step(delta,_form=="kid" and _kid.visible)
+	_landing_response.step(delta,grounded and _form=="kid" and _kid.visible and _dance.is_empty())
 	var aiming := firing or charge > 0.01 or _shot_time < 0.5 or _release_time < 0.35
 	var aim_target := maxf(_sub_weight, _rolling if weapon_id == "roller" else (1.0 if aiming else 0.0))
 	_aim_weight = lerpf(_aim_weight, aim_target, 1.0 - exp(-delta * (22.0 if aim_target > _aim_weight else 4.5)))
@@ -572,11 +584,17 @@ func animate(dt: float, state: Dictionary) -> void:
 			var planted_locomotion := mm_enabled and grounded and _form == "kid" and not full_body_action and _dance.is_empty()
 			_inertializer.apply(_skeleton,delta,_motion.transitioned,_motion,planted_locomotion)
 			profile_tick = _profile_span(&"inertialization",profile_tick)
+			# Reactive absorption belongs after gait inertialization: the matcher's
+			# target velocities describe locomotion, not these solved landing legs.
+			_landing_response.apply(_skeleton,_aim_weight)
 			if _form=="kid" and _dance.is_empty():_hit.apply(_skeleton,int(appearance.hat),_head_parameters)
+			if _form=="kid" and _dance.is_empty():_hit_recoil.apply(_skeleton)
 			_foot_plant.apply(_skeleton,delta,_motion,global_position,ground_sampler,planted_locomotion,catch_targets)
 			profile_tick = _profile_span(&"foot_ik",profile_tick)
 		elif _form=="kid" and _dance.is_empty():
+			_landing_response.apply(_skeleton,_aim_weight)
 			_hit.apply(_skeleton,int(appearance.hat),_head_parameters)
+			_hit_recoil.apply(_skeleton)
 		current_action = "fire" if _aim_weight > 0.5 else "run" if speed > 2.5 else "walk" if speed > 0.25 else "idle"
 	if _skeleton != null:
 		if _hit.active and _weapon_r!=null:
@@ -760,7 +778,21 @@ func _refresh_presentation_bones() -> void:
 func restore_presentation() -> void:
 	if _presentation!=null:_presentation.restore(self)
 
-func reset_presentation() -> void:
+func reset_presentation(preserve_landing:bool=false) -> void:
+	_hit_recoil.reset()
+	if not preserve_landing:
+		_landing_response.reset()
+		# Dead actors stop animation ticks. A lethal hit must not resume its
+		# frozen source springs or settle step when the player respawns.
+		_hit.values.fill(0.0)
+		_hit.active=false
+		_hit.accumulated=0.0
+		_hit.stagger_time=99.0
+		_hit.step_offset=Vector2.ZERO
+		_catch_step.active=false
+		_catch_step._feet.clear()
+		_catch_step._cooldown=0.0
+		_catch_step._last_revision=_hit.stagger_revision
 	if _presentation==null:return
 	# The caller has already set a spawn/teleport root. Preserve that new root
 	# while restoring all local bone/module/weapon/face state from the tick.
@@ -1217,7 +1249,15 @@ func trigger(action: String, arg: Variant = null) -> void:
 	if translated == "hit":
 		_flash = 0.42
 		var hair_impulse:=_hit.trigger(arg,_form=="kid")
+		if _form=="kid":_hit_recoil.trigger({"x":_hit.direction.x,"z":_hit.direction.y,"amp":_hit.amplitude})
 		if _hair_springs!=null:_hair_springs.kick(hair_impulse)
+	if translated == "land":
+		_landing_response.trigger(float(arg) if arg is float or arg is int else 8.0)
+		# A short hop can land before its airborne one-shot finishes. Release
+		# only that jump; other full-body actions keep their own lifecycle.
+		if _tree!=null and bool(_tree.get("parameters/Action/active")) and _source_clip_name(String(_action_clip.animation)).ends_with("_jump"):
+			_tree.set("parameters/Action/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
+		return
 	if _tree == null:
 		return
 	var name := _clip(translated)

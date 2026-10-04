@@ -66,7 +66,12 @@ func _run() -> void:
 		for action in ["shoot", "throw", "jump", "land", "hit", "spawn"]:
 			avatar.trigger(action)
 			avatar.animate(1.0 / 60.0, state)
-			_check("weapon_" + weapon + "_" + action, bool(tree.get("parameters/Action/active")))
+			if action == "land":
+				# Landing must release the preceding airborne jump and preserve
+				# the live gait/stance solver instead of taking over the full body.
+				_check("weapon_" + weapon + "_land_live_gait", not bool(tree.get("parameters/Action/active")) and bool(avatar.get("_foot_plant").get("_was_enabled")))
+			else:
+				_check("weapon_" + weapon + "_" + action, bool(tree.get("parameters/Action/active")))
 		_check("weapon_" + weapon + "_skeleton_finite", _finite_rig(rig))
 		var weapon_root := avatar.get("_weapon") as Node3D
 		_check("weapon_" + weapon + "_original_far_meshes", weapon_root.find_child("WeaponBodyFar", true, false) != null and weapon_root.find_child("WeaponInkFar", true, false) != null)

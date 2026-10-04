@@ -27,6 +27,8 @@ UI 细节及剩余差异见 `docs/ui-lab-port-review.md`。Mini Tanks 仅作为�
 
 本轮 PC 检查与性能采样的有效范围见 `docs/pc-polish-verification-2026-10-03.md`。无人值守性能检查必须显式添加 `--benchmark-background --nonpersistent`，并核对报告中的 `playing_seconds` 和 `focus_paused`，避免把失焦暂停期间的空闲渲染当作对战性能。
 
+直接从 Godot 运行时的落地、受击反馈、瞄准辅助及渲染缓存修正见 `docs/pc-polish-2026-10-04.md`；报告分别列出实际通过的场景与仍需打磨的移动、插值和帧时间范围。
+
 PowerShell 调用包装脚本时，以 `-GodotArgs @('--path', '<项目绝对路径>', '--', '--benchmark-background', '--nonpersistent', ...)` 传参。把裸 `--` 写在脚本参数间会被 PowerShell 消耗，导致游戏参数未进入 `OS.get_cmdline_user_args()`。固定帧上限探针用游戏参数 `--benchmark-fps=144`，游戏设置会覆盖引擎级 `--max-fps`。
 
 ## 可重复的开发工具

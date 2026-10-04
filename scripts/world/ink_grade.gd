@@ -16,6 +16,10 @@ var _screen_values:=PackedFloat32Array()
 var _screen_enabled:=false
 var _lens_texture: RID
 var _pipelines: Dictionary={}
+var _framebuffers:Dictionary={}
+var _framebuffer_contexts:Dictionary={}
+var _framebuffer_context:int=0
+var _framebuffer_size:=Vector2i.ZERO
 
 func _init() -> void:
 	effect_callback_type=EFFECT_CALLBACK_TYPE_POST_TRANSPARENT
@@ -71,6 +75,7 @@ func _render_callback(callback: int,render_data: RenderData) -> void:
 	if not buffers:return
 	var dimensions:=buffers.get_internal_size()
 	if dimensions.x<=0 or dimensions.y<=0:return
+	_prepare_framebuffer_cache(dimensions,buffers.get_instance_id(),buffers)
 	var params:=_params.duplicate();params[0]=dimensions.x;params[1]=dimensions.y;params[2]=hurt;params[3]=flash
 	for view in buffers.get_view_count():
 		var color:RID=buffers.get_color_layer(view)
@@ -95,7 +100,7 @@ func _render_callback(callback: int,render_data: RenderData) -> void:
 
 func _draw_pass(input: RID,output: RID,params: PackedFloat32Array,screen_pass: bool=false) -> void:
 	var shader:RID=_screen_shader if screen_pass else _shader
-	var framebuffer:=_rd.framebuffer_create([output]);var framebuffer_format:=_rd.framebuffer_get_format(framebuffer)
+	var framebuffer:=_framebuffer_for_output(output);var framebuffer_format:=_rd.framebuffer_get_format(framebuffer)
 	var key:=Vector2i(shader.get_id(),framebuffer_format)
 	if not _pipelines.has(key):
 		var raster:=RDPipelineRasterizationState.new();raster.cull_mode=RenderingDevice.POLYGON_CULL_DISABLED
@@ -109,15 +114,76 @@ func _draw_pass(input: RID,output: RID,params: PackedFloat32Array,screen_pass: b
 		var buffer:=RDUniform.new();buffer.uniform_type=RenderingDevice.UNIFORM_TYPE_UNIFORM_BUFFER;buffer.binding=2;buffer.add_id(_screen_buffer);uniforms.append(buffer)
 	var set:=UniformSetCacheRD.get_cache(shader,0,uniforms)
 	var draw:=_rd.draw_list_begin(framebuffer);_rd.draw_list_bind_render_pipeline(draw,_pipelines[key]);_rd.draw_list_bind_uniform_set(draw,set,0)
-	_rd.draw_list_set_push_constant(draw,params.to_byte_array(),64);_rd.draw_list_draw(draw,false,1,3);_rd.draw_list_end();_rd.free_rid(framebuffer)
+	_rd.draw_list_set_push_constant(draw,params.to_byte_array(),64);_rd.draw_list_draw(draw,false,1,3);_rd.draw_list_end()
+
+## Keep attachment RID and data format together; pipelines still use RD's
+## framebuffer format. An attachment release can invalidate the RID.
+func _framebuffer_for_output(output:RID)->RID:
+	var texture_format:int=_rd.texture_get_format(output).format
+	var cached:Dictionary=_framebuffers.get(output,{})
+	var framebuffer:RID=cached.get("framebuffer",RID())
+	var contexts:Dictionary=cached.get("contexts",{})
+	contexts[_framebuffer_context]=true
+	if not cached.is_empty() and int(cached.texture_format)==texture_format and framebuffer.is_valid() and _rd.framebuffer_is_valid(framebuffer):
+		return framebuffer
+	if framebuffer.is_valid() and _rd.framebuffer_is_valid(framebuffer):_rd.free_rid(framebuffer)
+	framebuffer=_rd.framebuffer_create([output])
+	_framebuffers[output]={"texture_format":texture_format,"framebuffer":framebuffer,"contexts":contexts}
+	return framebuffer
+
+func _prepare_framebuffer_cache(size:Vector2i,context:int=0,owner:Object=null)->void:
+	if context!=0:_framebuffer_context=context
+	if not _framebuffer_contexts.has(_framebuffer_context):
+		_framebuffer_contexts[_framebuffer_context]={"size":size,"owner":weakref(owner) if owner else null}
+	else:
+		var state:Dictionary=_framebuffer_contexts[_framebuffer_context]
+		if state.size!=size:
+			_clear_framebuffer_cache(_framebuffer_context,false)
+			state.size=size
+		if owner and state.owner==null:state.owner=weakref(owner)
+	_framebuffer_size=size
+	# Multiple viewports can share one CompositorEffect, including reflections.
+	for id in _framebuffer_contexts.keys():
+		var reference:WeakRef=_framebuffer_contexts[id].owner
+		if reference and reference.get_ref()==null:
+			_clear_framebuffer_cache(int(id),false)
+			_framebuffer_contexts.erase(id)
+	for output in _framebuffers.keys():
+		var framebuffer:RID=_framebuffers[output].framebuffer
+		if not framebuffer.is_valid() or not _rd.framebuffer_is_valid(framebuffer):_framebuffers.erase(output)
+
+## Full clear is explicit: RefCounted ObjectIDs can be negative.
+func _clear_framebuffer_cache(context:int=0,all_contexts:bool=true)->void:
+	for output in _framebuffers.keys():
+		var cached:Dictionary=_framebuffers[output]
+		var contexts:Dictionary=cached.contexts
+		if not all_contexts:
+			contexts.erase(context)
+			if not contexts.is_empty():continue
+		var framebuffer:RID=cached.framebuffer
+		if _rd and framebuffer.is_valid() and _rd.framebuffer_is_valid(framebuffer):_rd.free_rid(framebuffer)
+		_framebuffers.erase(output)
+
+static func _free_framebuffers(device:RenderingDevice,entries:Array)->void:
+	for cached in entries:
+		var framebuffer:RID=cached.framebuffer
+		if framebuffer.is_valid() and device.framebuffer_is_valid(framebuffer):device.free_rid(framebuffer)
+
+## This callable owns the captured resources until the render thread can free
+## them; it does not bind the CompositorEffect that is being deleted.
+static func _release_resources(device:RenderingDevice,bloom:InkBloom,entries:Array,shader:RID,sampler:RID,screen_shader:RID,screen_buffer:RID)->void:
+	_free_framebuffers(device,entries)
+	bloom.release()
+	if shader.is_valid():device.free_rid(shader)
+	if sampler.is_valid():device.free_rid(sampler)
+	if screen_shader.is_valid():device.free_rid(screen_shader)
+	if screen_buffer.is_valid():device.free_rid(screen_buffer)
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_PREDELETE and _rd:
-		_bloom.release()
-		if _shader.is_valid():_rd.free_rid(_shader)
-		if _sampler.is_valid():_rd.free_rid(_sampler)
-		if _screen_shader.is_valid():_rd.free_rid(_screen_shader)
-		if _screen_buffer.is_valid():_rd.free_rid(_screen_buffer)
+		RenderingServer.call_on_render_thread(_release_resources.bind(_rd,_bloom,_framebuffers.values(),_shader,_sampler,_screen_shader,_screen_buffer))
+		_framebuffers.clear()
+		_framebuffer_contexts.clear()
 
 func _release(shader: RID) -> void:
 	if _rd and shader.is_valid():_rd.free_rid(shader)

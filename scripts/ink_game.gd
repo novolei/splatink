@@ -66,6 +66,7 @@ var _shot_index:=0
 var _attract_follow:InkActor
 var _orbit_angle:=0.0
 var _last_hit_sound:=-10.0
+var _last_kill_sound:=-10.0
 var _spawn_match_mode:="turf"
 var _style_catalog:Dictionary={}
 
@@ -556,9 +557,15 @@ func notify_event(kind: String,data: Dictionary) -> void:
 	if kind=="hit" and data.get("attacker")==local_player:
 		_hit_until=clock+.12
 		if data.get("killed",false):_kill_until=clock+.45
-		if clock-_last_hit_sound>.06:_last_hit_sound=clock;audio.play("hit_marker",{"volume":.6})
-	if kind=="damage":
-		if data.get("victim")==local_player and float(data.get("amount",0))>=40 and camera_rig:camera_rig.call("add_shake",clampf((float(data.amount)-30)/220,0,.4))
+		if audio:
+			if bool(data.get("killed",false)):
+				# A finishing hit must not be swallowed by the ordinary hit throttle.
+				if clock-_last_kill_sound>.08:
+					_last_kill_sound=clock;audio.play("hit_marker",{"volume":1.0,"pitch":.82})
+			elif clock-_last_hit_sound>.06:
+				_last_hit_sound=clock
+				var strength:float=clampf(float(data.get("damage",36.0))/60.0,0.0,1.0)
+				audio.play("hit_marker",{"volume":lerpf(.68,.88,strength),"pitch":lerpf(1.08,.93,strength)})
 	if kind=="splatted":
 		var victim=data.get("victim");var attacker=data.get("attacker")
 		_feed.push_front({"text":str(attacker.display_name) + "  →  " + str(victim.display_name) if is_instance_valid(attacker) and is_instance_valid(victim) else "SPLATTED!","time":clock})

@@ -907,7 +907,9 @@ func _tick_super_jump(dt: float) -> void:
 			_event("shake",{"amount":.35})
 		_event("superjump:land", {"actor": self, "pos": global_position})
 		if avatar and avatar.has_method("reset_presentation"):
-			avatar.position.y=smooth_y;avatar.call("reset_presentation")
+			# Reset the teleport history after the landing event without erasing
+			# the absorption impulse that the production ground resolve just fired.
+			avatar.position.y=smooth_y;avatar.call("reset_presentation",true)
 
 func _event(kind: String, data: Dictionary = {}) -> void:
 	Rules.emit_event(match_node, kind, data)

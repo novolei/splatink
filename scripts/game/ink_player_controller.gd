@@ -85,7 +85,9 @@ func update(dt:float,input:Dictionary)->Dictionary:
 	return {"move":right*movement.x-forward*movement.y,"aim_yaw":yaw,"aim_pitch":pitch,"aim_point":point,"aim_dir":(point-actor.global_position-Vector3.UP*1.05).normalized()}
 
 func assist_target(strength:float)->Dictionary:
-	var actor=game.get("local_player");var camera:Camera3D=game.get("camera")
+	var actor=game.get("local_player")
+	var rig=game.get("camera_rig")
+	var camera:Camera3D=rig.get("aim_camera") if is_instance_valid(rig) else game.get("camera")
 	if strength<=0.0 or not is_instance_valid(camera) or not is_instance_valid(actor):
 		assist.has=false;assist.target=null;return {}
 	var direction:Vector3=-camera.global_basis.z

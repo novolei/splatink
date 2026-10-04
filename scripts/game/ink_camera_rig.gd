@@ -73,6 +73,12 @@ var _land_seen: float = 99.0
 var _jump_was_flight: bool = false
 var _jump_land_time: float = 99.0
 var _trauma_in: float = 0.0
+const DAMAGE_PITCH_LIMIT: float = .018
+const DAMAGE_ROLL_LIMIT: float = .008
+const DAMAGE_OFFSET_LIMIT: float = .025
+var damage_impulse: float = 0.0
+var _damage_roll: float = 0.0
+var _has_gameplay_pose: bool = false
 var _prev_mode: String = "orbit"
 var _prev_target: Node3D
 var _blend: Dictionary = {}
@@ -113,6 +119,7 @@ func configure(controller: Node,render_camera: Camera3D) -> void:
 	aim_camera.fov=camera.fov
 	aim_camera.near=camera.near
 	aim_camera.far=camera.far
+	_has_gameplay_pose=true
 
 static func ease_in_out(value: float) -> float:
 	return 4.0*value*value*value if value<.5 else 1.0-pow(-2.0*value+2.0,3.0)/2.0
@@ -136,12 +143,23 @@ func add_shake(amount: float,position_world = null) -> void:
 	if value>0.0:
 		_trauma_in=minf(1.0-trauma,_trauma_in+value*.75)
 
+func damage_feedback(amount: float,attacker: Node3D = null) -> void:
+	if amount<=0.0 or not is_finite(amount):return
+	var strength:float=clampf(.15+amount/60.0,.25,1.0)
+	damage_impulse=minf(1.0,damage_impulse+strength)
+	var side_amount:float=0.0
+	if is_instance_valid(attacker) and is_instance_valid(target) and is_instance_valid(aim_camera):
+		var incoming:Vector3=attacker.global_position-target.global_position
+		if incoming.length_squared()>.000001:side_amount=clampf(incoming.normalized().dot(aim_camera.global_basis.x),-1.0,1.0)
+	_damage_roll=clampf(_damage_roll+strength*side_amount,-1.0,1.0)
+
 func follow(actor: Node3D,snap: bool = false) -> void:
 	mode="follow"
 	target=actor
 	if not is_instance_valid(actor):return
 	dio_flip=int(actor.get("team_id"))==1
 	if snap:
+		damage_impulse=0.0;_damage_roll=0.0
 		if is_instance_valid(game) and str(game.get("state"))=="menu":
 			yaw=actor.rotation.y
 			pitch=-.28
@@ -217,6 +235,9 @@ func on_event(kind: String,data: Dictionary) -> void:
 	match kind:
 		"recoil":recoil(float(data.get("amount",0.0)))
 		"shake":add_shake(float(data.get("amount",0.0)),data.get("pos"))
+		"damage":
+			if is_instance_valid(game) and data.get("victim")==game.get("local_player") and str(data.get("source","")) not in ["ink","storm"]:
+				damage_feedback(float(data.get("amount",0.0)),data.get("attacker") as Node3D)
 		"splatted":
 			var victim = data.get("victim")
 			if victim==target and victim is Node3D:
@@ -236,7 +257,8 @@ func boss_finish(boss:Node3D) -> void:
 	orbit(center,15.0,5.5,.09,atan2(pos.x-center.x,pos.z-center.z))
 
 func _start_blend(duration: float) -> void:
-	_blend={"t":0.0,"duration":duration,"position":camera.global_position,"quaternion":camera.global_basis.get_rotation_quaternion(),"fov":camera.fov,"active":true}
+	var reference:Camera3D=aim_camera if _has_gameplay_pose else camera
+	_blend={"t":0.0,"duration":duration,"position":reference.global_position,"quaternion":reference.global_basis.get_rotation_quaternion(),"fov":reference.fov,"active":true}
 
 func _mode_changed(previous: String,next: String) -> void:
 	spectate_time=0.0
@@ -252,6 +274,9 @@ func _mode_changed(previous: String,next: String) -> void:
 
 func update(dt: float) -> void:
 	if not is_instance_valid(camera) or not is_instance_valid(game):return
+	# Orbit/spectate lerp from the prior gameplay pose, never from last frame's
+	# displayed shake or map transform. Feedback cannot accumulate into aiming.
+	if _has_gameplay_pose:camera.global_transform=aim_camera.global_transform
 	time+=dt
 	if not pivot.is_finite() or not is_finite(sx.x+sy.x+sz.x+boom.x+dip.x+recoil_spring.x+trauma):
 		pivot=Vector3(0,2,0);pivot_y=2;cur_dist=dist
@@ -280,11 +305,18 @@ func update(dt: float) -> void:
 		camera.global_basis=Basis(quat)
 		fov=lerpf(float(_blend.fov),fov,amount)
 		if amount>=1.0:_blend.active=false
+	# Preserve the original follow/recoil result for raycasts. Everything below
+	# this snapshot is presentation only and never writes gameplay yaw/pitch.
+	aim_camera.global_transform=camera.global_transform
+	aim_camera.fov=fov;aim_camera.near=camera.near;aim_camera.far=camera.far
+	_has_gameplay_pose=true
 	if _trauma_in>0.0:
 		var amount: float = minf(_trauma_in,dt*14.0)
 		trauma=minf(1.0,trauma+amount);_trauma_in-=amount
 	else:trauma=maxf(0.0,trauma-dt*2.1)
-	var intensity: float = trauma*trauma*float(settings.get("cameraShake",1.0))*shake_scale
+	var shake_gain:float=clampf(float(settings.get("cameraShake",1.0)),0.0,1.0)*clampf(shake_scale,0.0,1.0)
+	if bool(settings.get("reduce_motion",settings.get("reducedMotion",false))):shake_gain*=.35
+	var intensity: float = trauma*trauma*shake_gain
 	if intensity>.0005:
 		var t: float = time*13.0
 		camera.rotate_object_local(Vector3.RIGHT,noise(t,shake_seed)*.014*intensity)
@@ -292,8 +324,15 @@ func update(dt: float) -> void:
 		camera.rotate_object_local(Vector3.BACK,noise(t*.87,shake_seed+7.7)*.008*intensity)
 		camera.global_position+=camera.global_basis.x*noise(t*1.07,shake_seed+11.0)*.025*intensity
 		camera.global_position.y+=noise(t*.93,shake_seed+19.0)*.025*intensity
-	aim_camera.global_transform=camera.global_transform
-	aim_camera.fov=fov;aim_camera.near=camera.near;aim_camera.far=camera.far
+	var decay:float=exp(-24.0*maxf(dt,0.0))
+	damage_impulse*=decay;_damage_roll*=decay
+	if damage_impulse<.001:damage_impulse=0.0
+	if absf(_damage_roll)<.001:_damage_roll=0.0
+	var damage_strength:float=damage_impulse*shake_gain
+	if damage_strength>0.0:
+		camera.rotate_object_local(Vector3.RIGHT,-DAMAGE_PITCH_LIMIT*damage_strength)
+		camera.rotate_object_local(Vector3.BACK,DAMAGE_ROLL_LIMIT*_damage_roll*shake_gain)
+		camera.global_position+=aim_camera.global_basis.z*DAMAGE_OFFSET_LIMIT*damage_strength
 	if str(game.get("state"))!="playing" or game.get("paused")==true:map_open=false
 	var desired_map: float = 1.0 if map_open and mode in ["follow","spectate"] else 0.0
 	if desired_map>map_k:map_k=minf(1.0,map_k+dt/.42)

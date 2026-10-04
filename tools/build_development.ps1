@@ -52,8 +52,12 @@ if($Probe){
  $taskPresetText=$taskPresetText.Replace('[preset.1.options]',"[preset.1.options]`ncommand_line/extra_args=`"-- --autostart=180 --autopilot --capture=user://phone-probe.png --capture-after=40`"")
  [IO.File]::WriteAllText($taskPresets,$taskPresetText,[Text.UTF8Encoding]::new($false))
 }
-$taskCommit=(& git -C (Split-Path $taskRoot) rev-parse HEAD 2>$null)
-$taskStamp=@{id=$taskId;platform=$Platform;channel='development';probe=[bool]$Probe;native_locomotion_mm=[bool]$NativeLocomotionMM;engine='4.7.1.stable.official.a13da4feb';commit="$taskCommit-dirty";source='workspace snapshot';utc=[DateTime]::UtcNow.ToString('o')}
+$taskCommit=(& git -C $taskRoot rev-parse HEAD 2>$null)
+if($LASTEXITCODE){throw 'Cannot identify the native project commit'}
+$taskGitStatus=@(& git -C $taskRoot status --porcelain)
+if($LASTEXITCODE){throw 'Cannot identify native project source status'}
+$taskStampedCommit=if($taskGitStatus.Count){"$taskCommit-dirty"}else{"$taskCommit"}
+$taskStamp=@{id=$taskId;platform=$Platform;channel='development';probe=[bool]$Probe;native_locomotion_mm=[bool]$NativeLocomotionMM;engine='4.7.1.stable.official.a13da4feb';commit=$taskStampedCommit;source='workspace snapshot';utc=[DateTime]::UtcNow.ToString('o')}
 $taskStamp | ConvertTo-Json | Set-Content (Join-Path $taskStage 'data\build_stamp.json') -Encoding UTF8
 }
 $taskEngine=Join-Path $taskPortable 'Godot_v4.7.1-stable_win64_console.exe'
