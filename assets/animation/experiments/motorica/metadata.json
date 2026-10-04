@@ -1,0 +1,1168 @@
+{
+  "version": 1,
+  "experimental": true,
+  "default_enabled": false,
+  "accepted_for_production": false,
+  "source_rig_bones": 71,
+  "target_rig_bones": 87,
+  "fps": 30,
+  "target_body_sha256": "ca43f303d96cd17990f91fbbf48378132ee4dca39e3f38df4b61ce9d19dc7ce3",
+  "names": [
+    "hips",
+    "thighL",
+    "shinL",
+    "footL",
+    "toeL",
+    "thighR",
+    "shinR",
+    "footR",
+    "toeR"
+  ],
+  "target_indices": {
+    "hips": 0,
+    "thighL": 13,
+    "shinL": 14,
+    "footL": 15,
+    "toeL": 59,
+    "thighR": 16,
+    "shinR": 17,
+    "footR": 18,
+    "toeR": 70
+  },
+  "target_parents": {
+    "hips": "Kid",
+    "thighL": "hips",
+    "shinL": "thighL",
+    "footL": "shinL",
+    "toeL": "footL",
+    "thighR": "hips",
+    "shinR": "thighR",
+    "footR": "shinR",
+    "toeR": "footR"
+  },
+  "target_rest": [
+    {
+      "position": [
+        0.0,
+        0.64,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "position": [
+        0.078,
+        -0.018,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "position": [
+        0.003,
+        -0.275,
+        0.012
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "position": [
+        0.003,
+        -0.262,
+        -0.022
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "position": [
+        0.0,
+        -0.057,
+        0.1
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "position": [
+        -0.078,
+        -0.018,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "position": [
+        -0.003,
+        -0.275,
+        0.012
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "position": [
+        -0.003,
+        -0.262,
+        -0.022
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "position": [
+        0.0,
+        -0.057,
+        0.1
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "source_rest": {
+    "Root": {
+      "parent": null,
+      "local_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Hips": {
+      "parent": "Root",
+      "local_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.971000061
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.971000061
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "LeftUpLeg": {
+      "parent": "Hips",
+      "local_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0996920013
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.023657074
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          0.00110044
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0996920013
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.9473429871
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          0.00110044
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "LeftLeg": {
+      "parent": "LeftUpLeg",
+      "local_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.4334130478
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0996920013
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.5139299393
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          0.00110044
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "LeftFoot": {
+      "parent": "LeftLeg",
+      "local_matrix": [
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -0.4221789932
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          0.0996920013
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          0.091750946
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.00110044
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "LeftToeBase": {
+      "parent": "LeftFoot",
+      "local_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0053888702
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0700943995
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1523760128
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          0.0943031311
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          0.0216565466
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1534764528
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "RightUpLeg": {
+      "parent": "Hips",
+      "local_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0996909046
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0236573029
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.00119488
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0996909046
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.9473427582
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.00119488
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "RightLeg": {
+      "parent": "RightUpLeg",
+      "local_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.4334130096
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0996909046
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.5139297485
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.00119488
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "RightFoot": {
+      "parent": "RightLeg",
+      "local_matrix": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -0.4221789932
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          -0.0996909046
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          0.0917507553
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.00119488
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "RightToeBase": {
+      "parent": "RightFoot",
+      "local_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0053894615
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0,
+          -0.0700943995
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          0.1523760033
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "global_matrix": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          -0.0943014431
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          0.0216563559
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.1535708833
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "source_axes": {
+    "up": "+Y",
+    "forward": "+Z",
+    "side": "+X",
+    "unit_to_m": 0.01
+  },
+  "velocity_method": "numpy.gradient of exact 30Hz original Root XZ positions: centered difference inside, one-sided at endpoints; no interpolation/time warp",
+  "source_interpolation": "varying source FBX curves carry flags 0x104 (linear); exact 30Hz source keys sampled, exported rotations quaternion slerp at playback",
+  "method": "Root-separated global rest-basis deltas; retain target individual segment offsets and complete source timeline; no position normalization from Meshy; no synthesized foot correction",
+  "root_policy": "original Root motion retained as metadata and optional scaled visual-path root; apply never changes owner/world root or production controller",
+  "contact_labels": "inferred original ToeBase/ToeBase_End low-height+low-XZ-speed; .03m/.25mps; diagnostic only, not authored events or production FootPlant",
+  "clips": [
+    {
+      "id": "motorica_Run_Turns_StartStop_L_variation_1",
+      "source_file": "Run_Turns_StartStop_L_variation_1.fbx",
+      "duration": 28.566666666666666,
+      "sample_count": 858,
+      "loop": false,
+      "source_bones": 71,
+      "root_tracks": [],
+      "segment_length_ratios": {
+        "L": {
+          "thigh": 0.6351401801663096,
+          "shin": 0.6228144002418495,
+          "foot": 0.6859140815113011
+        },
+        "R": {
+          "thigh": 0.6351402360683581,
+          "shin": 0.6228144002418495,
+          "foot": 0.6859140392924936
+        }
+      },
+      "preview_root_scale": 0.6290582239167961,
+      "source_root_path_m": 57.9320183730878,
+      "source_speed_mps": {
+        "min": 0.0,
+        "max": 3.999719238281486,
+        "median": 2.2650512695312557
+      },
+      "source_stationary_spans": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          4.7,
+          6.966666666666667
+        ],
+        [
+          10.866666666666667,
+          13.133333333333333
+        ],
+        [
+          17.03333333333333,
+          19.3
+        ],
+        [
+          23.2,
+          25.466666666666665
+        ]
+      ],
+      "source_contact_floor_m": {
+        "L": 0.005487217632632296,
+        "R": 0.0013621482925764844
+      },
+      "candidate_windows": [
+        {
+          "id": "first_start",
+          "kind": "start",
+          "start": 0.5,
+          "end": 2.4,
+          "annotation_source": "measured raw Root curve; experimental window, not authored event markers",
+          "body_root_turn_radians": 0.0,
+          "minimum_source_speed_mps": 0.0,
+          "maximum_source_speed_mps": 3.9514846801757955,
+          "median_source_speed_mps": 3.0457786560058597
+        },
+        {
+          "id": "first_stop",
+          "kind": "stop",
+          "start": 3.2,
+          "end": 5.2,
+          "annotation_source": "measured raw Root curve; experimental window, not authored event markers",
+          "body_root_turn_radians": 0.0,
+          "minimum_source_speed_mps": 0.008953857421886369,
+          "maximum_source_speed_mps": 3.9997009277343807,
+          "median_source_speed_mps": 1.710314941406267
+        },
+        {
+          "id": "second_start",
+          "kind": "start",
+          "start": 6.7,
+          "end": 8.6,
+          "annotation_source": "measured raw Root curve; experimental window, not authored event markers",
+          "body_root_turn_radians": 0.7837631156461944,
+          "minimum_source_speed_mps": 0.0,
+          "maximum_source_speed_mps": 3.9565977813013,
+          "median_source_speed_mps": 3.1320019057210606
+        }
+      ],
+      "source_sha256": "9149f1c3d9c7e9528654b13ee30938dc870abf08ef34002cff43fcb8c7d09bab",
+      "variants": {
+        "source_path_pelvis9": {
+          "id": "motorica_Run_Turns_StartStop_L_variation_1_source_path_pelvis9",
+          "mode": "source_path_pelvis9",
+          "duration": 28.566666666666666,
+          "writes_hips": true,
+          "quality": {
+            "L": {
+              "inferred_source_contact_frames": 486,
+              "maximum_uncorrected_proxy_slide_m": 0.05752792467806806,
+              "minimum_target_proxy_y_m": -0.014904228779186374,
+              "proxy_slide_passes_3cm": false
+            },
+            "R": {
+              "inferred_source_contact_frames": 507,
+              "maximum_uncorrected_proxy_slide_m": 0.14238365439573167,
+              "minimum_target_proxy_y_m": -0.013655203545247959,
+              "proxy_slide_passes_3cm": false
+            }
+          },
+          "maximum_30hz_local_rotation_step_rad": 0.552811911676582,
+          "slerp_expected_maximum_60hz_step_rad": 0.276405955838291,
+          "worst": {
+            "time": 10.133333333333333,
+            "bone": "shinR"
+          },
+          "contact_correction_applied": false
+        },
+        "fixed_authority_leg8": {
+          "id": "motorica_Run_Turns_StartStop_L_variation_1_fixed_authority_leg8",
+          "mode": "fixed_authority_leg8",
+          "duration": 28.566666666666666,
+          "writes_hips": false,
+          "quality": {
+            "L": {
+              "inferred_source_contact_frames": 486,
+              "maximum_uncorrected_proxy_slide_m": 0.14249827697186773,
+              "minimum_target_proxy_y_m": 0.005314290106859451,
+              "proxy_slide_passes_3cm": false
+            },
+            "R": {
+              "inferred_source_contact_frames": 507,
+              "maximum_uncorrected_proxy_slide_m": 0.17372521217873121,
+              "minimum_target_proxy_y_m": 0.005375456929812926,
+              "proxy_slide_passes_3cm": false
+            }
+          },
+          "maximum_30hz_local_rotation_step_rad": 0.552811911676582,
+          "slerp_expected_maximum_60hz_step_rad": 0.276405955838291,
+          "worst": {
+            "time": 10.133333333333333,
+            "bone": "shinR"
+          },
+          "contact_correction_applied": false
+        }
+      }
+    },
+    {
+      "id": "motorica_Run_Turns_L_variation_1",
+      "source_file": "Run_Turns_L_variation_1.fbx",
+      "duration": 15.833333333333334,
+      "sample_count": 476,
+      "loop": false,
+      "source_bones": 71,
+      "root_tracks": [],
+      "segment_length_ratios": {
+        "L": {
+          "thigh": 0.6351401801663096,
+          "shin": 0.6228144002418495,
+          "foot": 0.6859140815113011
+        },
+        "R": {
+          "thigh": 0.6351402360683581,
+          "shin": 0.6228144002418495,
+          "foot": 0.6859140392924936
+        }
+      },
+      "preview_root_scale": 0.6290582239167961,
+      "source_root_path_m": 58.38022270375032,
+      "source_speed_mps": {
+        "min": 0.026925715213273225,
+        "max": 4.000012207031261,
+        "median": 3.984545694352359
+      },
+      "source_stationary_spans": [
+        [
+          13.1,
+          13.1
+        ]
+      ],
+      "source_contact_floor_m": {
+        "L": 0.00366565865722248,
+        "R": 0.0008090668373689838
+      },
+      "candidate_windows": [
+        {
+          "id": "running_left_90",
+          "kind": "running_body_turn",
+          "start": 6.0,
+          "end": 8.0,
+          "annotation_source": "measured raw Root curve; experimental window, not authored event markers",
+          "body_root_turn_radians": 1.5670149043630932,
+          "minimum_source_speed_mps": 2.828449246817737,
+          "maximum_source_speed_mps": 3.9999072135107494,
+          "median_source_speed_mps": 3.7365104976410053
+        },
+        {
+          "id": "running_left_180",
+          "kind": "braking_body_pivot",
+          "start": 12.3,
+          "end": 14.5,
+          "annotation_source": "measured raw Root curve; experimental window, not authored event markers",
+          "body_root_turn_radians": 3.138009104026982,
+          "minimum_source_speed_mps": 0.026925715213273225,
+          "maximum_source_speed_mps": 3.9994812062435985,
+          "median_source_speed_mps": 3.5566040039062443
+        }
+      ],
+      "source_sha256": "9ef0639f0a3d8a188755341a8eeb366cb05b6f7ae330519b97285d1a7489019e",
+      "variants": {
+        "source_path_pelvis9": {
+          "id": "motorica_Run_Turns_L_variation_1_source_path_pelvis9",
+          "mode": "source_path_pelvis9",
+          "duration": 15.833333333333334,
+          "writes_hips": true,
+          "quality": {
+            "L": {
+              "inferred_source_contact_frames": 159,
+              "maximum_uncorrected_proxy_slide_m": 0.04984439717353722,
+              "minimum_target_proxy_y_m": -0.018554841800598538,
+              "proxy_slide_passes_3cm": false
+            },
+            "R": {
+              "inferred_source_contact_frames": 147,
+              "maximum_uncorrected_proxy_slide_m": 0.19013261455598882,
+              "minimum_target_proxy_y_m": 0.0016733598474380912,
+              "proxy_slide_passes_3cm": false
+            }
+          },
+          "maximum_30hz_local_rotation_step_rad": 0.8745527633858219,
+          "slerp_expected_maximum_60hz_step_rad": 0.43727638169291094,
+          "worst": {
+            "time": 12.933333333333334,
+            "bone": "footR"
+          },
+          "contact_correction_applied": false
+        },
+        "fixed_authority_leg8": {
+          "id": "motorica_Run_Turns_L_variation_1_fixed_authority_leg8",
+          "mode": "fixed_authority_leg8",
+          "duration": 15.833333333333334,
+          "writes_hips": false,
+          "quality": {
+            "L": {
+              "inferred_source_contact_frames": 159,
+              "maximum_uncorrected_proxy_slide_m": 0.1017098959819936,
+              "minimum_target_proxy_y_m": 0.020995357722991118,
+              "proxy_slide_passes_3cm": false
+            },
+            "R": {
+              "inferred_source_contact_frames": 147,
+              "maximum_uncorrected_proxy_slide_m": 0.16834416568452656,
+              "minimum_target_proxy_y_m": 0.027841266226596634,
+              "proxy_slide_passes_3cm": false
+            }
+          },
+          "maximum_30hz_local_rotation_step_rad": 0.8745527633858219,
+          "slerp_expected_maximum_60hz_step_rad": 0.43727638169291094,
+          "worst": {
+            "time": 12.933333333333334,
+            "bone": "footR"
+          },
+          "contact_correction_applied": false
+        }
+      }
+    },
+    {
+      "id": "motorica_Run_Turns_180",
+      "source_file": "Run_Turns_180.fbx",
+      "duration": 11.0,
+      "sample_count": 331,
+      "loop": false,
+      "source_bones": 71,
+      "root_tracks": [],
+      "segment_length_ratios": {
+        "L": {
+          "thigh": 0.6351401801663096,
+          "shin": 0.6228144002418495,
+          "foot": 0.6859140815113011
+        },
+        "R": {
+          "thigh": 0.6351402360683581,
+          "shin": 0.6228144002418495,
+          "foot": 0.6859140392924936
+        }
+      },
+      "preview_root_scale": 0.6290582239167961,
+      "source_root_path_m": 35.26486918449402,
+      "source_speed_mps": {
+        "min": 0.022023010253903408,
+        "max": 4.000003051757815,
+        "median": 3.790588045120253
+      },
+      "source_stationary_spans": [
+        [
+          1.3666666666666667,
+          1.3666666666666667
+        ],
+        [
+          3.466666666666667,
+          3.466666666666667
+        ],
+        [
+          5.8,
+          5.8
+        ],
+        [
+          8.466666666666667,
+          8.466666666666667
+        ]
+      ],
+      "source_contact_floor_m": {
+        "L": 0.0012712519414110716,
+        "R": -0.0008430364052786051
+      },
+      "candidate_windows": [
+        {
+          "id": "first_left_180",
+          "kind": "braking_body_pivot",
+          "start": 0.6,
+          "end": 2.8,
+          "annotation_source": "measured raw Root curve; experimental window, not authored event markers",
+          "body_root_turn_radians": 3.1384746245855286,
+          "minimum_source_speed_mps": 0.027021789550786934,
+          "maximum_source_speed_mps": 4.000003051757815,
+          "median_source_speed_mps": 3.5565948486328267
+        },
+        {
+          "id": "first_right_180",
+          "kind": "braking_body_pivot",
+          "start": 2.7,
+          "end": 4.9,
+          "annotation_source": "measured raw Root curve; experimental window, not authored event markers",
+          "body_root_turn_radians": -3.133606660777074,
+          "minimum_source_speed_mps": 0.022023010253903408,
+          "maximum_source_speed_mps": 3.974882555007949,
+          "median_source_speed_mps": 3.5569247245788684
+        }
+      ],
+      "source_sha256": "49da698058455a09dc645becdbc295396eb331011dcd4f926148402f9754086d",
+      "variants": {
+        "source_path_pelvis9": {
+          "id": "motorica_Run_Turns_180_source_path_pelvis9",
+          "mode": "source_path_pelvis9",
+          "duration": 11.0,
+          "writes_hips": true,
+          "quality": {
+            "L": {
+              "inferred_source_contact_frames": 109,
+              "maximum_uncorrected_proxy_slide_m": 0.05469132777517272,
+              "minimum_target_proxy_y_m": -0.016649236145299298,
+              "proxy_slide_passes_3cm": false
+            },
+            "R": {
+              "inferred_source_contact_frames": 102,
+              "maximum_uncorrected_proxy_slide_m": 0.11984208669377637,
+              "minimum_target_proxy_y_m": -0.020373057277302598,
+              "proxy_slide_passes_3cm": false
+            }
+          },
+          "maximum_30hz_local_rotation_step_rad": 0.6902562953703553,
+          "slerp_expected_maximum_60hz_step_rad": 0.34512814768517763,
+          "worst": {
+            "time": 5.633333333333333,
+            "bone": "footR"
+          },
+          "contact_correction_applied": false
+        },
+        "fixed_authority_leg8": {
+          "id": "motorica_Run_Turns_180_fixed_authority_leg8",
+          "mode": "fixed_authority_leg8",
+          "duration": 11.0,
+          "writes_hips": false,
+          "quality": {
+            "L": {
+              "inferred_source_contact_frames": 109,
+              "maximum_uncorrected_proxy_slide_m": 0.08885913691475543,
+              "minimum_target_proxy_y_m": 0.019428696342054397,
+              "proxy_slide_passes_3cm": false
+            },
+            "R": {
+              "inferred_source_contact_frames": 102,
+              "maximum_uncorrected_proxy_slide_m": 0.10797927962645469,
+              "minimum_target_proxy_y_m": 0.030580535478235006,
+              "proxy_slide_passes_3cm": false
+            }
+          },
+          "maximum_30hz_local_rotation_step_rad": 0.6902562953703553,
+          "slerp_expected_maximum_60hz_step_rad": 0.34512814768517763,
+          "worst": {
+            "time": 5.633333333333333,
+            "bone": "footR"
+          },
+          "contact_correction_applied": false
+        }
+      }
+    }
+  ]
+}

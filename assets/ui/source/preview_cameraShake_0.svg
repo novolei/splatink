@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iw-pvsvg " viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs><linearGradient id="pvsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6cc6f2"/><stop offset=".55" stop-color="#bfe8ff"/><stop offset=".56" stop-color="#e9dcc3"/><stop offset="1" stop-color="#d6c6a6"/></linearGradient></defs>
+    <rect x="1" y="1" width="318" height="178" rx="14" fill="url(#pvsky)"/><rect x="40" y="118" width="240" height="70" fill="#efe4cf"/>
+    <path fill="#ff8a14" d="M70 140 q30 -14 60 0 q16 9 -8 18 q-30 10 -52 -2 q-12 -8 0 -16z"/><path fill="#2f5bff" d="M200 132 q26 -10 50 0 q12 7 -6 14 q-24 8 -44 -2 q-10 -6 0 -12z"/>
+    <g transform="translate(145 92) scale(.46)" style="color:#ff8a14"><svg x="0" y="0" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><g stroke="#15121c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.4">
+    <path d="M22 44 Q19 53 13 58 Q20 61 26 50 Z" fill="#ff8a14"/>
+    <path d="M29 46 Q28.5 55 25 61 Q32.5 61 33 48 Z" fill="#ff8a14"/>
+    <path d="M35 46 Q35.5 55 39 61 Q31.5 61 31 48 Z" fill="#ff8a14"/>
+    <path d="M42 44 Q45 53 51 58 Q44 61 38 50 Z" fill="#ff8a14"/>
+    <path d="M32 3 C36.5 3 50.5 17.5 55.5 24.5 C57.5 27.8 55.5 31 51.5 30.2 L46 29.4 L46 39.5 C46 46.5 41.5 49 32 49 C22.5 49 18 46.5 18 39.5 L18 29.4 L12.5 30.2 C8.5 31 6.5 27.8 8.5 24.5 C13.5 17.5 27.5 3 32 3 Z" fill="#ff8a14"/>
+  </g>
+  <path d="M25 13 Q29 8.5 32 8" stroke="#fff" stroke-opacity=".55" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <g class="iw-squid-eyes">
+    <ellipse cx="26" cy="36" rx="4.6" ry="5.6" fill="#fff" stroke="#15121c" stroke-width="2.4"/>
+    <ellipse cx="38" cy="36" rx="4.6" ry="5.6" fill="#fff" stroke="#15121c" stroke-width="2.4"/>
+    <ellipse cx="27" cy="37" rx="2.2" ry="3" fill="#15121c"/>
+    <ellipse cx="37" cy="37" rx="2.2" ry="3" fill="#15121c"/>
+  </g></svg></g>
+    <g transform="translate(160 72)"><circle r="7" fill="none" stroke="#fff" stroke-width="3"/></g>
+    <rect x="128" y="10" width="64" height="16" rx="8" fill="#15121c"/><text x="160" y="22" text-anchor="middle" font-family="Titan One, sans-serif" font-size="11" fill="#fff">2:47</text><g transform="translate(212 112)"><g class="iw-pv-boom"><path fill="#2f5bff" d="M4.6 17.3C1.8 18.3 0 22.9 -1.8 23.1C-3.7 23.3 -4.5 18.9 -6.4 18.5C-8.4 18.2 -12 19.7 -13.5 20.9C-15 22.1 -14.3 25.3 -15.4 26C-16.5 26.6 -19 25.9 -20.1 25C-21.2 24.1 -22.4 21.9 -22 20.7C-21.6 19.5 -18.4 19.9 -17.5 17.7C-16.6 15.5 -15.8 9.9 -16.6 7.4C-17.5 5 -22.4 4.8 -22.8 2.9C-23.2 0.9 -19.8 -1.5 -19.2 -4C-18.5 -6.6 -20 -10.5 -18.9 -12.3C-17.9 -14 -14.1 -12.8 -12.7 -14.3C-11.2 -15.8 -10.2 -19.7 -10.2 -21.1C-10.2 -22.6 -12.9 -22.1 -12.9 -23C-12.8 -23.8 -11.1 -25.7 -9.8 -26.2C-8.6 -26.7 -6 -26.4 -5.4 -25.8C-4.8 -25.2 -7.2 -24 -6.2 -22.6C-5.2 -21.3 -1.7 -17.8 0.5 -17.8C2.6 -17.7 5 -22.6 6.8 -22.1C8.6 -21.6 9.4 -15.8 11.3 -14.9C13.2 -14 16.8 -15.6 18.4 -16.8C20 -18 19.7 -21.6 21 -22C22.2 -22.4 24.9 -20.6 26 -19.2C27 -17.8 27.9 -14.6 27.2 -13.5C26.4 -12.5 23 -14.5 21.5 -12.7C19.9 -10.8 17.4 -4.8 17.8 -2.4C18.2 0 22.3 1.2 24.1 1.7C25.8 2.3 27.3 0.2 28.2 0.8C29 1.4 29.7 4 29.4 5.5C29.2 6.9 27.6 9.1 26.6 9.3C25.5 9.6 24.9 6.9 23.1 7C21.3 7.2 17.1 8.5 15.8 10.1C14.5 11.8 17 15.7 15.1 16.9C13.3 18.1 7.4 16.3 4.6 17.3Z"/><text y="5" text-anchor="middle" font-family="Titan One, sans-serif" font-size="13" fill="#fff" stroke="#15121c" stroke-width="3" paint-order="stroke">BOOM</text></g></g>
+    <rect x="1" y="1" width="318" height="178" rx="14" fill="none" stroke="#15121c" stroke-width="3"/></svg>

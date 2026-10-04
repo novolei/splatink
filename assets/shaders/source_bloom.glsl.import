@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://d0twxdcjuuwt6"
+path="res://.godot/imported/source_bloom.glsl-6ffebc5c5e4209db3ad63d016f26e41f.res"
+
+[deps]
+
+source_file="res://assets/shaders/source_bloom.glsl"
+dest_files=["res://.godot/imported/source_bloom.glsl-6ffebc5c5e4209db3ad63d016f26e41f.res"]
+
+[params]
+

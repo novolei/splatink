@@ -1,0 +1,170 @@
+{
+  "version": 3,
+  "base": "0208dd54902cca8a3bb016ed6591bfc933e2243a",
+  "bindings": "7e18e40d7591429f915035a7de7cf79457d555cc",
+  "frozen_tree": "aa4c3be232d94b7201d30395dfcc51d69a2c71d1",
+  "frozen_patch_sha256": "ef1cf21c7dbd3a0779283ff2545feef8f7a42714e411bb352bdb112b1e051e18",
+  "verified_blobs": [
+    {
+      "file": "src/algo/kd_tree.cpp",
+      "blob": "251cdf3d58293a0105182bf670e4d350aed8a4a9"
+    },
+    {
+      "file": "src/algo/kd_tree.h",
+      "blob": "86d84f847b9bc2a3291b79203694d162fad8f57b"
+    },
+    {
+      "file": "src/editor/mm_editor_plugin.cpp",
+      "blob": "158e84565cc0291db96664a4313c197ffd2161e9"
+    },
+    {
+      "file": "src/features/mm_gait_feature.cpp",
+      "blob": "c35c91a68aa8fa964a3df360fc2bdda199522ecf"
+    },
+    {
+      "file": "src/features/mm_gait_feature.h",
+      "blob": "0319ecd7357a143f0957ab20a71a5a4b1cc5f0d1"
+    },
+    {
+      "file": "src/gen/doc_data.gen.cpp",
+      "blob": "463cd1c606f6bc362d39035d225c9aee6fb34643"
+    },
+    {
+      "file": "src/mm_animation_library.cpp",
+      "blob": "3b5ee766eb04dd482c5edc00fb96414785fd9b10"
+    },
+    {
+      "file": "src/mm_animation_library.h",
+      "blob": "acb88cc028efb5c92155b3fa5184e723e8781905"
+    },
+    {
+      "file": "src/mm_animation_node.cpp",
+      "blob": "dd040dc90e2fbea92ae61fa53ec9c86266f84a71"
+    },
+    {
+      "file": "src/mm_animation_node.h",
+      "blob": "543d643f939bf83121769847a7764f1745186422"
+    },
+    {
+      "file": "src/mm_character.cpp",
+      "blob": "004448236966fc77ca1f518a86fa614bedb72ba1"
+    },
+    {
+      "file": "src/mm_character.h",
+      "blob": "b2a321d32882e9a7d21c646f09ab6174fcaffa50"
+    },
+    {
+      "file": "src/mm_query.h",
+      "blob": "ffacfd4ee111ee9d7c8cc68abffd50cce158fe16"
+    },
+    {
+      "file": "src/mm_trajectory_point.h",
+      "blob": "92a6a3bd0570a70bdc33ef29e44f8b64bb2c02b5"
+    },
+    {
+      "file": "src/modifiers/mm_foot_ik_modifier.cpp",
+      "blob": "e651667b04c5e695540b1de60b75416a4a2ec4f9"
+    },
+    {
+      "file": "src/modifiers/mm_foot_ik_modifier.h",
+      "blob": "520eeb99e87ab6b37d24f0e4872fbcc42214fcf6"
+    },
+    {
+      "file": "src/modifiers/mm_inertialization_modifier.cpp",
+      "blob": "ce597f1a330f76f64aa79a6b1cfb6c563ac18a2e"
+    },
+    {
+      "file": "src/modifiers/mm_inertialization_modifier.h",
+      "blob": "0b009a43e364ec4078992789e75975987bada807"
+    },
+    {
+      "file": "src/register_types.cpp",
+      "blob": "793d6715089c19816f3edab0d63d20821f2045e1"
+    }
+  ],
+  "bindings_libraries": {
+    "debug": {
+      "name": "libgodot-cpp.windows.template_debug.x86_64.lib",
+      "sha256": "1891a4ed063a6a2a9cb0c600cfcd782eb842aa8a94bfb87b8c65d8f405208a72"
+    },
+    "release": {
+      "name": "libgodot-cpp.windows.template_release.x86_64.lib",
+      "sha256": "d4bc820b0093f5832eb53c7b3e6cdaafb8dee8b77747ddc132abb39c66f71f1b"
+    }
+  },
+  "source_license": "MIT",
+  "reference_directories_read_only": true,
+  "api_revision": "splatink-external-query-v1",
+  "editor_cleanup_revision": 1,
+  "editor_cleanup_sha256": "eaf47445172f195286ba0ce16e25120bba295a7c9b6544235b1b56b220ca22ee",
+  "runtime_revision": "splatlower1",
+  "binaries": {
+    "template_debug": {
+      "path": "bin/windows/libgdmotionmatching.windows.template_debug.x86_64.splatlower1.dll",
+      "sha256": "7bea8da6a4dbbc6d3e0c5821b90438f4d28e10bc2b78b3b611b485c4ae632773",
+      "size": 1057280
+    },
+    "template_release": {
+      "path": "bin/windows/libgdmotionmatching.windows.template_release.x86_64.splatlower1.dll",
+      "sha256": "a900a3997779c279bbbe2ac22c207918f39d2ddf3c943bde280e7e5212be922e",
+      "size": 1017856
+    }
+  },
+  "macos_binaries": {
+    "template_debug": {
+      "path": "bin/macos/libgdmotionmatching.macos.template_debug.splatlower1.dylib",
+      "sha256": "542b4df0b2fff8479d4a112498704e767901e955e979fe9db38be26b82aa878c",
+      "size": 1819960,
+      "architectures": [
+        "arm64",
+        "x86_64"
+      ],
+      "status": "compiled; runtime validation pending"
+    },
+    "template_release": {
+      "path": "bin/macos/libgdmotionmatching.macos.template_release.splatlower1.dylib",
+      "sha256": "8a54d9979e42e9df5d00b7769d4247c218d08e6f29f6ba661c564a63f109a375",
+      "size": 1786520,
+      "architectures": [
+        "arm64",
+        "x86_64"
+      ],
+      "status": "compiled; runtime validation pending"
+    }
+  },
+  "previous_diagnostic_binaries": {
+    "template_debug": "3a20de08a171e078279fc8500db395ec517e271bb6d610195666f8dba2ed3648",
+    "template_release": "109db398ec7f54bebe29e87eaa6dcdcac3813ef85315d4859c20cf9c9675786d"
+  },
+  "toolchain": {
+    "compiler": "MSVC 14.44.35207",
+    "flags": "/std:c++17 /Zc:__cplusplus /EHsc /MT /O2 /utf-8",
+    "scons": "4.10.1",
+    "python": "3.14.6",
+    "jobs": 6,
+    "architecture": "x86_64",
+    "precision": "single"
+  },
+  "extension_api": [
+    "MMAnimationLibrary.configure_external_database(data,weights,animation_indices,times,offsets)",
+    "MMAnimationLibrary.query_normalized_vector(query,current_pose=-1)"
+  ],
+  "source_bridge_sha256": {
+    "header": "d9df945bf4433c09f6a9e4ea7962ae8abcba51f2ec8fd6c4ae90c53fced4f645",
+    "implementation": "d0960038d198416332c920f8cad1bb4c2d61d6605a797e467a0a1e1acd67d9ae",
+    "editor_cleanup": "eaf47445172f195286ba0ce16e25120bba295a7c9b6544235b1b56b220ca22ee"
+  },
+  "generator_sha256": {
+    "prepare": "be84c7e8e0838a4e2bdc2e9f0efc5ca2acdb76e956a063d11ce26ae88661beb2",
+    "patch": "d62c318874dba7c40c745d53185ac8382a33b0b0f3ff2ef70e310a11405b8917",
+    "editor_cleanup": "94ba0ec6d3fe6819a5b7060a46c8a6aaac1aebef702e1b846316feb84bc79788",
+    "build": "40ba5c1fbb5706bb808aec237892818b7f1b36e59e52365c9d468470e4c78600"
+  },
+  "constraints": [
+    "Opt-in lower-body pose selection only",
+    "Never instantiate MMCharacter for Splatink authoritative movement",
+    "Original 87-joint GLB bytes retained",
+    "macOS universal debug/release compiled from same fixed archive; runtime validation pending",
+    "No Android/iOS native binary claimed"
+  ]
+}

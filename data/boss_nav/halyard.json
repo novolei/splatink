@@ -1,0 +1,362 @@
+{
+  "source": "src/boss/bossNav.js exact _build",
+  "stage": "halyard",
+  "x0": -23.75,
+  "z0": -45.75,
+  "nx": 96,
+  "nz": 184,
+  "step": 0.5,
+  "floor_y": 0,
+  "pads": [
+    {
+      "x": 0,
+      "z": -42,
+      "r": 4.2
+    },
+    {
+      "x": 0,
+      "z": 42,
+      "r": 4.2
+    }
+  ],
+  "area": 187,
+  "spawn": [
+    0.25,
+    0,
+    29.75
+  ],
+  "yaw": -3.138108347132652,
+  "fields": "res://assets/boss_nav/halyard.bin",
+  "probes": [
+    {
+      "i": 0,
+      "x": -23.75,
+      "z": -45.75,
+      "kind": 1,
+      "floor": 0,
+      "wall": 0,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 5888,
+      "x": -7.75,
+      "z": -15.25,
+      "kind": 2,
+      "floor": 0,
+      "wall": 5.832762718200684,
+      "drop": 0,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 8832,
+      "x": -23.75,
+      "z": 0.25,
+      "kind": 1,
+      "floor": 0,
+      "wall": 0,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 17663,
+      "x": 23.75,
+      "z": 45.75,
+      "kind": 1,
+      "floor": 0,
+      "wall": 0,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 13674,
+      "x": -2.75,
+      "z": 25.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.1041018962860107,
+      "drop": 1.9860680103302002,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 14259,
+      "x": 1.75,
+      "z": 28.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 5.770797252655029,
+      "drop": 2.75,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 0.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 14836,
+      "x": 2.25,
+      "z": 31.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 4.75,
+      "drop": 2.2995097637176514,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 3.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 15178,
+      "x": -18.75,
+      "z": 33.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 2.9515621662139893,
+      "drop": 5.25,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 15298,
+      "x": -6.75,
+      "z": 33.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 4.4669904708862305,
+      "drop": 2.75,
+      "plan": true,
+      "pose": false,
+      "turn": true,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 15396,
+      "x": -5.75,
+      "z": 34.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.355551242828369,
+      "drop": 3.25,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 15490,
+      "x": -6.75,
+      "z": 34.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.75,
+      "drop": 3.75,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 15586,
+      "x": -6.75,
+      "z": 35.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.25,
+      "drop": 4.25,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 15718,
+      "x": 11.25,
+      "z": 35.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.992640733718872,
+      "drop": 4.75,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 1,
+        "wall": false
+      }
+    },
+    {
+      "i": 15831,
+      "x": 19.75,
+      "z": 36.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.5578866004943848,
+      "drop": 4.25,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 1.5,
+        "wall": false
+      }
+    },
+    {
+      "i": 15956,
+      "x": -13.75,
+      "z": 37.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.390054941177368,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 16203,
+      "x": 13.75,
+      "z": 38.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 4.75,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 3.5,
+        "wall": false
+      }
+    }
+  ],
+  "paths": [
+    {
+      "start": [
+        -2.25,
+        29.25
+      ],
+      "end": [
+        21.25,
+        37.75
+      ],
+      "path": [
+        [
+          -2.25,
+          29.25
+        ],
+        [
+          6.75,
+          33.75
+        ],
+        [
+          21.25,
+          37.75
+        ]
+      ]
+    },
+    {
+      "start": [
+        8.75,
+        33.75
+      ],
+      "end": [
+        -11.75,
+        35.75
+      ],
+      "path": [
+        [
+          8.75,
+          33.75
+        ],
+        [
+          -3.25,
+          32.75
+        ],
+        [
+          -11.75,
+          35.75
+        ]
+      ]
+    },
+    {
+      "start": [
+        -11.75,
+        35.75
+      ],
+      "end": [
+        8.75,
+        33.75
+      ],
+      "path": [
+        [
+          -11.75,
+          35.75
+        ],
+        [
+          -1.75,
+          32.75
+        ],
+        [
+          8.75,
+          33.75
+        ]
+      ]
+    }
+  ]
+}

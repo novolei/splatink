@@ -1,0 +1,2387 @@
+{
+  "source": "unmodified src/game/weapons.js Projectiles._step and fireCharger with original Physics.segmentCapsuleDist",
+  "traces": [
+    {
+      "input": {
+        "name": "shooter_kid_edge_inside",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.51,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 125,
+            "weapon": "shooter"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.5,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "shooter_squid_edge_inside",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.51,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "shooter_kid_edge_outside",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.512,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "shooter_squid_edge_outside",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.512,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "dualies_kid_edge_inside",
+        "kind": "dualies",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.51,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 125,
+            "weapon": "dualies"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.5,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "dualies_squid_edge_inside",
+        "kind": "dualies",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.51,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "dualies_kid_edge_outside",
+        "kind": "dualies",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.512,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "dualies_squid_edge_outside",
+        "kind": "dualies",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.512,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "splatling_kid_edge_inside",
+        "kind": "splatling",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.51,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 125,
+            "weapon": "splatling"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.5,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "splatling_squid_edge_inside",
+        "kind": "splatling",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.51,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "splatling_kid_edge_outside",
+        "kind": "splatling",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.512,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "splatling_squid_edge_outside",
+        "kind": "splatling",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.512,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "blaster_kid_edge_inside",
+        "kind": "blaster",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.62,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 125,
+            "weapon": "blast"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "blast",
+            "point": [
+              0,
+              0.5,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "blaster_squid_edge_inside",
+        "kind": "blaster",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.62,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "blaster_kid_edge_outside",
+        "kind": "blaster",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.622,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "blaster_squid_edge_outside",
+        "kind": "blaster",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.622,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosher_head_kid_edge_inside",
+        "kind": "slosher_head",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.5599999999999999,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 125,
+            "weapon": "slosher"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.5,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          },
+          {
+            "kind": "slosh",
+            "point": [
+              0,
+              0.5,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosher_head_squid_edge_inside",
+        "kind": "slosher_head",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.5599999999999999,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosher_head_kid_edge_outside",
+        "kind": "slosher_head",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.5619999999999999,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosher_head_squid_edge_outside",
+        "kind": "slosher_head",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.5619999999999999,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosher_tail_kid_edge_inside",
+        "kind": "slosher_tail",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.5,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 125,
+            "weapon": "slosher"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.5,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosher_tail_squid_edge_inside",
+        "kind": "slosher_tail",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.5,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosher_tail_kid_edge_outside",
+        "kind": "slosher_tail",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.502,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosher_tail_squid_edge_outside",
+        "kind": "slosher_tail",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.502,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "flick_kid_edge_inside",
+        "kind": "flick",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.51,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 108.75331141449112,
+            "weapon": "drop"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.5,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "flick_squid_edge_inside",
+        "kind": "flick",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.51,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "flick_kid_edge_outside",
+        "kind": "flick",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.512,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "flick_squid_edge_outside",
+        "kind": "flick",
+        "from": [
+          0,
+          0.5,
+          0
+        ],
+        "to": [
+          0,
+          0.5,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.512,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.5,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "actor_array_order_far_first",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2.5
+        ],
+        "actors": [
+          {
+            "name": "far",
+            "pos": [
+              0,
+              0,
+              2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          },
+          {
+            "name": "near",
+            "pos": [
+              0,
+              0,
+              0.75
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "far",
+            "damage": 125,
+            "weapon": "shooter"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.800000011920929,
+              2.003251536859219
+            ],
+            "target": "far"
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2.5
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "actor_array_equal_distance",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [
+          {
+            "name": "first",
+            "pos": [
+              0.2,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          },
+          {
+            "name": "second",
+            "pos": [
+              -0.2,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "first",
+            "damage": 125,
+            "weapon": "shooter"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.800000011920929,
+              1.1971244220901283
+            ],
+            "target": "first"
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "wall_before_actor_source_priority",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [
+          {
+            "name": "behind_wall",
+            "pos": [
+              0,
+              0,
+              1.4
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": 0.5,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "behind_wall",
+            "damage": 125,
+            "weapon": "shooter"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.800000011920929,
+              1.3973987705126247
+            ],
+            "target": "behind_wall"
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "actor_before_closer_boss",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0,
+              0,
+              1.4
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": 0.7,
+        "boss": 0.3
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 125,
+            "weapon": "shooter"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.800000011920929,
+              1.3973987705126247
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "boss_before_closer_wall",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [],
+        "world": 0.4,
+        "boss": 1.2
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "boss",
+            "damage": 125,
+            "weapon": "shooter",
+            "point": [
+              0,
+              0.8,
+              1.2
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.8,
+              1.2
+            ],
+            "target": ""
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "world_when_no_actor_or_boss",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [],
+        "world": 0.4,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [],
+        "impacts": [
+          {
+            "kind": "world",
+            "point": [
+              0,
+              0.8,
+              0.4
+            ]
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "fast_round_endpoint_broad_phase",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          12
+        ],
+        "actors": [
+          {
+            "name": "near_start",
+            "pos": [
+              0,
+              0,
+              2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          0.800000011920929,
+          12
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "squid_high_shot_misses",
+        "kind": "shooter",
+        "from": [
+          0,
+          1.05,
+          0
+        ],
+        "to": [
+          0,
+          1.05,
+          2
+        ],
+        "actors": [
+          {
+            "name": "dry_squid",
+            "pos": [
+              0,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": false,
+        "hits": [],
+        "impacts": [],
+        "end": [
+          0,
+          1.0499999523162842,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "swim_visual_still_gameplay_squid",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.4,
+          0
+        ],
+        "to": [
+          0,
+          0.4,
+          2
+        ],
+        "actors": [
+          {
+            "name": "swimmer",
+            "pos": [
+              0,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true,
+            "swim": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "swimmer",
+            "damage": 125,
+            "weapon": "shooter"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.4000000059604645,
+              1.1971244220901283
+            ],
+            "target": "swimmer"
+          }
+        ],
+        "end": [
+          0,
+          0.4000000059604645,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "ally_then_dead_then_valid",
+        "kind": "shooter",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [
+          {
+            "name": "ally",
+            "pos": [
+              0,
+              0,
+              0.5
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 0,
+            "alive": true
+          },
+          {
+            "name": "dead",
+            "pos": [
+              0,
+              0,
+              0.8
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": false
+          },
+          {
+            "name": "enemy",
+            "pos": [
+              0,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 125,
+            "weapon": "shooter"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.800000011920929,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "visual_smooth_height",
+        "kind": "shooter",
+        "from": [
+          0,
+          1.65,
+          0
+        ],
+        "to": [
+          0,
+          1.65,
+          2
+        ],
+        "actors": [
+          {
+            "name": "smooth",
+            "pos": [
+              0,
+              0,
+              1.2
+            ],
+            "smoothY": 0.4,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "smooth",
+            "damage": 125,
+            "weapon": "shooter"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              1.649999976158142,
+              1.1971244220901283
+            ],
+            "target": "smooth"
+          }
+        ],
+        "end": [
+          0,
+          1.649999976158142,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "slosh_volley_repeated_actor",
+        "kind": "slosher_head",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0,
+              0,
+              1.2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1,
+        "repeat": true
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.800000011920929,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          },
+          {
+            "kind": "slosh",
+            "point": [
+              0,
+              0.800000011920929,
+              1.1971244220901283
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "flick_actual_impact_falloff",
+        "kind": "flick",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0,
+              0,
+              1.4
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1,
+        "start": [
+          0,
+          0.8,
+          -2
+        ]
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 78.89244525732866,
+            "weapon": "drop"
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.800000011920929,
+              1.3973987705126247
+            ],
+            "target": "enemy"
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "flick_actual_boss_falloff",
+        "kind": "flick",
+        "from": [
+          0,
+          0.8,
+          0
+        ],
+        "to": [
+          0,
+          0.8,
+          2
+        ],
+        "actors": [],
+        "world": -1,
+        "boss": 1.1,
+        "start": [
+          0,
+          0.8,
+          -2
+        ]
+      },
+      "wanted": {
+        "dead": true,
+        "hits": [
+          {
+            "target": "boss",
+            "damage": 82.92857142857142,
+            "weapon": "drop",
+            "point": [
+              0,
+              0.8,
+              1.1
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "kind": "contact",
+            "point": [
+              0,
+              0.8,
+              1.1
+            ],
+            "target": ""
+          }
+        ],
+        "end": [
+          0,
+          0.800000011920929,
+          2
+        ]
+      }
+    }
+  ],
+  "beams": [
+    {
+      "input": {
+        "name": "charger_nearest_actor",
+        "actors": [
+          {
+            "name": "far",
+            "pos": [
+              0,
+              0,
+              8
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          },
+          {
+            "name": "near",
+            "pos": [
+              0,
+              0,
+              3
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1,
+        "y": 1.05
+      },
+      "wanted": {
+        "hits": [
+          {
+            "target": "near",
+            "damage": 160,
+            "weapon": "charger"
+          }
+        ],
+        "len": 3.031550068587106,
+        "end": [
+          0,
+          1.05,
+          3.031550068587106
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "charger_world_caps_actor",
+        "actors": [
+          {
+            "name": "behind_wall",
+            "pos": [
+              0,
+              0,
+              5
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": 2,
+        "boss": -1,
+        "y": 1.05
+      },
+      "wanted": {
+        "hits": [],
+        "len": 2,
+        "end": [
+          0,
+          1.05,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "charger_boss_before_actor",
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0,
+              0,
+              6
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": 2,
+        "y": 1.05
+      },
+      "wanted": {
+        "hits": [
+          {
+            "target": "boss",
+            "damage": 160,
+            "weapon": "charger",
+            "point": [
+              0,
+              1.05,
+              2
+            ]
+          }
+        ],
+        "len": 2,
+        "end": [
+          0,
+          1.05,
+          2
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "charger_actor_before_boss",
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0,
+              0,
+              2
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": 6,
+        "y": 1.05
+      },
+      "wanted": {
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 160,
+            "weapon": "charger"
+          }
+        ],
+        "len": 2.0397805212620024,
+        "end": [
+          0,
+          1.05,
+          2.0397805212620024
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "charger_world_cap_boss",
+        "actors": [],
+        "world": 3,
+        "boss": -1,
+        "y": 1.05
+      },
+      "wanted": {
+        "hits": [],
+        "len": 3,
+        "end": [
+          0,
+          1.05,
+          3
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "charger_axis_radius_near_foot",
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0,
+              0,
+              4
+            ],
+            "smoothY": 0,
+            "form": "kid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1,
+        "y": 0.02
+      },
+      "wanted": {
+        "hits": [
+          {
+            "target": "enemy",
+            "damage": 160,
+            "weapon": "charger"
+          }
+        ],
+        "len": 4.079561042524005,
+        "end": [
+          0,
+          0.02,
+          4.079561042524005
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "charger_squid_halfmetre_axis",
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.519,
+              0,
+              4
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1,
+        "y": 0.5
+      },
+      "wanted": {
+        "hits": [],
+        "len": 27,
+        "end": [
+          0,
+          0.5,
+          27
+        ]
+      }
+    },
+    {
+      "input": {
+        "name": "charger_outside_threshold",
+        "actors": [
+          {
+            "name": "enemy",
+            "pos": [
+              0.521,
+              0,
+              4
+            ],
+            "smoothY": 0,
+            "form": "squid",
+            "team": 1,
+            "alive": true
+          }
+        ],
+        "world": -1,
+        "boss": -1,
+        "y": 0.5
+      },
+      "wanted": {
+        "hits": [],
+        "len": 27,
+        "end": [
+          0,
+          0.5,
+          27
+        ]
+      }
+    }
+  ]
+}

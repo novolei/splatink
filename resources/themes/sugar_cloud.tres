@@ -1,0 +1,68 @@
+[gd_resource type="Theme" format=3 uid="uid://cxqimlfdsgq4y"]
+
+[ext_resource type="FontVariation" path="res://assets/fonts/ink_body_600_font.tres" id="1"]
+[ext_resource type="FontVariation" path="res://assets/fonts/ink_display_font.tres" id="2"]
+
+[sub_resource type="StyleBoxFlat" id="Focus"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+bg_color = Color(0.071, 0.055, 0.118, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.541, 0.078, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Input"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+bg_color = Color(0.071, 0.055, 0.118, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.44, 0.38, 0.58, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Panel"]
+content_margin_left = 18.0
+content_margin_top = 12.0
+content_margin_right = 18.0
+content_margin_bottom = 12.0
+bg_color = Color(0.149, 0.122, 0.227, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.082, 0.071, 0.11, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[resource]
+default_font = ExtResource("1")
+default_font_size = 22
+CheckButton/font_sizes/font_size = 21
+Label/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/styles/focus = SubResource("Focus")
+LineEdit/styles/normal = SubResource("Input")
+OptionButton/font_sizes/font_size = 20
+OptionButton/fonts/font = ExtResource("2")
+OptionButton/styles/focus = SubResource("Focus")
+OptionButton/styles/hover = SubResource("Focus")
+OptionButton/styles/normal = SubResource("Input")
+PanelContainer/styles/panel = SubResource("Panel")
+PopupMenu/font_sizes/font_size = 20
+PopupMenu/styles/panel = SubResource("Panel")

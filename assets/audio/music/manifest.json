@@ -1,0 +1,68 @@
+{
+  "sample_rate": 48000,
+  "tracks": {
+    "title": {
+      "id": "title",
+      "bpm": 128,
+      "bars": 40,
+      "loop_start": 7.5,
+      "loop_end": 75
+    },
+    "menu": {
+      "id": "menu",
+      "bpm": 105,
+      "bars": 26,
+      "loop_start": 4.571428571428571,
+      "loop_end": 59.42857142857142
+    },
+    "battle": {
+      "id": "battle",
+      "bpm": 150,
+      "bars": 38,
+      "loop_start": 3.2,
+      "loop_end": 60.800000000000004
+    },
+    "battle_final": {
+      "id": "battle_final",
+      "bpm": 150,
+      "bars": 21,
+      "loop_start": 1.6,
+      "loop_end": 33.6
+    },
+    "results_win": {
+      "id": "results_win",
+      "bpm": 124,
+      "bars": 8,
+      "loop_start": 0,
+      "loop_end": 15.483870967741936
+    },
+    "results_lose": {
+      "id": "results_lose",
+      "bpm": 84,
+      "bars": 8,
+      "loop_start": 0,
+      "loop_end": 22.857142857142858
+    },
+    "boss": {
+      "id": "boss",
+      "bpm": 140,
+      "bars": 34,
+      "loop_start": 3.4285714285714284,
+      "loop_end": 58.285714285714285
+    },
+    "boss_2": {
+      "id": "boss_2",
+      "bpm": 140,
+      "bars": 17,
+      "loop_start": 1.7142857142857142,
+      "loop_end": 29.142857142857142
+    },
+    "boss_3": {
+      "id": "boss_3",
+      "bpm": 140,
+      "bars": 17,
+      "loop_start": 1.7142857142857142,
+      "loop_end": 29.142857142857142
+    }
+  }
+}

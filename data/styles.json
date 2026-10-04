@@ -1,0 +1,339 @@
+{
+  "BROWS": [
+    "classic",
+    "bold",
+    "arched",
+    "straight"
+  ],
+  "BROW_NAMES": [
+    "Classic",
+    "Bold",
+    "Arched",
+    "Straight"
+  ],
+  "HAIR_STYLES": 8,
+  "HAIR_STYLE_NAMES": [
+    "Tide",
+    "Spike",
+    "Twin",
+    "Bob",
+    "Pony",
+    "Crest",
+    "Knot",
+    "Swoop"
+  ],
+  "HATS": [
+    "none",
+    "cap",
+    "beanie",
+    "bucket"
+  ],
+  "HAT_NAMES": [
+    "None",
+    "Snapback",
+    "Beanie",
+    "Bucket Hat"
+  ],
+  "IRIS": [
+    [
+      "#ffcf3a",
+      "#ff7a00"
+    ],
+    [
+      "#4ff0dc",
+      "#0b7fb0"
+    ],
+    [
+      "#c9a2ff",
+      "#5b2ad6"
+    ],
+    [
+      "#a8f56a",
+      "#1d9a4a"
+    ],
+    [
+      "#ffa3cf",
+      "#d0246e"
+    ],
+    [
+      "#e6b36a",
+      "#6b3a14"
+    ],
+    [
+      "#e4f4ff",
+      "#4f7fc4"
+    ],
+    [
+      "#ff8f6b",
+      "#b3121c"
+    ]
+  ],
+  "IRIS_NAMES": [
+    "Amber",
+    "Lagoon",
+    "Violet",
+    "Lime",
+    "Rose",
+    "Hazel",
+    "Frost",
+    "Ember"
+  ],
+  "OUTFITS": [
+    {
+      "shirt": "#f4f2ec",
+      "shorts": "#27304a",
+      "shoe": "#272b34",
+      "sole": "#f4f2ec",
+      "sock": "#f7f7f4",
+      "strap": "#30343d",
+      "pattern": 0
+    },
+    {
+      "shirt": "#2b2e36",
+      "shorts": "#cfbb92",
+      "shoe": "#f3f2ee",
+      "sole": "#c98b4e",
+      "sock": "#f7f7f4",
+      "strap": "#24262c",
+      "pattern": 1
+    },
+    {
+      "shirt": "#bfc5cf",
+      "shorts": "#1f2127",
+      "shoe": "#f3f2ee",
+      "sole": "#2a2c33",
+      "sock": "#2a2c33",
+      "strap": "#2a2c33",
+      "pattern": 2
+    },
+    {
+      "shirt": "#f2e6c9",
+      "shorts": "#3a5683",
+      "shoe": "#3a3f4b",
+      "sole": "#f4f2ec",
+      "sock": "#f7f7f4",
+      "strap": "#3a3f4b",
+      "pattern": 3
+    },
+    {
+      "shirt": "#f3efe4",
+      "shorts": "#2c3038",
+      "shoe": "#ece9e0",
+      "sole": "#c69256",
+      "sock": "#f5f4ef",
+      "strap": "#2a3550",
+      "pattern": 4
+    },
+    {
+      "shirt": "#26282e",
+      "shorts": "#4a5160",
+      "shoe": "#1e2026",
+      "sole": "#f2f1ec",
+      "sock": "#1e2026",
+      "strap": "#1b1d22",
+      "pattern": 5
+    },
+    {
+      "shirt": "#5f6446",
+      "shorts": "#b5a37f",
+      "shoe": "#6a5238",
+      "sole": "#2b2622",
+      "sock": "#e6e0d0",
+      "strap": "#3b3a2c",
+      "pattern": 6
+    },
+    {
+      "shirt": "#ebe4d6",
+      "shorts": "#41608f",
+      "shoe": "#f2f1ec",
+      "sole": "#d9cbb0",
+      "sock": "#f7f7f4",
+      "strap": "#39404f",
+      "pattern": 7
+    },
+    {
+      "shirt": "#f2f2ef",
+      "shorts": "#23262d",
+      "shoe": "#23262d",
+      "sole": "#f2f1ec",
+      "sock": "#f7f7f4",
+      "strap": "#23262d",
+      "pattern": 8
+    },
+    {
+      "shirt": "#1f2a44",
+      "shorts": "#1f2a44",
+      "shoe": "#f2f1ec",
+      "sole": "#1f2a44",
+      "sock": "#f7f7f4",
+      "strap": "#161b29",
+      "pattern": 9
+    }
+  ],
+  "OUTFIT_NAMES": [
+    "Basic Ringer",
+    "Night Pinstripe",
+    "Raglan Runner",
+    "Chevron Tee",
+    "Breton Stripe",
+    "Splatter Tee",
+    "Splat Camo",
+    "Dip-Dye Tee",
+    "Pro Jersey",
+    "Track Top"
+  ],
+  "PRESETS": [
+    {
+      "id": "rookie",
+      "name": "Rookie",
+      "blurb": "Fresh off the ferry, ringer tee and long tentacles.",
+      "style": {
+        "hair": 0,
+        "skin": 0,
+        "outfit": 0,
+        "eyes": 0,
+        "hat": 0,
+        "brows": 0
+      }
+    },
+    {
+      "id": "dash",
+      "name": "Dash",
+      "blurb": "Track-top sprinter with a spiky quiff.",
+      "style": {
+        "hair": 1,
+        "skin": 5,
+        "outfit": 9,
+        "eyes": 1,
+        "hat": 0,
+        "brows": 1
+      }
+    },
+    {
+      "id": "pip",
+      "name": "Pip",
+      "blurb": "Twin tails, breton stripes, always first to the ferry deck.",
+      "style": {
+        "hair": 2,
+        "skin": 4,
+        "outfit": 4,
+        "eyes": 4,
+        "hat": 0,
+        "brows": 2
+      }
+    },
+    {
+      "id": "coral",
+      "name": "Coral",
+      "blurb": "Dip-dyed and unbothered.",
+      "style": {
+        "hair": 3,
+        "skin": 3,
+        "outfit": 7,
+        "eyes": 5,
+        "hat": 0,
+        "brows": 0
+      }
+    },
+    {
+      "id": "marlo",
+      "name": "Marlo",
+      "blurb": "Ponytail up, jersey on, game face.",
+      "style": {
+        "hair": 4,
+        "skin": 1,
+        "outfit": 8,
+        "eyes": 7,
+        "hat": 0,
+        "brows": 1
+      }
+    },
+    {
+      "id": "riptide",
+      "name": "Riptide",
+      "blurb": "Mohawk crest and a splatter tee. Loud.",
+      "style": {
+        "hair": 5,
+        "skin": 7,
+        "outfit": 5,
+        "eyes": 3,
+        "hat": 0,
+        "brows": 3
+      }
+    },
+    {
+      "id": "nori",
+      "name": "Nori",
+      "blurb": "Low bun under a bucket hat, splat camo, very patient charger main.",
+      "style": {
+        "hair": 6,
+        "skin": 6,
+        "outfit": 6,
+        "eyes": 2,
+        "hat": 3,
+        "brows": 3
+      }
+    },
+    {
+      "id": "suki",
+      "name": "Suki",
+      "blurb": "Side-swept and too cool for the lobby.",
+      "style": {
+        "hair": 7,
+        "skin": 8,
+        "outfit": 1,
+        "eyes": 6,
+        "hat": 0,
+        "brows": 2
+      }
+    },
+    {
+      "id": "kelp",
+      "name": "Kelp",
+      "blurb": "Beanie season, all season.",
+      "style": {
+        "hair": 3,
+        "skin": 2,
+        "outfit": 2,
+        "eyes": 3,
+        "hat": 2,
+        "brows": 0
+      }
+    },
+    {
+      "id": "skipper",
+      "name": "Skipper",
+      "blurb": "Snapback, raglan, harbour regular.",
+      "style": {
+        "hair": 0,
+        "skin": 5,
+        "outfit": 3,
+        "eyes": 0,
+        "hat": 1,
+        "brows": 1
+      }
+    }
+  ],
+  "SKIN_NAMES": [
+    "Rosy",
+    "Peach",
+    "Tan",
+    "Cocoa",
+    "Porcelain",
+    "Honey",
+    "Olive",
+    "Chestnut",
+    "Ebony"
+  ],
+  "SKIN_TONES": [
+    "#ffd9c2",
+    "#eab48e",
+    "#b37a52",
+    "#6e4429",
+    "#f9e1d3",
+    "#d9a577",
+    "#c29a72",
+    "#8f5a3a",
+    "#4a2c20"
+  ]
+}

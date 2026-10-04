@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-10-03T12:30:40.393Z",
+  "source": "INKWAVE original procedural source",
+  "maps": [
+    {
+      "id": "tidewater",
+      "blocks": 145,
+      "faces": 289,
+      "meshes": 26,
+      "placements": 144,
+      "vertices": 311736,
+      "bytes": 15928388,
+      "paint_ppm": 12.895073280000002
+    },
+    {
+      "id": "kelpline",
+      "blocks": 141,
+      "faces": 328,
+      "meshes": 27,
+      "placements": 130,
+      "vertices": 282760,
+      "bytes": 14529139,
+      "paint_ppm": 15.235200000000003
+    },
+    {
+      "id": "halyard",
+      "blocks": 211,
+      "faces": 259,
+      "meshes": 36,
+      "placements": 219,
+      "vertices": 845897,
+      "bytes": 43823370,
+      "paint_ppm": 16.560000000000002
+    },
+    {
+      "id": "cargo",
+      "blocks": 613,
+      "faces": 529,
+      "meshes": 20,
+      "placements": 223,
+      "vertices": 676883,
+      "bytes": 35925626,
+      "paint_ppm": 14.016384000000002
+    }
+  ],
+  "textures": 19
+}

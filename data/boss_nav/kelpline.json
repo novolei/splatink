@@ -1,0 +1,350 @@
+{
+  "source": "src/boss/bossNav.js exact _build",
+  "stage": "kelpline",
+  "x0": -23.75,
+  "z0": -47.75,
+  "nx": 96,
+  "nz": 192,
+  "step": 0.5,
+  "floor_y": 0,
+  "pads": [
+    {
+      "x": 0,
+      "z": -44,
+      "r": 4.2
+    },
+    {
+      "x": 0,
+      "z": 44,
+      "r": 4.2
+    }
+  ],
+  "area": 740.75,
+  "spawn": [
+    0.25,
+    0,
+    22.25
+  ],
+  "yaw": -3.137819086595858,
+  "fields": "res://assets/boss_nav/kelpline.bin",
+  "probes": [
+    {
+      "i": 0,
+      "x": -23.75,
+      "z": -47.75,
+      "kind": 1,
+      "floor": 0,
+      "wall": 0,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 6144,
+      "x": -23.75,
+      "z": -15.75,
+      "kind": 1,
+      "floor": 0,
+      "wall": 0,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 9216,
+      "x": -23.75,
+      "z": 0.25,
+      "kind": 0,
+      "floor": 0.20000000298023224,
+      "wall": 7,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 18431,
+      "x": 23.75,
+      "z": 47.75,
+      "kind": 1,
+      "floor": 0,
+      "wall": 0,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 9811,
+      "x": -14.25,
+      "z": 3.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 5.135164737701416,
+      "drop": 1.8115527629852295,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 6.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 11265,
+      "x": -7.25,
+      "z": 10.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.7811288833618164,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 11783,
+      "x": 11.75,
+      "z": 13.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.25,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 6.5,
+        "wall": false
+      }
+    },
+    {
+      "i": 12242,
+      "x": 1.25,
+      "z": 15.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 4.359772205352783,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 12813,
+      "x": -1.25,
+      "z": 18.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 7,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 6.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 13480,
+      "x": -3.75,
+      "z": 22.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 5.25,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 10.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 13958,
+      "x": -4.75,
+      "z": 24.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 2.9122776985168457,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 14453,
+      "x": 2.75,
+      "z": 27.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 5.272680282592773,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 10.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 15103,
+      "x": -8.25,
+      "z": 30.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.75,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 15614,
+      "x": 7.25,
+      "z": 33.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 6.75,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 17.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 16076,
+      "x": -1.75,
+      "z": 35.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 4.25,
+      "drop": 3.25,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 16521,
+      "x": -19.25,
+      "z": 38.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 5.340169906616211,
+      "drop": 4.75,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 0.25,
+        "wall": true
+      }
+    }
+  ],
+  "paths": [
+    {
+      "start": [
+        9.75,
+        11.25
+      ],
+      "end": [
+        12.25,
+        37.25
+      ],
+      "path": [
+        [
+          9.75,
+          11.25
+        ],
+        [
+          12.25,
+          37.25
+        ]
+      ]
+    },
+    {
+      "start": [
+        7.25,
+        19.25
+      ],
+      "end": [
+        11.75,
+        29.75
+      ],
+      "path": [
+        [
+          7.25,
+          19.25
+        ],
+        [
+          11.75,
+          29.75
+        ]
+      ]
+    },
+    {
+      "start": [
+        11.75,
+        29.75
+      ],
+      "end": [
+        7.25,
+        19.25
+      ],
+      "path": [
+        [
+          11.75,
+          29.75
+        ],
+        [
+          7.25,
+          19.25
+        ]
+      ]
+    }
+  ]
+}

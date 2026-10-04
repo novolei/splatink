@@ -1,0 +1,611 @@
+{
+  "source": "vendor/three/jsm/postprocessing/UnrealBloomPass.js actual GPU HALF render targets",
+  "format": "rgba16f",
+  "flip_y": false,
+  "compare_channels": "rgb",
+  "native_alpha_contract": "Preserve input alpha for transparent studio overlays; source additive blend changes alpha.",
+  "absolute_tolerance": 0.003,
+  "relative_tolerance": 0.002,
+  "cases": [
+    {
+      "name": "64x48_day",
+      "size": [
+        64,
+        48
+      ],
+      "strength": 0.28,
+      "radius": 0.45,
+      "threshold": 2.4,
+      "stages": {
+        "input": {
+          "size": [
+            64,
+            48
+          ],
+          "path": "res://data/bloom_reference/64x48_day_input.rgba16f.bin"
+        },
+        "bright": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_day_bright.rgba16f.bin"
+        },
+        "vertical0": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_day_vertical0.rgba16f.bin"
+        },
+        "vertical1": {
+          "size": [
+            16,
+            12
+          ],
+          "path": "res://data/bloom_reference/64x48_day_vertical1.rgba16f.bin"
+        },
+        "vertical2": {
+          "size": [
+            8,
+            6
+          ],
+          "path": "res://data/bloom_reference/64x48_day_vertical2.rgba16f.bin"
+        },
+        "vertical3": {
+          "size": [
+            4,
+            3
+          ],
+          "path": "res://data/bloom_reference/64x48_day_vertical3.rgba16f.bin"
+        },
+        "vertical4": {
+          "size": [
+            2,
+            2
+          ],
+          "path": "res://data/bloom_reference/64x48_day_vertical4.rgba16f.bin"
+        },
+        "composite": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_day_composite.rgba16f.bin"
+        },
+        "output": {
+          "size": [
+            64,
+            48
+          ],
+          "path": "res://data/bloom_reference/64x48_day_output.rgba16f.bin"
+        }
+      }
+    },
+    {
+      "name": "64x48_sunset",
+      "size": [
+        64,
+        48
+      ],
+      "strength": 0.4,
+      "radius": 0.55,
+      "threshold": 1.7,
+      "stages": {
+        "input": {
+          "size": [
+            64,
+            48
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_input.rgba16f.bin"
+        },
+        "bright": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_bright.rgba16f.bin"
+        },
+        "vertical0": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_vertical0.rgba16f.bin"
+        },
+        "vertical1": {
+          "size": [
+            16,
+            12
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_vertical1.rgba16f.bin"
+        },
+        "vertical2": {
+          "size": [
+            8,
+            6
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_vertical2.rgba16f.bin"
+        },
+        "vertical3": {
+          "size": [
+            4,
+            3
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_vertical3.rgba16f.bin"
+        },
+        "vertical4": {
+          "size": [
+            2,
+            2
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_vertical4.rgba16f.bin"
+        },
+        "composite": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_composite.rgba16f.bin"
+        },
+        "output": {
+          "size": [
+            64,
+            48
+          ],
+          "path": "res://data/bloom_reference/64x48_sunset_output.rgba16f.bin"
+        }
+      }
+    },
+    {
+      "name": "64x48_wide",
+      "size": [
+        64,
+        48
+      ],
+      "strength": 0.75,
+      "radius": 1,
+      "threshold": 0.85,
+      "stages": {
+        "input": {
+          "size": [
+            64,
+            48
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_input.rgba16f.bin"
+        },
+        "bright": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_bright.rgba16f.bin"
+        },
+        "vertical0": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_vertical0.rgba16f.bin"
+        },
+        "vertical1": {
+          "size": [
+            16,
+            12
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_vertical1.rgba16f.bin"
+        },
+        "vertical2": {
+          "size": [
+            8,
+            6
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_vertical2.rgba16f.bin"
+        },
+        "vertical3": {
+          "size": [
+            4,
+            3
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_vertical3.rgba16f.bin"
+        },
+        "vertical4": {
+          "size": [
+            2,
+            2
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_vertical4.rgba16f.bin"
+        },
+        "composite": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_composite.rgba16f.bin"
+        },
+        "output": {
+          "size": [
+            64,
+            48
+          ],
+          "path": "res://data/bloom_reference/64x48_wide_output.rgba16f.bin"
+        }
+      }
+    },
+    {
+      "name": "64x48_disabled",
+      "size": [
+        64,
+        48
+      ],
+      "strength": 0,
+      "radius": 0.45,
+      "threshold": 2.4,
+      "stages": {
+        "input": {
+          "size": [
+            64,
+            48
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_input.rgba16f.bin"
+        },
+        "bright": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_bright.rgba16f.bin"
+        },
+        "vertical0": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_vertical0.rgba16f.bin"
+        },
+        "vertical1": {
+          "size": [
+            16,
+            12
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_vertical1.rgba16f.bin"
+        },
+        "vertical2": {
+          "size": [
+            8,
+            6
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_vertical2.rgba16f.bin"
+        },
+        "vertical3": {
+          "size": [
+            4,
+            3
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_vertical3.rgba16f.bin"
+        },
+        "vertical4": {
+          "size": [
+            2,
+            2
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_vertical4.rgba16f.bin"
+        },
+        "composite": {
+          "size": [
+            32,
+            24
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_composite.rgba16f.bin"
+        },
+        "output": {
+          "size": [
+            64,
+            48
+          ],
+          "path": "res://data/bloom_reference/64x48_disabled_output.rgba16f.bin"
+        }
+      }
+    },
+    {
+      "name": "65x49_day",
+      "size": [
+        65,
+        49
+      ],
+      "strength": 0.28,
+      "radius": 0.45,
+      "threshold": 2.4,
+      "stages": {
+        "input": {
+          "size": [
+            65,
+            49
+          ],
+          "path": "res://data/bloom_reference/65x49_day_input.rgba16f.bin"
+        },
+        "bright": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_day_bright.rgba16f.bin"
+        },
+        "vertical0": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_day_vertical0.rgba16f.bin"
+        },
+        "vertical1": {
+          "size": [
+            17,
+            13
+          ],
+          "path": "res://data/bloom_reference/65x49_day_vertical1.rgba16f.bin"
+        },
+        "vertical2": {
+          "size": [
+            9,
+            7
+          ],
+          "path": "res://data/bloom_reference/65x49_day_vertical2.rgba16f.bin"
+        },
+        "vertical3": {
+          "size": [
+            5,
+            4
+          ],
+          "path": "res://data/bloom_reference/65x49_day_vertical3.rgba16f.bin"
+        },
+        "vertical4": {
+          "size": [
+            3,
+            2
+          ],
+          "path": "res://data/bloom_reference/65x49_day_vertical4.rgba16f.bin"
+        },
+        "composite": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_day_composite.rgba16f.bin"
+        },
+        "output": {
+          "size": [
+            65,
+            49
+          ],
+          "path": "res://data/bloom_reference/65x49_day_output.rgba16f.bin"
+        }
+      }
+    },
+    {
+      "name": "65x49_sunset",
+      "size": [
+        65,
+        49
+      ],
+      "strength": 0.4,
+      "radius": 0.55,
+      "threshold": 1.7,
+      "stages": {
+        "input": {
+          "size": [
+            65,
+            49
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_input.rgba16f.bin"
+        },
+        "bright": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_bright.rgba16f.bin"
+        },
+        "vertical0": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_vertical0.rgba16f.bin"
+        },
+        "vertical1": {
+          "size": [
+            17,
+            13
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_vertical1.rgba16f.bin"
+        },
+        "vertical2": {
+          "size": [
+            9,
+            7
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_vertical2.rgba16f.bin"
+        },
+        "vertical3": {
+          "size": [
+            5,
+            4
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_vertical3.rgba16f.bin"
+        },
+        "vertical4": {
+          "size": [
+            3,
+            2
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_vertical4.rgba16f.bin"
+        },
+        "composite": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_composite.rgba16f.bin"
+        },
+        "output": {
+          "size": [
+            65,
+            49
+          ],
+          "path": "res://data/bloom_reference/65x49_sunset_output.rgba16f.bin"
+        }
+      }
+    },
+    {
+      "name": "65x49_wide",
+      "size": [
+        65,
+        49
+      ],
+      "strength": 0.75,
+      "radius": 1,
+      "threshold": 0.85,
+      "stages": {
+        "input": {
+          "size": [
+            65,
+            49
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_input.rgba16f.bin"
+        },
+        "bright": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_bright.rgba16f.bin"
+        },
+        "vertical0": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_vertical0.rgba16f.bin"
+        },
+        "vertical1": {
+          "size": [
+            17,
+            13
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_vertical1.rgba16f.bin"
+        },
+        "vertical2": {
+          "size": [
+            9,
+            7
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_vertical2.rgba16f.bin"
+        },
+        "vertical3": {
+          "size": [
+            5,
+            4
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_vertical3.rgba16f.bin"
+        },
+        "vertical4": {
+          "size": [
+            3,
+            2
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_vertical4.rgba16f.bin"
+        },
+        "composite": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_composite.rgba16f.bin"
+        },
+        "output": {
+          "size": [
+            65,
+            49
+          ],
+          "path": "res://data/bloom_reference/65x49_wide_output.rgba16f.bin"
+        }
+      }
+    },
+    {
+      "name": "65x49_disabled",
+      "size": [
+        65,
+        49
+      ],
+      "strength": 0,
+      "radius": 0.45,
+      "threshold": 2.4,
+      "stages": {
+        "input": {
+          "size": [
+            65,
+            49
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_input.rgba16f.bin"
+        },
+        "bright": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_bright.rgba16f.bin"
+        },
+        "vertical0": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_vertical0.rgba16f.bin"
+        },
+        "vertical1": {
+          "size": [
+            17,
+            13
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_vertical1.rgba16f.bin"
+        },
+        "vertical2": {
+          "size": [
+            9,
+            7
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_vertical2.rgba16f.bin"
+        },
+        "vertical3": {
+          "size": [
+            5,
+            4
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_vertical3.rgba16f.bin"
+        },
+        "vertical4": {
+          "size": [
+            3,
+            2
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_vertical4.rgba16f.bin"
+        },
+        "composite": {
+          "size": [
+            33,
+            25
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_composite.rgba16f.bin"
+        },
+        "output": {
+          "size": [
+            65,
+            49
+          ],
+          "path": "res://data/bloom_reference/65x49_disabled_output.rgba16f.bin"
+        }
+      }
+    }
+  ]
+}

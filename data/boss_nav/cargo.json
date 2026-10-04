@@ -1,0 +1,362 @@
+{
+  "source": "src/boss/bossNav.js exact _build",
+  "stage": "cargo",
+  "x0": -51.75,
+  "z0": -54.75,
+  "nx": 208,
+  "nz": 220,
+  "step": 0.5,
+  "floor_y": 0,
+  "pads": [
+    {
+      "x": -25.008,
+      "z": -35.715,
+      "r": 4.2
+    },
+    {
+      "x": 25.008,
+      "z": 35.715,
+      "r": 4.2
+    }
+  ],
+  "area": 174.75,
+  "spawn": [
+    20.25,
+    0,
+    -14.25
+  ],
+  "yaw": -2.013657688972317,
+  "fields": "res://assets/boss_nav/cargo.bin",
+  "probes": [
+    {
+      "i": 0,
+      "x": -51.75,
+      "z": -54.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 0.4571067690849304,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 15253,
+      "x": -17.25,
+      "z": -18.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 2.25,
+      "drop": 7,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 22880,
+      "x": -51.75,
+      "z": 0.25,
+      "kind": 2,
+      "floor": 0,
+      "wall": 7,
+      "drop": 0,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 45759,
+      "x": 51.75,
+      "z": 54.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 0.4571067690849304,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 13441,
+      "x": 12.75,
+      "z": -22.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 2.9515621662139893,
+      "drop": 2.25,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 14698,
+      "x": 17.25,
+      "z": -19.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.6551249027252197,
+      "drop": 4.25,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 2.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 15955,
+      "x": 21.75,
+      "z": -16.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 6.75,
+      "drop": 2.442582368850708,
+      "plan": true,
+      "pose": false,
+      "turn": true,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 16993,
+      "x": 20.75,
+      "z": -14.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 5.75,
+      "drop": 4.674428939819336,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 1.25,
+        "wall": false
+      }
+    },
+    {
+      "i": 17616,
+      "x": 20.25,
+      "z": -12.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 4.277692794799805,
+      "drop": 5.853277683258057,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 1.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 18232,
+      "x": 16.25,
+      "z": -11.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.873105525970459,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 18876,
+      "x": 26.25,
+      "z": -9.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 5.158327102661133,
+      "drop": 2.665475845336914,
+      "plan": true,
+      "pose": false,
+      "turn": true,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 20103,
+      "x": 15.75,
+      "z": -6.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.7811288833618164,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 20692,
+      "x": -1.75,
+      "z": -5.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.75,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 21122,
+      "x": 5.25,
+      "z": -4.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.285533905029297,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 4.5,
+        "wall": true
+      }
+    },
+    {
+      "i": 21575,
+      "x": 23.75,
+      "z": -3.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.7811288833618164,
+      "drop": 3.873105525970459,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 22170,
+      "x": 9.25,
+      "z": -1.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 2.9515621662139893,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    }
+  ],
+  "paths": [
+    {
+      "start": [
+        18.75,
+        -19.25
+      ],
+      "end": [
+        25.25,
+        -2.25
+      ],
+      "path": [
+        [
+          18.75,
+          -19.25
+        ],
+        [
+          25.25,
+          -6.25
+        ],
+        [
+          25.25,
+          -2.25
+        ]
+      ]
+    },
+    {
+      "start": [
+        15.25,
+        -12.25
+      ],
+      "end": [
+        13.75,
+        -5.75
+      ],
+      "path": [
+        [
+          15.25,
+          -12.25
+        ],
+        [
+          15.25,
+          -7.25
+        ],
+        [
+          13.75,
+          -5.75
+        ]
+      ]
+    },
+    {
+      "start": [
+        13.75,
+        -5.75
+      ],
+      "end": [
+        15.25,
+        -12.25
+      ],
+      "path": [
+        [
+          13.75,
+          -5.75
+        ],
+        [
+          15.75,
+          -9.75
+        ],
+        [
+          15.25,
+          -12.25
+        ]
+      ]
+    }
+  ]
+}

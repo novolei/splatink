@@ -1,0 +1,13 @@
+{
+  "revision": "splatlower1",
+  "archive": "source-splatlower1.tar.gz",
+  "sha256": "810f3e05de95360ee2797a4d9a4e53e600f7fbc602f57994f1891e2a5395c53a",
+  "size": 4284731,
+  "editor_cleanup_revision": 1,
+  "base": "0208dd54902cca8a3bb016ed6591bfc933e2243a",
+  "godot_cpp": "7e18e40d7591429f915035a7de7cf79457d555cc",
+  "frozen_tree": "aa4c3be232d94b7201d30395dfcc51d69a2c71d1",
+  "description": "Complete source and generated source/header snapshot plus frozen patch and Splatink normalized-query API; no compiled libraries, object files, Git or caches. Documentation GIF omitted.",
+  "license": "MIT",
+  "release_excluded": true
+}

@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/novolei/godot-splatoon-paint",
+  "revision": "cc3805d12280d9eb5235890b192714c7383dffdb",
+  "reference_files": ["scripts/draw_viewport.gd", "scripts/brush.gd", "scripts/uv_position.gd", "scripts/score_calculator.gd"],
+  "adaptation": "GPU atlas brush drawing with an independent coarse gameplay grid. INKWAVE's face atlas provides direct hit-to-UV coordinates, avoiding per-shot triangle scans; scoring stays on its original 0.25m cell grid, avoiding GPU readback for every shot.",
+  "upstream_credits": ["tossudev/godot-splatoon-paint", "Crigz Vs Game Dev", "Alfred Baudisch"],
+  "reference_only": true
+}

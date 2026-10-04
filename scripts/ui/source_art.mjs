@@ -1,0 +1,45 @@
+import {AWARD_ICONS,AWARDS,BOSS_AWARDS,tagArt,inkBand,dripsSVG,rankEmblem,skinSwatch,irisSwatch} from '../../../src/ui/menu-art.js';
+import {SPLAT_ICON,DEATH_ICON,mouseGlyph,padGlyph,SQUID,WEAPON_ICONS,SUB_ICONS,SPECIAL_ICONS,logoMarkup,mapThumb} from '../../../src/ui/ui-icons.js';
+import {SKIN_TONES,IRIS} from '../../../src/game/character-style.js';
+import {splatSVG} from '../../../src/ui/ui-util.js';
+import {MOVE_ICONS,bossEmblem} from '../../../src/ui/boss-art.js';
+import {writeFileSync} from 'node:fs';
+const folder=new URL('../../assets/ui/source/',import.meta.url);
+const clean=(svg)=>svg.replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" ').replaceAll('currentColor','#ffffff').replaceAll('var(--tc-light)','#ffc48a').replaceAll('var(--tc)','#ff8a14').replaceAll('var(--a)','#ff8a14').replaceAll('var(--k)','#15121c').replaceAll('class="iw-tf0"','fill="#ff8a14"').replaceAll('class="iw-tf1"','fill="#b8620f"').replaceAll('class="iw-tf2"','fill="#ffc48a"').replaceAll('class="iw-tf3"','fill="#6a3a12"').replaceAll('class="iw-ico-cut"','fill="#fff4c4" stroke="#fff4c4"');
+// Browser SVG overflow is visible; expand only its viewport so Godot retains the original satellite drops.
+writeFileSync(new URL('logo_splat_full.svg',folder),clean(logoMarkup().match(/<svg[\s\S]*?<\/svg>/)[0]).replace('viewBox="0 0 600 240"','viewBox="-80 -130 760 500"').replaceAll('class="iw-fa"','fill="#ff8a14"').replaceAll('class="iw-fb"','fill="#2f5bff"'));
+for(const [index,id] of ['tidewater','kelpline','halyard','cargo'].entries())writeFileSync(new URL(`layout_${id}.svg`,folder),clean(mapThumb({id,theme:id==='halyard'?'golden':'day'},index+2)).replaceAll('class="iw-fa"','fill="#ff8a14"').replaceAll('class="iw-fb"','fill="#2f5bff"'));
+for(let index=0;index<2;index++)writeFileSync(new URL(`mode_splat_${index}.svg`,folder),clean(splatSVG({seed:51+index*9,fill:'#ffffff',r:58,arms:9,drops:5})));
+for(let index=0;index<2;index++)writeFileSync(new URL(`news_splat_${index}.svg`,folder),clean(splatSVG({seed:17+index*11,fill:'#ffffff',r:58,arms:9,drops:5})));
+writeFileSync(new URL('splat_blue.svg',folder),clean(splatSVG({seed:'BOSS BATTLE'.length*7+3,fill:'#2f5bff',r:60,arms:7,drops:3})));
+writeFileSync(new URL('news_beta_tape.svg',folder),'<svg xmlns="http://www.w3.org/2000/svg" width="314" height="35" viewBox="0 0 314 35"><defs><clipPath id="clip"><rect width="314" height="35"/></clipPath></defs><rect width="314" height="35" fill="#ffd23f"/><g clip-path="url(#clip)">'+Array.from({length:18},(_,i)=>`<path d="M${i*23.04-35} 35L${i*23.04} 0H${i*23.04+11.52}L${i*23.04-23.48} 35Z" fill="#15121c"/>`).join('')+'</g></svg>');
+for(const [id,svg] of Object.entries(AWARD_ICONS))writeFileSync(new URL(`award_${id}.svg`,folder),clean(svg));
+for(let seed=0;seed<7;seed++)writeFileSync(new URL(`tag_${seed}.svg`,folder),clean(tagArt(seed)));
+writeFileSync(new URL('lobby_band.svg',folder),clean(inkBand(9)).replace('<path ','<path fill="#15121c" stroke="#ff8a14" stroke-width="3.5" '));
+writeFileSync(new URL('create_drips.svg',folder),clean(dripsSVG([[46,1.1],[120,1.7],[168,.8],[300,1.3],[352,.9]],'iw-fa')).replaceAll('class="iw-fa"','fill="#d9ff00"'));
+writeFileSync(new URL('splat_icon.svg',folder),clean(SPLAT_ICON));
+writeFileSync(new URL('death_icon.svg',folder),clean(DEATH_ICON));
+for(const name of ['M','L','R','W'])writeFileSync(new URL(`mouse_${name}.svg`,folder),clean(mouseGlyph(name).match(/<svg[\s\S]*?<\/svg>/)[0]).replaceAll('var(--a, #ff8a14)','#ff8a14'));
+for(const name of ['View','Start','DPad'])writeFileSync(new URL(`pad_${name}.svg`,folder),clean(padGlyph(name).match(/<svg[\s\S]*?<\/svg>/)[0]));
+for(const [name,params] of Object.entries({banner_go:{seed:21,r:60,arms:11,drops:9},banner_timesup_a:{seed:13,r:60,arms:10,drops:7},banner_timesup_b:{seed:8,r:60,arms:9,drops:6}}))writeFileSync(new URL(`${name}.svg`,folder),clean(splatSVG(params)).replaceAll('class="iw-fa"','fill="#ffffff"'));
+writeFileSync(new URL('squid_white.svg',folder),clean(SQUID));
+for(const [index,color] of ['#9fe8ff','#7dffb0','#ffd54a','#ff8ad0','#ffb14a'].entries())writeFileSync(new URL(`rank_${index}.svg`,folder),clean(rankEmblem(index)).replaceAll('var(--rk)',color));
+for(const [index,color] of SKIN_TONES.entries())writeFileSync(new URL(`skin_${index}.svg`,folder),clean(skinSwatch(color)));
+for(const [index,colors] of IRIS.entries())writeFileSync(new URL(`iris_${index}.svg`,folder),clean(irisSwatch(colors)));
+for(let index=0;index<32;index++)writeFileSync(new URL(`locker_blob_${index}.svg`,folder),clean(splatSVG({seed:90+index*7,cls:'iw-fa',r:58,arms:8,drops:0})).replaceAll('class="iw-fa"','fill="#ff8a14"'));
+writeFileSync(new URL('profile_blob.svg',folder),clean(splatSVG({seed:17,cls:'iw-fa',r:62,arms:8,drops:0})).replaceAll('class="iw-fa"','fill="#ff8a14"'));
+for(const [id,svg] of Object.entries(WEAPON_ICONS)){
+ writeFileSync(new URL(`weaponw_${id}.svg`,folder),clean(svg));
+ writeFileSync(new URL(`weapon_${id}.svg`,folder),clean(svg.replaceAll('currentColor','#ff8a14')));
+}
+for(const [id,svg] of Object.entries(SUB_ICONS))writeFileSync(new URL(`subw_${id}.svg`,folder),clean(svg.replaceAll('currentColor','#d0cadf')));
+for(const [id,svg] of Object.entries(SPECIAL_ICONS))writeFileSync(new URL(`specialw_${id}.svg`,folder),clean(svg.replaceAll('currentColor','#d0cadf')));
+for(let index=0;index<7;index++)writeFileSync(new URL(`weapon_blob_${index}.svg`,folder),clean(splatSVG({seed:40+index*3,cls:'iw-fa',r:58,arms:8,drops:0})).replaceAll('class="iw-fa"','fill="#ff8a14"'));
+writeFileSync(new URL('pause_blob.svg',folder),clean(splatSVG({seed:3,cls:'iw-fa',r:60,arms:8,drops:4})).replaceAll('class="iw-fa"','fill="#ff8a14"'));
+writeFileSync(new URL('lobby_vs.svg',folder),clean(splatSVG({seed:5,fill:'#15121c',r:52,arms:8,drops:2})).replaceAll('<path ','<path stroke="#ffffff" stroke-width="6" ').replaceAll('<circle ','<circle stroke="#ffffff" stroke-width="6" '));
+writeFileSync(new URL('lobby_mode_blob.svg',folder),clean(splatSVG({seed:12,cls:'iw-fa',r:56,arms:8,drops:3})).replaceAll('class="iw-fa"','fill="#ffffff" stroke="#15121c" stroke-width="7"'));
+writeFileSync(new URL('source_pointer.svg',folder),'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20"><path d="M1 1H31L16 19Z" fill="#ffffff" stroke="#15121c" stroke-width="3" stroke-linejoin="round"/></svg>');
+for(const [name,svg] of Object.entries(MOVE_ICONS))writeFileSync(new URL(`boss_move_${name}.svg`,folder),clean(svg));
+writeFileSync(new URL('boss_emblem_cracked.svg',folder),clean(bossEmblem({cracked:true})).replaceAll('var(--boss, var(--enemy, #2f5bff))','#2f5bff').replaceAll('var(--weak, var(--self, #ff8a14))','#ff8a14'));
+for(const [name,params] of Object.entries({boss_bar_splat:{seed:44,r:60,arms:9,drops:3},boss_title_a:{seed:71,r:58,arms:10,drops:6},boss_title_b:{seed:23,r:56,arms:9,drops:5},boss_phase2:{seed:44,r:58,arms:10,drops:6},boss_phase3:{seed:51,r:58,arms:10,drops:6},boss_end_win_a:{seed:5,r:60,arms:11,drops:8},boss_end_win_b:{seed:12,r:60,arms:10,drops:6},boss_end_lose_a:{seed:19,r:60,arms:11,drops:8},boss_end_lose_b:{seed:8,r:60,arms:10,drops:6}}))writeFileSync(new URL(`${name}.svg`,folder),clean(splatSVG(params)).replaceAll('class="iw-fa"','fill="#ffffff"'));
+writeFileSync(new URL('../../../resources/themes/awards.json',folder),JSON.stringify({turf:AWARDS,boss:BOSS_AWARDS},null,2));

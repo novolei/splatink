@@ -1,0 +1,427 @@
+{
+  "size": 512,
+  "layers": 28,
+  "levels": 9,
+  "records": [
+    {
+      "kind": "albedo",
+      "layer": 0,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 1,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 2,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 3,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 4,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 5,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 6,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 7,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 8,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 9,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 10,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 11,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 12,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 13,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 14,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 15,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 16,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 17,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 18,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 19,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 20,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 21,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 22,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 23,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 24,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 25,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 26,
+      "bytes": 349524
+    },
+    {
+      "kind": "albedo",
+      "layer": 27,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 0,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 1,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 2,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 3,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 4,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 5,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 6,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 7,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 8,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 9,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 10,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 11,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 12,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 13,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 14,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 15,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 16,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 17,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 18,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 19,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 20,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 21,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 22,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 23,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 24,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 25,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 26,
+      "bytes": 349524
+    },
+    {
+      "kind": "normal",
+      "layer": 27,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 0,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 1,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 2,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 3,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 4,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 5,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 6,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 7,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 8,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 9,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 10,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 11,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 12,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 13,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 14,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 15,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 16,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 17,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 18,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 19,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 20,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 21,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 22,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 23,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 24,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 25,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 26,
+      "bytes": 349524
+    },
+    {
+      "kind": "orm",
+      "layer": 27,
+      "bytes": 349524
+    }
+  ]
+}

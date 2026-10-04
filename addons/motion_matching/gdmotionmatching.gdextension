@@ -1,0 +1,10 @@
+[configuration]
+entry_symbol = "example_library_init"
+compatibility_minimum = "4.7"
+reloadable = false
+
+[libraries]
+windows.debug.x86_64 = "res://addons/motion_matching/bin/windows/libgdmotionmatching.windows.template_debug.x86_64.splatlower1.dll"
+windows.release.x86_64 = "res://addons/motion_matching/bin/windows/libgdmotionmatching.windows.template_release.x86_64.splatlower1.dll"
+macos.debug = "res://addons/motion_matching/bin/macos/libgdmotionmatching.macos.template_debug.splatlower1.dylib"
+macos.release = "res://addons/motion_matching/bin/macos/libgdmotionmatching.macos.template_release.splatlower1.dylib"

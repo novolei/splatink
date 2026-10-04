@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iw-ico " viewBox="0 0 64 64" aria-hidden="true"><g stroke="#15121c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M17 41 L13.5 55 Q13 58.5 16.5 58.5 L22.5 58.5 L27 43 Z" fill="#2b2735"/>
+      <path d="M15 18 Q24.5 5.5 34 18" fill="none" stroke-width="4.2"/>
+      <path d="M35 21.5 L53.5 19.5 Q60 19.5 60 26 L60 36 Q60 42.5 53.5 42.5 L35 40.5 Z" fill="#e4e8ef"/>
+      <ellipse cx="58" cy="31" rx="3.6" ry="10.5" fill="#2b2735"/>
+      <circle cx="24.5" cy="30.5" r="15.5" fill="#ff8a14"/>
+      <rect x="36.5" y="20.5" width="5.5" height="21" rx="2.2" fill="#ff8a14"/>
+    </g>
+    <ellipse cx="19.5" cy="24.5" rx="5.2" ry="3.6" fill="#fff" fill-opacity=".6"/></svg>

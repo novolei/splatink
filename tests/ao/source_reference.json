@@ -1,0 +1,698 @@
+{
+  "version": 1,
+  "source": "Actual vendored GTAOPass.js + MeshNormalMaterial WebGL geometry/depth GPU passes",
+  "flip_y": false,
+  "depth_convention": "WebGL nonreversed clip Z -1..1; original 24_8 depth sampled to float32",
+  "quality": "High/Ultra",
+  "absolute_tolerance": 0.001,
+  "relative_tolerance": 0.001,
+  "quirks": [
+    "PD SAMPLE_VECTORS retains initial radiusExponent1 despite pass property2",
+    "Original asymmetric PD mat2 is preserved",
+    "Source HALF intermediate quantization",
+    "Original per-pass actual noise bytes; AO5x5,PD64x64",
+    "Alpha retained by source multiply blend"
+  ],
+  "cases": [
+    {
+      "name": "64x48_geometry",
+      "size": [
+        64,
+        48
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5090 (0x00002B85) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "stages": {
+        "input": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_geometry_input.rgba16f.bin",
+          "sha256": "bb843cf510ce91cd6b8534703adcd7a288facb15f1067230a21c6ed6c113e9a8"
+        },
+        "normal": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_geometry_normal.rgba16f.bin",
+          "sha256": "abe2f8a96f22e15d8f305cfd5ff8b3a8cad759cfcd88c09b1afe9c01e94c2b38"
+        },
+        "ao": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_geometry_ao.rgba16f.bin",
+          "sha256": "1c18f61678a95bef857370de875af2946b5edf5b0d72d980c1ce11605941e719"
+        },
+        "pd": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_geometry_pd.rgba16f.bin",
+          "sha256": "c91ed3c58dce43f29b547e9f826b0d0e95b3c37005e6bd6dab3721d76779cee3"
+        },
+        "output": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_geometry_output.rgba16f.bin",
+          "sha256": "8986039bc7ccb919c620f6cb270d1b8cfab9985060f2c29140d209f9f3ba55b9"
+        },
+        "depth": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba32f",
+          "path": "res://tests/ao/reference/64x48_geometry_depth.rgba32f.bin",
+          "sha256": "a6a0c6909088b16ed4412a6186a74f738782cec8956db606298c9dcbaddbb0be"
+        }
+      },
+      "noises": {
+        "ao": {
+          "size": [
+            5,
+            5
+          ],
+          "format": "rgba8",
+          "path": "res://tests/ao/reference/64x48_geometry_ao.rgba8.bin",
+          "sha256": "0cca9ba7c3de8a8eb4edbd722198218526f77648b4d66b236cd665bc11655f77"
+        },
+        "pd": {
+          "size": [
+            64,
+            64
+          ],
+          "format": "rgba8",
+          "path": "res://tests/ao/reference/64x48_geometry_pd.rgba8.bin",
+          "sha256": "7ff9e575b762e5dd203e0c816ae97360aa7857e9d6d0163681076fd0bfe6f3ab"
+        }
+      },
+      "projection": [
+        1.2238887653465924,
+        0,
+        0,
+        0,
+        0,
+        1.6318516871287896,
+        0,
+        0,
+        0,
+        0,
+        -1.0006668889629877,
+        -1,
+        0,
+        0,
+        -0.10003334444814939,
+        0
+      ],
+      "projection_inverse": [
+        0.8170677175199093,
+        0,
+        0,
+        0,
+        0,
+        0.612800788139932,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -9.996666666666666,
+        0,
+        0,
+        -0.9999999999999999,
+        10.003333333333334
+      ],
+      "world": [
+        0.8625731672574404,
+        1.3877787807814457e-17,
+        -0.5059323384875372,
+        0,
+        -0.18239328497037016,
+        0.9327556404750128,
+        -0.3109656006052213,
+        0,
+        0.4719112424229637,
+        0.36050924421164116,
+        0.8045699870817742,
+        0,
+        3.15,
+        2.75,
+        4.75,
+        1
+      ],
+      "params": {
+        "cameraNear": 0.05,
+        "cameraFar": 150,
+        "radius": 1.1,
+        "distanceExponent": 1.6,
+        "thickness": 1,
+        "distanceFallOff": 1,
+        "scale": 1.5,
+        "blendIntensity": 0.8,
+        "lumaPhi": 10,
+        "depthPhi": 2,
+        "normalPhi": 3,
+        "pdRadius": 6,
+        "index": 0
+      },
+      "gtao_defines": {
+        "PERSPECTIVE_CAMERA": 1,
+        "SAMPLES": 12,
+        "NORMAL_VECTOR_TYPE": 1,
+        "DEPTH_SWIZZLING": "x",
+        "SCREEN_SPACE_RADIUS": 0,
+        "SCREEN_SPACE_RADIUS_SCALE": 100,
+        "SCENE_CLIP_BOX": 0
+      },
+      "pd_defines": {
+        "SAMPLES": 16,
+        "SAMPLE_VECTORS": "vec3[SAMPLES](vec3(1, 0, 0),vec3(0.7071067811865476, 0.7071067811865475, 0.06666666666666667),vec3(6.123233995736766e-17, 1, 0.13333333333333333),vec3(-0.7071067811865475, 0.7071067811865476, 0.2),vec3(-1, 1.2246467991473532e-16, 0.26666666666666666),vec3(-0.7071067811865477, -0.7071067811865475, 0.3333333333333333),vec3(-1.8369701987210297e-16, -1, 0.4),vec3(0.7071067811865474, -0.7071067811865477, 0.4666666666666667),vec3(1, -2.4492935982947064e-16, 0.5333333333333333),vec3(0.7071067811865477, 0.7071067811865474, 0.6),vec3(3.061616997868383e-16, 1, 0.6666666666666666),vec3(-0.7071067811865467, 0.7071067811865483, 0.7333333333333333),vec3(-1, 3.6739403974420594e-16, 0.8),vec3(-0.7071067811865471, -0.7071067811865479, 0.8666666666666667),vec3(-4.286263797015736e-16, -1, 0.9333333333333333),vec3(0.7071067811865466, -0.7071067811865485, 1))",
+        "NORMAL_VECTOR_TYPE": 1,
+        "DEPTH_VALUE_SOURCE": 0,
+        "DEPTH_SWIZZLING": "x"
+      },
+      "character_bones": 0
+    },
+    {
+      "name": "64x48_source_character",
+      "size": [
+        64,
+        48
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5090 (0x00002B85) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "stages": {
+        "input": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_source_character_input.rgba16f.bin",
+          "sha256": "bb843cf510ce91cd6b8534703adcd7a288facb15f1067230a21c6ed6c113e9a8"
+        },
+        "normal": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_source_character_normal.rgba16f.bin",
+          "sha256": "b8ea186d457c1f8bf2f3797f16e4db6bd8acdb2d70c22cd1656a50efa55ae36d"
+        },
+        "ao": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_source_character_ao.rgba16f.bin",
+          "sha256": "33f0fd2553105fd0092ee26e81bde28be6c5de901dc8d2f4212004859302fe6a"
+        },
+        "pd": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_source_character_pd.rgba16f.bin",
+          "sha256": "40500037ce44a060a5e408d32ef8424022491f13f562ddaf60bc70600da0a319"
+        },
+        "output": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/64x48_source_character_output.rgba16f.bin",
+          "sha256": "66cffe03c25b82830e7441ba42abf9b6706cf092656ec983028387e41d6bf9ba"
+        },
+        "depth": {
+          "size": [
+            64,
+            48
+          ],
+          "format": "rgba32f",
+          "path": "res://tests/ao/reference/64x48_source_character_depth.rgba32f.bin",
+          "sha256": "83a5eecc3ed36f3356686d26cfd1927d2874f4843620bfc052d2023cad977b86"
+        }
+      },
+      "noises": {
+        "ao": {
+          "size": [
+            5,
+            5
+          ],
+          "format": "rgba8",
+          "path": "res://tests/ao/reference/64x48_source_character_ao.rgba8.bin",
+          "sha256": "0cca9ba7c3de8a8eb4edbd722198218526f77648b4d66b236cd665bc11655f77"
+        },
+        "pd": {
+          "size": [
+            64,
+            64
+          ],
+          "format": "rgba8",
+          "path": "res://tests/ao/reference/64x48_source_character_pd.rgba8.bin",
+          "sha256": "7ff9e575b762e5dd203e0c816ae97360aa7857e9d6d0163681076fd0bfe6f3ab"
+        }
+      },
+      "projection": [
+        1.2238887653465924,
+        0,
+        0,
+        0,
+        0,
+        1.6318516871287896,
+        0,
+        0,
+        0,
+        0,
+        -1.0006668889629877,
+        -1,
+        0,
+        0,
+        -0.10003334444814939,
+        0
+      ],
+      "projection_inverse": [
+        0.8170677175199093,
+        0,
+        0,
+        0,
+        0,
+        0.612800788139932,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -9.996666666666666,
+        0,
+        0,
+        -0.9999999999999999,
+        10.003333333333334
+      ],
+      "world": [
+        0.8625731672574404,
+        1.3877787807814457e-17,
+        -0.5059323384875372,
+        0,
+        -0.18239328497037016,
+        0.9327556404750128,
+        -0.3109656006052213,
+        0,
+        0.4719112424229637,
+        0.36050924421164116,
+        0.8045699870817742,
+        0,
+        3.15,
+        2.75,
+        4.75,
+        1
+      ],
+      "params": {
+        "cameraNear": 0.05,
+        "cameraFar": 150,
+        "radius": 1.1,
+        "distanceExponent": 1.6,
+        "thickness": 1,
+        "distanceFallOff": 1,
+        "scale": 1.5,
+        "blendIntensity": 0.8,
+        "lumaPhi": 10,
+        "depthPhi": 2,
+        "normalPhi": 3,
+        "pdRadius": 6,
+        "index": 0
+      },
+      "gtao_defines": {
+        "PERSPECTIVE_CAMERA": 1,
+        "SAMPLES": 12,
+        "NORMAL_VECTOR_TYPE": 1,
+        "DEPTH_SWIZZLING": "x",
+        "SCREEN_SPACE_RADIUS": 0,
+        "SCREEN_SPACE_RADIUS_SCALE": 100,
+        "SCENE_CLIP_BOX": 0
+      },
+      "pd_defines": {
+        "SAMPLES": 16,
+        "SAMPLE_VECTORS": "vec3[SAMPLES](vec3(1, 0, 0),vec3(0.7071067811865476, 0.7071067811865475, 0.06666666666666667),vec3(6.123233995736766e-17, 1, 0.13333333333333333),vec3(-0.7071067811865475, 0.7071067811865476, 0.2),vec3(-1, 1.2246467991473532e-16, 0.26666666666666666),vec3(-0.7071067811865477, -0.7071067811865475, 0.3333333333333333),vec3(-1.8369701987210297e-16, -1, 0.4),vec3(0.7071067811865474, -0.7071067811865477, 0.4666666666666667),vec3(1, -2.4492935982947064e-16, 0.5333333333333333),vec3(0.7071067811865477, 0.7071067811865474, 0.6),vec3(3.061616997868383e-16, 1, 0.6666666666666666),vec3(-0.7071067811865467, 0.7071067811865483, 0.7333333333333333),vec3(-1, 3.6739403974420594e-16, 0.8),vec3(-0.7071067811865471, -0.7071067811865479, 0.8666666666666667),vec3(-4.286263797015736e-16, -1, 0.9333333333333333),vec3(0.7071067811865466, -0.7071067811865485, 1))",
+        "NORMAL_VECTOR_TYPE": 1,
+        "DEPTH_VALUE_SOURCE": 0,
+        "DEPTH_SWIZZLING": "x"
+      },
+      "character_bones": 87
+    },
+    {
+      "name": "65x49_geometry",
+      "size": [
+        65,
+        49
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5090 (0x00002B85) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "stages": {
+        "input": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_geometry_input.rgba16f.bin",
+          "sha256": "78f57bf48a5c76660df8fb2885a6f8141a642a3ce6d5915864403486b7ba81d9"
+        },
+        "normal": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_geometry_normal.rgba16f.bin",
+          "sha256": "c47294eaa4a9018ac0d2fdc2cb1527993065b4280d5ddd1d2f5b28e53bec1dbf"
+        },
+        "ao": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_geometry_ao.rgba16f.bin",
+          "sha256": "daa4d5264827c165264092a888faf0ee5993542a927f821303aa4748697dd51a"
+        },
+        "pd": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_geometry_pd.rgba16f.bin",
+          "sha256": "7d2a8de278a98e737ee91a01efee8a4215023f3140cb2d3a8ae1bc125c3046f7"
+        },
+        "output": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_geometry_output.rgba16f.bin",
+          "sha256": "7c6bf1331f042aebec656e577f0ae18dd30ec41904febb2f8ee3f982fbee298c"
+        },
+        "depth": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba32f",
+          "path": "res://tests/ao/reference/65x49_geometry_depth.rgba32f.bin",
+          "sha256": "8ca44244285cc0e00cae9ff703fff07fb01f1528f3861b51c5502faa5a853980"
+        }
+      },
+      "noises": {
+        "ao": {
+          "size": [
+            5,
+            5
+          ],
+          "format": "rgba8",
+          "path": "res://tests/ao/reference/65x49_geometry_ao.rgba8.bin",
+          "sha256": "0cca9ba7c3de8a8eb4edbd722198218526f77648b4d66b236cd665bc11655f77"
+        },
+        "pd": {
+          "size": [
+            64,
+            64
+          ],
+          "format": "rgba8",
+          "path": "res://tests/ao/reference/65x49_geometry_pd.rgba8.bin",
+          "sha256": "7ff9e575b762e5dd203e0c816ae97360aa7857e9d6d0163681076fd0bfe6f3ab"
+        }
+      },
+      "projection": [
+        1.2301651179893955,
+        0,
+        0,
+        0,
+        0,
+        1.6318516871287896,
+        0,
+        0,
+        0,
+        0,
+        -1.0006668889629877,
+        -1,
+        0,
+        0,
+        -0.10003334444814939,
+        0
+      ],
+      "projection_inverse": [
+        0.8128990046754198,
+        0,
+        0,
+        0,
+        0,
+        0.612800788139932,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -9.996666666666666,
+        0,
+        0,
+        -0.9999999999999999,
+        10.003333333333334
+      ],
+      "world": [
+        0.8625731672574404,
+        1.3877787807814457e-17,
+        -0.5059323384875372,
+        0,
+        -0.18239328497037016,
+        0.9327556404750128,
+        -0.3109656006052213,
+        0,
+        0.4719112424229637,
+        0.36050924421164116,
+        0.8045699870817742,
+        0,
+        3.15,
+        2.75,
+        4.75,
+        1
+      ],
+      "params": {
+        "cameraNear": 0.05,
+        "cameraFar": 150,
+        "radius": 1.1,
+        "distanceExponent": 1.6,
+        "thickness": 1,
+        "distanceFallOff": 1,
+        "scale": 1.5,
+        "blendIntensity": 0.8,
+        "lumaPhi": 10,
+        "depthPhi": 2,
+        "normalPhi": 3,
+        "pdRadius": 6,
+        "index": 0
+      },
+      "gtao_defines": {
+        "PERSPECTIVE_CAMERA": 1,
+        "SAMPLES": 12,
+        "NORMAL_VECTOR_TYPE": 1,
+        "DEPTH_SWIZZLING": "x",
+        "SCREEN_SPACE_RADIUS": 0,
+        "SCREEN_SPACE_RADIUS_SCALE": 100,
+        "SCENE_CLIP_BOX": 0
+      },
+      "pd_defines": {
+        "SAMPLES": 16,
+        "SAMPLE_VECTORS": "vec3[SAMPLES](vec3(1, 0, 0),vec3(0.7071067811865476, 0.7071067811865475, 0.06666666666666667),vec3(6.123233995736766e-17, 1, 0.13333333333333333),vec3(-0.7071067811865475, 0.7071067811865476, 0.2),vec3(-1, 1.2246467991473532e-16, 0.26666666666666666),vec3(-0.7071067811865477, -0.7071067811865475, 0.3333333333333333),vec3(-1.8369701987210297e-16, -1, 0.4),vec3(0.7071067811865474, -0.7071067811865477, 0.4666666666666667),vec3(1, -2.4492935982947064e-16, 0.5333333333333333),vec3(0.7071067811865477, 0.7071067811865474, 0.6),vec3(3.061616997868383e-16, 1, 0.6666666666666666),vec3(-0.7071067811865467, 0.7071067811865483, 0.7333333333333333),vec3(-1, 3.6739403974420594e-16, 0.8),vec3(-0.7071067811865471, -0.7071067811865479, 0.8666666666666667),vec3(-4.286263797015736e-16, -1, 0.9333333333333333),vec3(0.7071067811865466, -0.7071067811865485, 1))",
+        "NORMAL_VECTOR_TYPE": 1,
+        "DEPTH_VALUE_SOURCE": 0,
+        "DEPTH_SWIZZLING": "x"
+      },
+      "character_bones": 0
+    },
+    {
+      "name": "65x49_source_character",
+      "size": [
+        65,
+        49
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5090 (0x00002B85) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "stages": {
+        "input": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_source_character_input.rgba16f.bin",
+          "sha256": "78f57bf48a5c76660df8fb2885a6f8141a642a3ce6d5915864403486b7ba81d9"
+        },
+        "normal": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_source_character_normal.rgba16f.bin",
+          "sha256": "0f840a37dfc281fb7bd4c0b2e49e69243b89e0686ccbc4ca82db898951af84ff"
+        },
+        "ao": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_source_character_ao.rgba16f.bin",
+          "sha256": "57bc2d2193f7f4275a6f36011d7ea93f8f0bd9b82f9152b275ec095266b67b95"
+        },
+        "pd": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_source_character_pd.rgba16f.bin",
+          "sha256": "00524cfe85bfb4ca0fa2f1357c5b1d105c48221d2c992be180cefe60fb3fb888"
+        },
+        "output": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba16f",
+          "path": "res://tests/ao/reference/65x49_source_character_output.rgba16f.bin",
+          "sha256": "14543dfa59a2dc90f65a981d4fb3a7f50f00db813e99d232bfebb61276b71986"
+        },
+        "depth": {
+          "size": [
+            65,
+            49
+          ],
+          "format": "rgba32f",
+          "path": "res://tests/ao/reference/65x49_source_character_depth.rgba32f.bin",
+          "sha256": "18ef83242a66037332c64987ed0cd2eb3fb0563f3d777dbd6ce183c3d4d0a561"
+        }
+      },
+      "noises": {
+        "ao": {
+          "size": [
+            5,
+            5
+          ],
+          "format": "rgba8",
+          "path": "res://tests/ao/reference/65x49_source_character_ao.rgba8.bin",
+          "sha256": "0cca9ba7c3de8a8eb4edbd722198218526f77648b4d66b236cd665bc11655f77"
+        },
+        "pd": {
+          "size": [
+            64,
+            64
+          ],
+          "format": "rgba8",
+          "path": "res://tests/ao/reference/65x49_source_character_pd.rgba8.bin",
+          "sha256": "7ff9e575b762e5dd203e0c816ae97360aa7857e9d6d0163681076fd0bfe6f3ab"
+        }
+      },
+      "projection": [
+        1.2301651179893955,
+        0,
+        0,
+        0,
+        0,
+        1.6318516871287896,
+        0,
+        0,
+        0,
+        0,
+        -1.0006668889629877,
+        -1,
+        0,
+        0,
+        -0.10003334444814939,
+        0
+      ],
+      "projection_inverse": [
+        0.8128990046754198,
+        0,
+        0,
+        0,
+        0,
+        0.612800788139932,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -9.996666666666666,
+        0,
+        0,
+        -0.9999999999999999,
+        10.003333333333334
+      ],
+      "world": [
+        0.8625731672574404,
+        1.3877787807814457e-17,
+        -0.5059323384875372,
+        0,
+        -0.18239328497037016,
+        0.9327556404750128,
+        -0.3109656006052213,
+        0,
+        0.4719112424229637,
+        0.36050924421164116,
+        0.8045699870817742,
+        0,
+        3.15,
+        2.75,
+        4.75,
+        1
+      ],
+      "params": {
+        "cameraNear": 0.05,
+        "cameraFar": 150,
+        "radius": 1.1,
+        "distanceExponent": 1.6,
+        "thickness": 1,
+        "distanceFallOff": 1,
+        "scale": 1.5,
+        "blendIntensity": 0.8,
+        "lumaPhi": 10,
+        "depthPhi": 2,
+        "normalPhi": 3,
+        "pdRadius": 6,
+        "index": 0
+      },
+      "gtao_defines": {
+        "PERSPECTIVE_CAMERA": 1,
+        "SAMPLES": 12,
+        "NORMAL_VECTOR_TYPE": 1,
+        "DEPTH_SWIZZLING": "x",
+        "SCREEN_SPACE_RADIUS": 0,
+        "SCREEN_SPACE_RADIUS_SCALE": 100,
+        "SCENE_CLIP_BOX": 0
+      },
+      "pd_defines": {
+        "SAMPLES": 16,
+        "SAMPLE_VECTORS": "vec3[SAMPLES](vec3(1, 0, 0),vec3(0.7071067811865476, 0.7071067811865475, 0.06666666666666667),vec3(6.123233995736766e-17, 1, 0.13333333333333333),vec3(-0.7071067811865475, 0.7071067811865476, 0.2),vec3(-1, 1.2246467991473532e-16, 0.26666666666666666),vec3(-0.7071067811865477, -0.7071067811865475, 0.3333333333333333),vec3(-1.8369701987210297e-16, -1, 0.4),vec3(0.7071067811865474, -0.7071067811865477, 0.4666666666666667),vec3(1, -2.4492935982947064e-16, 0.5333333333333333),vec3(0.7071067811865477, 0.7071067811865474, 0.6),vec3(3.061616997868383e-16, 1, 0.6666666666666666),vec3(-0.7071067811865467, 0.7071067811865483, 0.7333333333333333),vec3(-1, 3.6739403974420594e-16, 0.8),vec3(-0.7071067811865471, -0.7071067811865479, 0.8666666666666667),vec3(-4.286263797015736e-16, -1, 0.9333333333333333),vec3(0.7071067811865466, -0.7071067811865485, 1))",
+        "NORMAL_VECTOR_TYPE": 1,
+        "DEPTH_VALUE_SOURCE": 0,
+        "DEPTH_SWIZZLING": "x"
+      },
+      "character_bones": 87
+    }
+  ]
+}

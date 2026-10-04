@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dm53whtx748qx"
+path="res://.godot/imported/capture_normal.glsl-7a7a11a045a9bb71c5e8c28ee0715dd1.res"
+
+[deps]
+
+source_file="res://tests/ao/capture_normal.glsl"
+dest_files=["res://.godot/imported/capture_normal.glsl-7a7a11a045a9bb71c5e8c28ee0715dd1.res"]
+
+[params]
+

@@ -1,0 +1,45 @@
+{
+  "source": "INKWAVE original Minimap._build/_drawBase",
+  "stages": [
+    {
+      "stage": "tidewater",
+      "width": 350,
+      "height": 616,
+      "grid": 142100,
+      "turf": [
+        207094,
+        207094
+      ]
+    },
+    {
+      "stage": "kelpline",
+      "width": 336,
+      "height": 672,
+      "grid": 158627,
+      "turf": [
+        217188,
+        217188
+      ]
+    },
+    {
+      "stage": "halyard",
+      "width": 336,
+      "height": 644,
+      "grid": 125338,
+      "turf": [
+        152635,
+        152635
+      ]
+    },
+    {
+      "stage": "cargo",
+      "width": 728,
+      "height": 770,
+      "grid": 171782,
+      "turf": [
+        222073,
+        222073
+      ]
+    }
+  ]
+}

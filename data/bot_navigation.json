@@ -1,0 +1,2279 @@
+{
+  "source": "src/game/bots.js _edgeGuard/_nearWater/_tail/_bossTick",
+  "edges": [
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 0,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 0,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.7173560908995228,
+        0,
+        0.6967067093471654
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 0,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 0,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 5.5,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 5.5,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.7173560908995228,
+        0,
+        0.6967067093471654
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 5.5,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 5.5,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 9.7,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 9.7,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.7173560908995228,
+        0,
+        0.6967067093471654
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 9.7,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "speed": 9.7,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 0,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.9927129910375885,
+        0,
+        0.12050276936736662
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 0,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.9995736030415051,
+        0,
+        -0.02919952230128886
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 0,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 0,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 5.5,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.9927129910375885,
+        0,
+        0.12050276936736662
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 5.5,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.9995736030415051,
+        0,
+        -0.02919952230128886
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 5.5,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 5.5,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 9.7,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.9927129910375885,
+        0,
+        0.12050276936736662
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 9.7,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.9995736030415051,
+        0,
+        -0.02919952230128886
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 9.7,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "speed": 9.7,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 0,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.7173560908995228,
+        0,
+        0.6967067093471654
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 0,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.7173560908995228,
+        0,
+        0.6967067093471654
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 0,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.6967067093471654,
+        0,
+        -0.7173560908995228
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 0,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 5.5,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        -0.9927129910375885,
+        0,
+        0.12050276936736662
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 5.5,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 5.5,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.12050276936736667,
+        0,
+        -0.9927129910375885
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 5.5,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 9.7,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        -0.9927129910375885,
+        0,
+        0.12050276936736662
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 9.7,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 9.7,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.12050276936736667,
+        0,
+        -0.9927129910375885
+      ]
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "speed": 9.7,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 0,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 0,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 0,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.6967067093471654,
+        0,
+        -0.7173560908995228
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 0,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 5.5,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 5.5,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 5.5,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.6967067093471654,
+        0,
+        -0.7173560908995228
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 5.5,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 9.7,
+      "angle": 0,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 9.7,
+      "angle": 0.8,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 9.7,
+      "angle": 1.5707963267948966,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        0.6967067093471654,
+        0,
+        -0.7173560908995228
+      ]
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "speed": 9.7,
+      "angle": 3.141592653589793,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "move": [
+        1.2246467991473532e-16,
+        0,
+        -1
+      ]
+    }
+  ],
+  "water": [
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "radius": 0.6,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": false
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "radius": 1.2,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": false
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "radius": 3.2,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": false
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "radius": 0.6,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "radius": 1.2,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "radius": 3.2,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "radius": 0.6,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "radius": 1.2,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    },
+    {
+      "pos": [
+        3.5,
+        0,
+        3.5
+      ],
+      "radius": 3.2,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "radius": 0.6,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "radius": 1.2,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    },
+    {
+      "pos": [
+        0,
+        0,
+        4.3
+      ],
+      "radius": 3.2,
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "wet": true
+    }
+  ],
+  "tail": [
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0.69,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0.69,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "charger",
+      "charging": true,
+      "progress": 0.69,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0.7,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0.7,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "charger",
+      "charging": true,
+      "progress": 0.7,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0.7001,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 1,
+        "pi": 0,
+        "no_progress": 0.7001,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "charger",
+      "charging": true,
+      "progress": 0.7001,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 1.5,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 1,
+        "pi": 0,
+        "no_progress": 1.5,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "charger",
+      "charging": true,
+      "progress": 1.5,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 1.5001,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 1,
+        "pi": 1,
+        "no_progress": 1.5001,
+        "skipped": true,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": null,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "charger",
+      "charging": true,
+      "progress": 1.5001,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 2.4,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 1,
+        "pi": 1,
+        "no_progress": 2.4,
+        "skipped": true,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": null,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "charger",
+      "charging": true,
+      "progress": 2.4,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 2.4001,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 1,
+        "pi": 1,
+        "no_progress": 0,
+        "skipped": false,
+        "path": false,
+        "goal_timer": 0,
+        "repath": 0,
+        "need_jump": false,
+        "best_distance": null,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "charger",
+      "charging": true,
+      "progress": 2.4001,
+      "jump_cd": 0,
+      "need_jump": false,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0,
+      "jump_cd": 0,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 0.6,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0,
+      "jump_cd": 0.2,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0.2,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": true,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0.71,
+      "jump_cd": 0,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 1,
+        "pi": 0,
+        "no_progress": 0.71,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": true,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0.71,
+      "jump_cd": 0.2,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0.2,
+        "pi": 0,
+        "no_progress": 0.71,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": true,
+        "best_distance": 3,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 1.6,
+      "jump_cd": 0,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 1,
+        "pi": 1,
+        "no_progress": 1.6,
+        "skipped": true,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": true,
+        "best_distance": null,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 1.6,
+      "jump_cd": 0.2,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0.2,
+        "pi": 1,
+        "no_progress": 1.6,
+        "skipped": true,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": true,
+        "best_distance": null,
+        "move": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0,
+      "jump_cd": 0,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 0.6,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0.9927129910375885,
+          0,
+          0.12050276936736662
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0,
+      "jump_cd": 0.2,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0.2,
+        "pi": 0,
+        "no_progress": 0,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": true,
+        "best_distance": 3,
+        "move": [
+          0.9927129910375885,
+          0,
+          0.12050276936736662
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0.71,
+      "jump_cd": 0,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 0.6,
+        "pi": 0,
+        "no_progress": 0.71,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": 3,
+        "move": [
+          0.9927129910375885,
+          0,
+          0.12050276936736662
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 0.71,
+      "jump_cd": 0.2,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0.2,
+        "pi": 0,
+        "no_progress": 0.71,
+        "skipped": false,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": true,
+        "best_distance": 3,
+        "move": [
+          0.9927129910375885,
+          0,
+          0.12050276936736662
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 1.6,
+      "jump_cd": 0,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": true,
+        "jump_cd": 0.6,
+        "pi": 1,
+        "no_progress": 1.6,
+        "skipped": true,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": false,
+        "best_distance": null,
+        "move": [
+          0.9927129910375885,
+          0,
+          0.12050276936736662
+        ]
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        3.6
+      ],
+      "bounds": [
+        -4,
+        -4,
+        4,
+        4
+      ],
+      "weapon": "shooter",
+      "charging": false,
+      "progress": 1.6,
+      "jump_cd": 0.2,
+      "need_jump": true,
+      "want_move": true,
+      "result": {
+        "jump": false,
+        "jump_cd": 0.2,
+        "pi": 1,
+        "no_progress": 1.6,
+        "skipped": true,
+        "path": true,
+        "goal_timer": 4,
+        "repath": 1,
+        "need_jump": true,
+        "best_distance": null,
+        "move": [
+          0.9927129910375885,
+          0,
+          0.12050276936736662
+        ]
+      }
+    }
+  ],
+  "aim": [
+    {
+      "time": 0,
+      "acquired": 0,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.6713886960371944,
+        0.06773452750314703
+      ]
+    },
+    {
+      "time": 0,
+      "acquired": 0.2,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.6252489568745039,
+        0.07696247533568516
+      ]
+    },
+    {
+      "time": 0,
+      "acquired": 2,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.5793175360400782,
+        0.0861487595025703
+      ]
+    },
+    {
+      "time": 0.4,
+      "acquired": 0,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.6837260000582601,
+        0.05064115700148961
+      ]
+    },
+    {
+      "time": 0.4,
+      "acquired": 0.2,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.6375862608955696,
+        0.059869104834027756
+      ]
+    },
+    {
+      "time": 0.4,
+      "acquired": 2,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.5916548400611439,
+        0.06905538900091288
+      ]
+    },
+    {
+      "time": 1.2,
+      "acquired": 0,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.6456480911609959,
+        0.08256964993692663
+      ]
+    },
+    {
+      "time": 1.2,
+      "acquired": 0.2,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.599508351998305,
+        0.09179759776946476
+      ]
+    },
+    {
+      "time": 1.2,
+      "acquired": 2,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.5535769311638794,
+        0.1009838819363499
+      ]
+    },
+    {
+      "time": 3.5,
+      "acquired": 0,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.681473044749339,
+        0.06078997170635615
+      ]
+    },
+    {
+      "time": 3.5,
+      "acquired": 0.2,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.6353333055866481,
+        0.0700179195388943
+      ]
+    },
+    {
+      "time": 3.5,
+      "acquired": 2,
+      "ph1": 1.7,
+      "ph2": -2.3,
+      "sign_y": 0.8,
+      "sign_p": -0.4,
+      "ideal": [
+        1.5707963267948966,
+        0.08975817418995052
+      ],
+      "wanted": [
+        1.5894018847522224,
+        0.07920420370577942
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c11uh8w57k1u8"]
+
+[ext_resource type="Script" uid="uid://cab7e2qtptn1c" path="res://scripts/ink_game.gd" id="1_main"]
+
+[node name="Splatink" type="Node3D" unique_id=2113146057]
+script = ExtResource("1_main")

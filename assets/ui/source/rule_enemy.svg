@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" aria-hidden="true">
+    <path fill="#2f5bff" d="M106.1 60.6C104.2 62.8 94.1 65 89.1 66.8C84.1 68.6 81.8 70.1 76.2 71.4C70.7 72.7 64.2 75.1 55.7 74.8C47.3 74.5 32.5 71.5 25.5 69.8C18.4 68 15.1 66.8 13.6 64.5C12.2 62.2 13.5 58.4 16.9 56.2C20.4 53.9 28.2 52.6 34.3 50.9C40.4 49.2 46.3 46.2 53.6 45.9C60.9 45.6 70.2 47.9 78.1 49.2C85.9 50.4 95.9 51.4 100.6 53.3C105.2 55.2 108 58.3 106.1 60.6Z"/>
+    <g transform="translate(36 22) scale(.62)" style="color:var(--a)"><svg x="0" y="0" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><g stroke="#15121c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.4">
+    <path d="M22 44 Q19 53 13 58 Q20 61 26 50 Z" fill="#ff8a14"/>
+    <path d="M29 46 Q28.5 55 25 61 Q32.5 61 33 48 Z" fill="#ff8a14"/>
+    <path d="M35 46 Q35.5 55 39 61 Q31.5 61 31 48 Z" fill="#ff8a14"/>
+    <path d="M42 44 Q45 53 51 58 Q44 61 38 50 Z" fill="#ff8a14"/>
+    <path d="M32 3 C36.5 3 50.5 17.5 55.5 24.5 C57.5 27.8 55.5 31 51.5 30.2 L46 29.4 L46 39.5 C46 46.5 41.5 49 32 49 C22.5 49 18 46.5 18 39.5 L18 29.4 L12.5 30.2 C8.5 31 6.5 27.8 8.5 24.5 C13.5 17.5 27.5 3 32 3 Z" fill="#ff8a14"/>
+  </g>
+  <path d="M25 13 Q29 8.5 32 8" stroke="#fff" stroke-opacity=".55" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <g class="iw-squid-eyes">
+    <ellipse cx="26" cy="36" rx="4.6" ry="5.6" fill="#fff" stroke="#15121c" stroke-width="2.4"/>
+    <ellipse cx="38" cy="36" rx="4.6" ry="5.6" fill="#fff" stroke="#15121c" stroke-width="2.4"/>
+    <ellipse cx="27" cy="37" rx="2.2" ry="3" fill="#15121c"/>
+    <ellipse cx="37" cy="37" rx="2.2" ry="3" fill="#15121c"/>
+  </g></svg></g>
+    <path d="M78 16 q4 6 0 9 q-4 -3 0 -9z" fill="#9fe3ff" stroke="#15121c" stroke-width="1.8"/>
+    <g transform="translate(86 34)"><rect width="26" height="16" rx="8" fill="#15121c"/><text x="13" y="12" text-anchor="middle" font-family="Rubik, sans-serif" font-weight="900" font-size="10" fill="#ff5a6a">HP</text></g>
+    <path d="M92 58 L100 58 M96 54 L96 62" stroke="#fff" stroke-width="0" />
+    <path d="M18 28 l6 6 m0 -6 l-6 6" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  </svg>

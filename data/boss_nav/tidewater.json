@@ -1,0 +1,374 @@
+{
+  "source": "src/boss/bossNav.js exact _build",
+  "stage": "tidewater",
+  "x0": -24.75,
+  "z0": -43.75,
+  "nx": 100,
+  "nz": 176,
+  "step": 0.5,
+  "floor_y": 0,
+  "pads": [
+    {
+      "x": 0,
+      "z": -39.2,
+      "r": 4.2
+    },
+    {
+      "x": 0,
+      "z": 39.2,
+      "r": 4.2
+    }
+  ],
+  "area": 846.75,
+  "spawn": [
+    0.25,
+    0,
+    21.25
+  ],
+  "yaw": -3.1374570278707687,
+  "fields": "res://assets/boss_nav/tidewater.bin",
+  "probes": [
+    {
+      "i": 0,
+      "x": -24.75,
+      "z": -43.75,
+      "kind": 1,
+      "floor": 0,
+      "wall": 0,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 5866,
+      "x": 8.25,
+      "z": -14.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 7,
+      "drop": 7,
+      "plan": false,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 5.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 8800,
+      "x": -24.75,
+      "z": 0.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.75,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 17599,
+      "x": 24.75,
+      "z": 43.75,
+      "kind": 1,
+      "floor": 0,
+      "wall": 0,
+      "drop": 0.25,
+      "plan": false,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": false
+      }
+    },
+    {
+      "i": 9166,
+      "x": 8.25,
+      "z": 1.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.1041018962860107,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 11018,
+      "x": -15.75,
+      "z": 11.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.25,
+      "drop": 5.25,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 11431,
+      "x": -9.25,
+      "z": 13.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 7,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 3.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 11829,
+      "x": -10.25,
+      "z": 15.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 7,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 5.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 12211,
+      "x": -19.25,
+      "z": 17.25,
+      "kind": 0,
+      "floor": 0.1772727221250534,
+      "wall": 4.849019527435303,
+      "drop": 3.7811288833618164,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 4.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 12585,
+      "x": 17.75,
+      "z": 18.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 7,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 5.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 12950,
+      "x": 0.25,
+      "z": 20.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 6.26920223236084,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 7.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 13358,
+      "x": 4.25,
+      "z": 22.75,
+      "kind": 0,
+      "floor": 0,
+      "wall": 4.75,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 12.75,
+        "wall": true
+      }
+    },
+    {
+      "i": 13815,
+      "x": -17.25,
+      "z": 25.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 7,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 12.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 14271,
+      "x": 10.75,
+      "z": 27.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 4.359772205352783,
+      "drop": 7,
+      "plan": true,
+      "pose": false,
+      "turn": false,
+      "lane": {
+        "dist": 0,
+        "wall": true
+      }
+    },
+    {
+      "i": 14669,
+      "x": 9.75,
+      "z": 29.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 5.832762718200684,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 1.25,
+        "wall": true
+      }
+    },
+    {
+      "i": 15075,
+      "x": 12.75,
+      "z": 31.25,
+      "kind": 0,
+      "floor": 0,
+      "wall": 3.390054941177368,
+      "drop": 7,
+      "plan": true,
+      "pose": true,
+      "turn": true,
+      "lane": {
+        "dist": 18.75,
+        "wall": true
+      }
+    }
+  ],
+  "paths": [
+    {
+      "start": [
+        -15.25,
+        11.75
+      ],
+      "end": [
+        -14.25,
+        31.25
+      ],
+      "path": [
+        [
+          -15.25,
+          11.75
+        ],
+        [
+          -14.25,
+          31.25
+        ]
+      ]
+    },
+    {
+      "start": [
+        16.25,
+        17.25
+      ],
+      "end": [
+        -15.75,
+        24.75
+      ],
+      "path": [
+        [
+          16.25,
+          17.25
+        ],
+        [
+          12.25,
+          24.75
+        ],
+        [
+          8.25,
+          28.25
+        ],
+        [
+          -13.25,
+          27.25
+        ],
+        [
+          -15.75,
+          24.75
+        ]
+      ]
+    },
+    {
+      "start": [
+        -15.75,
+        24.75
+      ],
+      "end": [
+        16.25,
+        17.25
+      ],
+      "path": [
+        [
+          -15.75,
+          24.75
+        ],
+        [
+          -5.25,
+          28.25
+        ],
+        [
+          11.25,
+          25.75
+        ],
+        [
+          15.25,
+          21.25
+        ],
+        [
+          16.25,
+          17.25
+        ]
+      ]
+    }
+  ]
+}

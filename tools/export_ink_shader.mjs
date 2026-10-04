@@ -1,0 +1,20 @@
+// Preserve the original wet-ink colour, rounded edges, gel, ripples and swim-wake math.
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const source=await fs.readFile(path.join(root,'src/world/inkShading.js'),'utf8');
+const level=await fs.readFile(path.join(root,'src/world/levelMaterial.js'),'utf8');
+const names={uPaint:'paint_atlas',uTexel:'texel',uAtlasSize:'atlas_size',uPpm:'paint_ppm',uGel:'gel_layer',uTime:'clock',uInkClock:'clock',uRip:'ripples',uRipP:'ripple_params',uWake:'wake_points',uWakeB:'wake_bounds',uSwimH:'swimmers',uSwimF:'swimmer_dirs',vWPos:'world_pos',vWNorm:'world_normal',vFaceUv:'UV',vFaceData:'face_data',vFaceTan:'face_tangent',vPaintUv:'UV2',uTeamA:'team_a',uTeamB:'team_b',tNormal:'t_normal',viewMatrix:'VIEW_MATRIX'};
+const convert=s=>{for(const[a,b]of Object.entries(names))s=s.replace(new RegExp('\\b'+a+'\\b','g'),b);return s.replaceAll('${INK_RIPPLES}','24');};
+const chunk=name=>convert(source.match(new RegExp('export const '+name+' = /\\* glsl \\*/`([\\s\\S]*?)`;'))[1]);
+let pars=chunk('INK_PARS').replace(/uniform[^;]+;\s*/g,'').replace(/float gInkKeep[^;]+;/,'').replace('vec2 gPdx = vec2(0.0), gPdy = vec2(0.0);','');
+pars=pars.replace('vec4 paintAt(vec2 uv)','vec4 paintAt(vec2 uv,vec2 gPdx,vec2 gPdy)');
+await fs.writeFile(path.join(root,'splatink/assets/shaders/source_ink_pars.gdshaderinc'),pars);
+let color=chunk('INK_COLOR').replace('paintAt(UV2)','paintAt(UV2,gPdx,gPdy)');
+color=color.replace(/#if NUM_DIR_LIGHTS > 0[\s\S]*?#endif/,'    vec3 sunW=normalize(sun_direction);');
+await fs.writeFile(path.join(root,'splatink/assets/shaders/source_ink_color.gdshaderinc'),'float gInkKeep=0.0,gInkNear=0.0,gInkS=0.0,gWake=0.0;vec2 gPdx=vec2(0.0),gPdy=vec2(0.0);\n'+color);
+let normal=level.slice(level.indexOf('  vec2 slope = gInkD;'),level.indexOf('  normal = normalize((viewMatrix',level.indexOf('  vec2 slope = gInkD;')));
+normal=convert(normal).replace('${INK_GEL}',chunk('INK_GEL')).replace('${INK_SLOPE}',chunk('INK_SLOPE'));
+normal+='\nNORMAL=normalize(mat3(VIEW_MATRIX)*wn);\n';
+await fs.writeFile(path.join(root,'splatink/assets/shaders/source_ink_normal.gdshaderinc'),normal);

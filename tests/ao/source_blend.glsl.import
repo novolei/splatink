@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://cajfrq5fcndcs"
+path="res://.godot/imported/source_blend.glsl-7458415b7e4b560db0d390aad450400f.res"
+
+[deps]
+
+source_file="res://tests/ao/source_blend.glsl"
+dest_files=["res://.godot/imported/source_blend.glsl-7458415b7e4b560db0d390aad450400f.res"]
+
+[params]
+

@@ -1,0 +1,10 @@
+{
+  "resources": 1030,
+  "raw": 344,
+  "nativeLibraries": [
+    "addons/motion_matching/bin/macos/libgdmotionmatching.macos.template_debug.splatlower1.dylib",
+    "addons/motion_matching/bin/macos/libgdmotionmatching.macos.template_release.splatlower1.dylib",
+    "addons/motion_matching/bin/windows/libgdmotionmatching.windows.template_debug.x86_64.splatlower1.dll",
+    "addons/motion_matching/bin/windows/libgdmotionmatching.windows.template_release.x86_64.splatlower1.dll"
+  ]
+}

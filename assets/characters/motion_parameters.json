@@ -1,0 +1,14 @@
+{
+  "source": "Character constructor resting foot stance and sole pivots",
+  "idle_stance": [
+    0.10400000214576721,
+    0.014000000432133675,
+    0.1899999976158142,
+    -0.10000000149011612,
+    -0.009999999776482582,
+    -0.20000000298023224
+  ],
+  "ankle_height": 0.085,
+  "ball_z": 0.11,
+  "heel_z": 0.065
+}

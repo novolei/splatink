@@ -1,0 +1,1958 @@
+{
+  "experiment_only": true,
+  "godot_runtime_verified": true,
+  "source_frames_blender_validation": {
+    "schema": "mixamo_raw_blender_comparison_v1",
+    "raw_reference": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\raw_source.json",
+    "raw_reference_sha256": "59eb88f550066941aaa4ab54c4521940b0e84bd8bcae5915976917b564414d6f",
+    "method": "Name-aligned original 65 bones at every exact 30 Hz time; source Y-up meter world positions and shortest global quaternion angle; Blender basis polar-normalized only for 32-bit roundoff",
+    "thresholds": {
+      "position_m": 2e-05,
+      "rotation_degrees": 0.005,
+      "time_s": 1e-08
+    },
+    "clips": [
+      {
+        "id": "left_turn",
+        "source_file": "left turn.fbx",
+        "frame_count": 50,
+        "bone_count": 65,
+        "compared_bone_frames": 3250,
+        "max_time_error_s": 2.220446049250313e-16,
+        "rest_position_error_m": {
+          "max": 2.9709805851326097e-07,
+          "median": 1.8603683445488334e-07,
+          "p95": 2.4797765063106223e-07,
+          "rms": 1.9031378321100303e-07
+        },
+        "world_position_error_m": {
+          "max": 4.259764044664641e-06,
+          "median": 2.284708164393152e-07,
+          "p95": 1.3284768405435702e-06,
+          "rms": 5.902589583996004e-07
+        },
+        "world_rotation_error_degrees": {
+          "max": 0.00043232789895587814,
+          "median": 4.002083521495076e-05,
+          "p95": 0.00019295978398152546,
+          "rms": 8.902171362684586e-05
+        },
+        "worst_position": {
+          "frame": 14,
+          "bone": "mixamorig:RightToe_End"
+        },
+        "worst_rotation": {
+          "frame": 26,
+          "bone": "mixamorig:RightFoot"
+        },
+        "per_bone": [
+          {
+            "name": "mixamorig:Hips",
+            "max_world_position_error_m": 1.3074988301753507e-07,
+            "max_world_rotation_error_degrees": 2.079918215737063e-05
+          },
+          {
+            "name": "mixamorig:Spine",
+            "max_world_position_error_m": 1.6038164513177942e-07,
+            "max_world_rotation_error_degrees": 2.133507620696309e-05
+          },
+          {
+            "name": "mixamorig:Spine1",
+            "max_world_position_error_m": 2.3014608163676594e-07,
+            "max_world_rotation_error_degrees": 2.125250358761725e-05
+          },
+          {
+            "name": "mixamorig:Spine2",
+            "max_world_position_error_m": 2.59029700124086e-07,
+            "max_world_rotation_error_degrees": 2.1067754939421778e-05
+          },
+          {
+            "name": "mixamorig:Neck",
+            "max_world_position_error_m": 3.2153775418754777e-07,
+            "max_world_rotation_error_degrees": 2.3075304438313716e-05
+          },
+          {
+            "name": "mixamorig:Head",
+            "max_world_position_error_m": 4.956716889144861e-07,
+            "max_world_rotation_error_degrees": 2.5371799612417327e-05
+          },
+          {
+            "name": "mixamorig:HeadTop_End",
+            "max_world_position_error_m": 4.844715282150333e-07,
+            "max_world_rotation_error_degrees": 2.5371799612417327e-05
+          },
+          {
+            "name": "mixamorig:LeftShoulder",
+            "max_world_position_error_m": 2.844931499473458e-07,
+            "max_world_rotation_error_degrees": 3.017014911509339e-05
+          },
+          {
+            "name": "mixamorig:LeftArm",
+            "max_world_position_error_m": 2.94162255140246e-07,
+            "max_world_rotation_error_degrees": 2.668490566489227e-05
+          },
+          {
+            "name": "mixamorig:LeftForeArm",
+            "max_world_position_error_m": 3.8481133350185107e-07,
+            "max_world_rotation_error_degrees": 3.1796193480573324e-05
+          },
+          {
+            "name": "mixamorig:LeftHand",
+            "max_world_position_error_m": 5.362402803577654e-07,
+            "max_world_rotation_error_degrees": 3.359459191342503e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb1",
+            "max_world_position_error_m": 5.27580806965308e-07,
+            "max_world_rotation_error_degrees": 5.6775906706479006e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb2",
+            "max_world_position_error_m": 5.166682140263033e-07,
+            "max_world_rotation_error_degrees": 5.096085711200167e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb3",
+            "max_world_position_error_m": 5.506453390123531e-07,
+            "max_world_rotation_error_degrees": 4.759567158734599e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb4",
+            "max_world_position_error_m": 5.217289477296432e-07,
+            "max_world_rotation_error_degrees": 4.732372068752604e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex1",
+            "max_world_position_error_m": 5.647936269354239e-07,
+            "max_world_rotation_error_degrees": 9.267170264173774e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex2",
+            "max_world_position_error_m": 6.174465755510398e-07,
+            "max_world_rotation_error_degrees": 7.599354944927945e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex3",
+            "max_world_position_error_m": 5.271176470413935e-07,
+            "max_world_rotation_error_degrees": 8.725513651253605e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex4",
+            "max_world_position_error_m": 5.810172959462627e-07,
+            "max_world_rotation_error_degrees": 8.725513651253605e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle1",
+            "max_world_position_error_m": 5.773709064881495e-07,
+            "max_world_rotation_error_degrees": 4.327526298225801e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle2",
+            "max_world_position_error_m": 5.899773373101275e-07,
+            "max_world_rotation_error_degrees": 0.00010179539878981436
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle3",
+            "max_world_position_error_m": 6.911332941681984e-07,
+            "max_world_rotation_error_degrees": 5.632115715978764e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle4",
+            "max_world_position_error_m": 6.60575701786136e-07,
+            "max_world_rotation_error_degrees": 5.6513236837288475e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing1",
+            "max_world_position_error_m": 5.499386973311809e-07,
+            "max_world_rotation_error_degrees": 3.0344844651235872e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing2",
+            "max_world_position_error_m": 5.365189967740434e-07,
+            "max_world_rotation_error_degrees": 2.821341508507438e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing3",
+            "max_world_position_error_m": 5.511600866930112e-07,
+            "max_world_rotation_error_degrees": 3.851635414114399e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing4",
+            "max_world_position_error_m": 5.202266346356265e-07,
+            "max_world_rotation_error_degrees": 3.851635414114399e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky1",
+            "max_world_position_error_m": 6.114949517974717e-07,
+            "max_world_rotation_error_degrees": 4.1744617981310424e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky2",
+            "max_world_position_error_m": 5.853179320356355e-07,
+            "max_world_rotation_error_degrees": 0.00011866478548422817
+          },
+          {
+            "name": "mixamorig:LeftHandPinky3",
+            "max_world_position_error_m": 5.780868844068445e-07,
+            "max_world_rotation_error_degrees": 6.450273045646233e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky4",
+            "max_world_position_error_m": 5.50492380708299e-07,
+            "max_world_rotation_error_degrees": 6.454829024924717e-05
+          },
+          {
+            "name": "mixamorig:RightShoulder",
+            "max_world_position_error_m": 3.779844526375627e-07,
+            "max_world_rotation_error_degrees": 2.0906099270325378e-05
+          },
+          {
+            "name": "mixamorig:RightArm",
+            "max_world_position_error_m": 3.6455320744199064e-07,
+            "max_world_rotation_error_degrees": 2.814921503930467e-05
+          },
+          {
+            "name": "mixamorig:RightForeArm",
+            "max_world_position_error_m": 3.5135198846689837e-07,
+            "max_world_rotation_error_degrees": 2.682194039261657e-05
+          },
+          {
+            "name": "mixamorig:RightHand",
+            "max_world_position_error_m": 4.3741273480531225e-07,
+            "max_world_rotation_error_degrees": 3.80302491575817e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb1",
+            "max_world_position_error_m": 3.7957499504816575e-07,
+            "max_world_rotation_error_degrees": 5.0269413985309205e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb2",
+            "max_world_position_error_m": 3.802784514519804e-07,
+            "max_world_rotation_error_degrees": 6.198923174655053e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb3",
+            "max_world_position_error_m": 4.4885098638728255e-07,
+            "max_world_rotation_error_degrees": 9.630065657176199e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb4",
+            "max_world_position_error_m": 5.078308699544954e-07,
+            "max_world_rotation_error_degrees": 0.0001081914926632605
+          },
+          {
+            "name": "mixamorig:RightHandIndex1",
+            "max_world_position_error_m": 3.823753947429167e-07,
+            "max_world_rotation_error_degrees": 3.4678071311162056e-05
+          },
+          {
+            "name": "mixamorig:RightHandIndex2",
+            "max_world_position_error_m": 4.089821953959942e-07,
+            "max_world_rotation_error_degrees": 5.8655834579549715e-05
+          },
+          {
+            "name": "mixamorig:RightHandIndex3",
+            "max_world_position_error_m": 4.558634359187297e-07,
+            "max_world_rotation_error_degrees": 0.00010946709055951333
+          },
+          {
+            "name": "mixamorig:RightHandIndex4",
+            "max_world_position_error_m": 4.84835659705088e-07,
+            "max_world_rotation_error_degrees": 0.00010946709055951333
+          },
+          {
+            "name": "mixamorig:RightHandMiddle1",
+            "max_world_position_error_m": 4.271626804843241e-07,
+            "max_world_rotation_error_degrees": 5.311075163897254e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle2",
+            "max_world_position_error_m": 4.274521708079243e-07,
+            "max_world_rotation_error_degrees": 7.586579910377824e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle3",
+            "max_world_position_error_m": 4.251702132723962e-07,
+            "max_world_rotation_error_degrees": 8.491684104508804e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle4",
+            "max_world_position_error_m": 4.040677443434596e-07,
+            "max_world_rotation_error_degrees": 8.491684104508804e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing1",
+            "max_world_position_error_m": 3.6910094063603366e-07,
+            "max_world_rotation_error_degrees": 3.326702712636704e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing2",
+            "max_world_position_error_m": 3.61948495518957e-07,
+            "max_world_rotation_error_degrees": 6.890388994566579e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing3",
+            "max_world_position_error_m": 3.8485999100012424e-07,
+            "max_world_rotation_error_degrees": 0.00012530687207761503
+          },
+          {
+            "name": "mixamorig:RightHandRing4",
+            "max_world_position_error_m": 3.5467054049527767e-07,
+            "max_world_rotation_error_degrees": 0.00012530687207761503
+          },
+          {
+            "name": "mixamorig:RightHandPinky1",
+            "max_world_position_error_m": 4.764809059584909e-07,
+            "max_world_rotation_error_degrees": 7.795038712123125e-05
+          },
+          {
+            "name": "mixamorig:RightHandPinky2",
+            "max_world_position_error_m": 4.603871561404844e-07,
+            "max_world_rotation_error_degrees": 0.00011739690451420149
+          },
+          {
+            "name": "mixamorig:RightHandPinky3",
+            "max_world_position_error_m": 4.5229888762629154e-07,
+            "max_world_rotation_error_degrees": 6.47906361949398e-05
+          },
+          {
+            "name": "mixamorig:RightHandPinky4",
+            "max_world_position_error_m": 4.0383814381970076e-07,
+            "max_world_rotation_error_degrees": 6.475250397665371e-05
+          },
+          {
+            "name": "mixamorig:LeftUpLeg",
+            "max_world_position_error_m": 1.6198881082261329e-07,
+            "max_world_rotation_error_degrees": 5.2548878656580145e-05
+          },
+          {
+            "name": "mixamorig:LeftLeg",
+            "max_world_position_error_m": 1.4136847893766937e-06,
+            "max_world_rotation_error_degrees": 5.42641012963277e-05
+          },
+          {
+            "name": "mixamorig:LeftFoot",
+            "max_world_position_error_m": 1.2175214091595455e-06,
+            "max_world_rotation_error_degrees": 0.0002508006307850626
+          },
+          {
+            "name": "mixamorig:LeftToeBase",
+            "max_world_position_error_m": 1.5844235674667862e-06,
+            "max_world_rotation_error_degrees": 0.00020360178770497878
+          },
+          {
+            "name": "mixamorig:LeftToe_End",
+            "max_world_position_error_m": 2.4127172552777406e-06,
+            "max_world_rotation_error_degrees": 0.00020198820730571944
+          },
+          {
+            "name": "mixamorig:RightUpLeg",
+            "max_world_position_error_m": 1.6249781754448324e-07,
+            "max_world_rotation_error_degrees": 9.561606614150014e-05
+          },
+          {
+            "name": "mixamorig:RightLeg",
+            "max_world_position_error_m": 3.53245790794511e-06,
+            "max_world_rotation_error_degrees": 4.343752811090425e-05
+          },
+          {
+            "name": "mixamorig:RightFoot",
+            "max_world_position_error_m": 2.447755607589525e-06,
+            "max_world_rotation_error_degrees": 0.00043232789895587814
+          },
+          {
+            "name": "mixamorig:RightToeBase",
+            "max_world_position_error_m": 3.269476829887271e-06,
+            "max_world_rotation_error_degrees": 0.00029232906583249513
+          },
+          {
+            "name": "mixamorig:RightToe_End",
+            "max_world_position_error_m": 4.259764044664641e-06,
+            "max_world_rotation_error_degrees": 0.00029404245916272455
+          }
+        ],
+        "rest_world_rotation_error_degrees": {
+          "max": 0.0004107907130839049,
+          "median": 3.878068544127764e-05,
+          "p95": 0.00016746448648459364,
+          "rms": 8.334905768593776e-05
+        },
+        "rest_world_matrix_max_abs_element_error": 2.0989069846710784e-05,
+        "passed": true
+      },
+      {
+        "id": "right_turn",
+        "source_file": "right turn.fbx",
+        "frame_count": 50,
+        "bone_count": 65,
+        "compared_bone_frames": 3250,
+        "max_time_error_s": 2.220446049250313e-16,
+        "rest_position_error_m": {
+          "max": 2.9709805851326097e-07,
+          "median": 1.8603683445488334e-07,
+          "p95": 2.4797765063106223e-07,
+          "rms": 1.9031378321100303e-07
+        },
+        "world_position_error_m": {
+          "max": 4.410171617826994e-06,
+          "median": 2.0980715197992406e-07,
+          "p95": 1.3231956242557994e-06,
+          "rms": 5.843848183271527e-07
+        },
+        "world_rotation_error_degrees": {
+          "max": 0.0004305184152718109,
+          "median": 3.9090966834129636e-05,
+          "p95": 0.00022751218864400496,
+          "rms": 9.162918162630282e-05
+        },
+        "worst_position": {
+          "frame": 32,
+          "bone": "mixamorig:RightToe_End"
+        },
+        "worst_rotation": {
+          "frame": 12,
+          "bone": "mixamorig:RightFoot"
+        },
+        "per_bone": [
+          {
+            "name": "mixamorig:Hips",
+            "max_world_position_error_m": 1.3544970385556952e-07,
+            "max_world_rotation_error_degrees": 1.9932336015363244e-05
+          },
+          {
+            "name": "mixamorig:Spine",
+            "max_world_position_error_m": 1.674245854207011e-07,
+            "max_world_rotation_error_degrees": 1.9938629449376015e-05
+          },
+          {
+            "name": "mixamorig:Spine1",
+            "max_world_position_error_m": 2.2604786384990968e-07,
+            "max_world_rotation_error_degrees": 2.034902648830223e-05
+          },
+          {
+            "name": "mixamorig:Spine2",
+            "max_world_position_error_m": 2.282431183804829e-07,
+            "max_world_rotation_error_degrees": 2.1425915613501463e-05
+          },
+          {
+            "name": "mixamorig:Neck",
+            "max_world_position_error_m": 3.072303414197186e-07,
+            "max_world_rotation_error_degrees": 2.0674433935514727e-05
+          },
+          {
+            "name": "mixamorig:Head",
+            "max_world_position_error_m": 4.1180158443188256e-07,
+            "max_world_rotation_error_degrees": 2.622001632286739e-05
+          },
+          {
+            "name": "mixamorig:HeadTop_End",
+            "max_world_position_error_m": 4.994305050941693e-07,
+            "max_world_rotation_error_degrees": 2.622001632286739e-05
+          },
+          {
+            "name": "mixamorig:LeftShoulder",
+            "max_world_position_error_m": 3.077685979883372e-07,
+            "max_world_rotation_error_degrees": 2.484269108720769e-05
+          },
+          {
+            "name": "mixamorig:LeftArm",
+            "max_world_position_error_m": 3.312823741970373e-07,
+            "max_world_rotation_error_degrees": 2.5092320516995004e-05
+          },
+          {
+            "name": "mixamorig:LeftForeArm",
+            "max_world_position_error_m": 3.811948534873257e-07,
+            "max_world_rotation_error_degrees": 3.013039457014618e-05
+          },
+          {
+            "name": "mixamorig:LeftHand",
+            "max_world_position_error_m": 4.813302767661632e-07,
+            "max_world_rotation_error_degrees": 2.452658657464229e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb1",
+            "max_world_position_error_m": 4.6830088528761137e-07,
+            "max_world_rotation_error_degrees": 5.597337145864934e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb2",
+            "max_world_position_error_m": 4.970600606422343e-07,
+            "max_world_rotation_error_degrees": 4.4011882762840456e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb3",
+            "max_world_position_error_m": 5.190338699902799e-07,
+            "max_world_rotation_error_degrees": 4.436354502211589e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb4",
+            "max_world_position_error_m": 4.785015577335582e-07,
+            "max_world_rotation_error_degrees": 4.730345154068601e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex1",
+            "max_world_position_error_m": 4.663009578837832e-07,
+            "max_world_rotation_error_degrees": 9.248331551196825e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex2",
+            "max_world_position_error_m": 4.771438120409312e-07,
+            "max_world_rotation_error_degrees": 6.463929012364659e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex3",
+            "max_world_position_error_m": 4.470465657050792e-07,
+            "max_world_rotation_error_degrees": 7.763329901788044e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex4",
+            "max_world_position_error_m": 5.036197897323905e-07,
+            "max_world_rotation_error_degrees": 7.763329901788044e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle1",
+            "max_world_position_error_m": 5.534105243153595e-07,
+            "max_world_rotation_error_degrees": 4.707610489584063e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle2",
+            "max_world_position_error_m": 5.780820363609239e-07,
+            "max_world_rotation_error_degrees": 9.130784826057648e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle3",
+            "max_world_position_error_m": 6.27638331770613e-07,
+            "max_world_rotation_error_degrees": 5.602734839046156e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle4",
+            "max_world_position_error_m": 6.505118597930776e-07,
+            "max_world_rotation_error_degrees": 5.5984996599989936e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing1",
+            "max_world_position_error_m": 5.917740777233781e-07,
+            "max_world_rotation_error_degrees": 1.8501312607378898e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing2",
+            "max_world_position_error_m": 5.695632661562444e-07,
+            "max_world_rotation_error_degrees": 2.7828777006080593e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing3",
+            "max_world_position_error_m": 5.88363406116368e-07,
+            "max_world_rotation_error_degrees": 2.6646859076705086e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing4",
+            "max_world_position_error_m": 5.577035204534429e-07,
+            "max_world_rotation_error_degrees": 2.6646859076705086e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky1",
+            "max_world_position_error_m": 5.56382455715248e-07,
+            "max_world_rotation_error_degrees": 3.8806009023730725e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky2",
+            "max_world_position_error_m": 5.478209615193084e-07,
+            "max_world_rotation_error_degrees": 0.00011535578539378811
+          },
+          {
+            "name": "mixamorig:LeftHandPinky3",
+            "max_world_position_error_m": 5.658410138890652e-07,
+            "max_world_rotation_error_degrees": 6.40012332384772e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky4",
+            "max_world_position_error_m": 5.471006593391163e-07,
+            "max_world_rotation_error_degrees": 6.403190287014548e-05
+          },
+          {
+            "name": "mixamorig:RightShoulder",
+            "max_world_position_error_m": 3.08209909087344e-07,
+            "max_world_rotation_error_degrees": 2.3564435465768998e-05
+          },
+          {
+            "name": "mixamorig:RightArm",
+            "max_world_position_error_m": 3.315337900010137e-07,
+            "max_world_rotation_error_degrees": 2.935440112940516e-05
+          },
+          {
+            "name": "mixamorig:RightForeArm",
+            "max_world_position_error_m": 2.5252802064435693e-07,
+            "max_world_rotation_error_degrees": 3.0420365973571903e-05
+          },
+          {
+            "name": "mixamorig:RightHand",
+            "max_world_position_error_m": 3.522865876054977e-07,
+            "max_world_rotation_error_degrees": 2.8707246393561812e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb1",
+            "max_world_position_error_m": 3.2899408060185885e-07,
+            "max_world_rotation_error_degrees": 4.4866378672721794e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb2",
+            "max_world_position_error_m": 3.2923371003258377e-07,
+            "max_world_rotation_error_degrees": 6.536392101542745e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb3",
+            "max_world_position_error_m": 4.0119621562222506e-07,
+            "max_world_rotation_error_degrees": 9.807261534787306e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb4",
+            "max_world_position_error_m": 4.411023136047693e-07,
+            "max_world_rotation_error_degrees": 0.000109107513833917
+          },
+          {
+            "name": "mixamorig:RightHandIndex1",
+            "max_world_position_error_m": 2.8726440721228863e-07,
+            "max_world_rotation_error_degrees": 2.944070062631083e-05
+          },
+          {
+            "name": "mixamorig:RightHandIndex2",
+            "max_world_position_error_m": 3.1371614414298945e-07,
+            "max_world_rotation_error_degrees": 5.651976302467304e-05
+          },
+          {
+            "name": "mixamorig:RightHandIndex3",
+            "max_world_position_error_m": 3.651747120414935e-07,
+            "max_world_rotation_error_degrees": 0.00011478565947928896
+          },
+          {
+            "name": "mixamorig:RightHandIndex4",
+            "max_world_position_error_m": 4.3136203316364013e-07,
+            "max_world_rotation_error_degrees": 0.00011478565947928896
+          },
+          {
+            "name": "mixamorig:RightHandMiddle1",
+            "max_world_position_error_m": 3.486144537779739e-07,
+            "max_world_rotation_error_degrees": 4.487101048686955e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle2",
+            "max_world_position_error_m": 3.9511714763989303e-07,
+            "max_world_rotation_error_degrees": 7.244999366523235e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle3",
+            "max_world_position_error_m": 3.976900171390954e-07,
+            "max_world_rotation_error_degrees": 8.248404220397335e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle4",
+            "max_world_position_error_m": 4.0015296203106117e-07,
+            "max_world_rotation_error_degrees": 8.248404220397335e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing1",
+            "max_world_position_error_m": 3.0449009733727156e-07,
+            "max_world_rotation_error_degrees": 3.365157490565622e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing2",
+            "max_world_position_error_m": 3.4318444208874984e-07,
+            "max_world_rotation_error_degrees": 7.032144565045993e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing3",
+            "max_world_position_error_m": 3.330606896640214e-07,
+            "max_world_rotation_error_degrees": 0.0001133237033879093
+          },
+          {
+            "name": "mixamorig:RightHandRing4",
+            "max_world_position_error_m": 3.2948611881225946e-07,
+            "max_world_rotation_error_degrees": 0.0001133237033879093
+          },
+          {
+            "name": "mixamorig:RightHandPinky1",
+            "max_world_position_error_m": 4.3179273202311276e-07,
+            "max_world_rotation_error_degrees": 7.030453241952796e-05
+          },
+          {
+            "name": "mixamorig:RightHandPinky2",
+            "max_world_position_error_m": 4.2667729112101197e-07,
+            "max_world_rotation_error_degrees": 0.00011688318252573637
+          },
+          {
+            "name": "mixamorig:RightHandPinky3",
+            "max_world_position_error_m": 4.063579079265974e-07,
+            "max_world_rotation_error_degrees": 6.4250423669638e-05
+          },
+          {
+            "name": "mixamorig:RightHandPinky4",
+            "max_world_position_error_m": 3.4179601959374396e-07,
+            "max_world_rotation_error_degrees": 6.417844935921383e-05
+          },
+          {
+            "name": "mixamorig:LeftUpLeg",
+            "max_world_position_error_m": 1.6236760357118653e-07,
+            "max_world_rotation_error_degrees": 5.529050101052794e-05
+          },
+          {
+            "name": "mixamorig:LeftLeg",
+            "max_world_position_error_m": 2.2744320326610685e-06,
+            "max_world_rotation_error_degrees": 4.709710154589622e-05
+          },
+          {
+            "name": "mixamorig:LeftFoot",
+            "max_world_position_error_m": 1.724778062432405e-06,
+            "max_world_rotation_error_degrees": 0.0002584945324425
+          },
+          {
+            "name": "mixamorig:LeftToeBase",
+            "max_world_position_error_m": 2.0104070144493197e-06,
+            "max_world_rotation_error_degrees": 0.0001775901073919752
+          },
+          {
+            "name": "mixamorig:LeftToe_End",
+            "max_world_position_error_m": 2.437823266906596e-06,
+            "max_world_rotation_error_degrees": 0.00017946900997448752
+          },
+          {
+            "name": "mixamorig:RightUpLeg",
+            "max_world_position_error_m": 1.605081642086092e-07,
+            "max_world_rotation_error_degrees": 8.890776248655826e-05
+          },
+          {
+            "name": "mixamorig:RightLeg",
+            "max_world_position_error_m": 1.8540847766587392e-06,
+            "max_world_rotation_error_degrees": 6.449497899748225e-05
+          },
+          {
+            "name": "mixamorig:RightFoot",
+            "max_world_position_error_m": 1.2514510936594197e-06,
+            "max_world_rotation_error_degrees": 0.0004305184152718109
+          },
+          {
+            "name": "mixamorig:RightToeBase",
+            "max_world_position_error_m": 2.8210999259603613e-06,
+            "max_world_rotation_error_degrees": 0.00033125082196624003
+          },
+          {
+            "name": "mixamorig:RightToe_End",
+            "max_world_position_error_m": 4.410171617826994e-06,
+            "max_world_rotation_error_degrees": 0.00033132863172415854
+          }
+        ],
+        "rest_world_rotation_error_degrees": {
+          "max": 0.0004107907130839049,
+          "median": 3.878068544127764e-05,
+          "p95": 0.00016746448648459364,
+          "rms": 8.334905768593776e-05
+        },
+        "rest_world_matrix_max_abs_element_error": 2.0989069846710784e-05,
+        "passed": true
+      },
+      {
+        "id": "left_turn_90",
+        "source_file": "left turn 90.fbx",
+        "frame_count": 29,
+        "bone_count": 65,
+        "compared_bone_frames": 1885,
+        "max_time_error_s": 1.1102230246251565e-16,
+        "rest_position_error_m": {
+          "max": 2.9709805851326097e-07,
+          "median": 1.8603683445488334e-07,
+          "p95": 2.4797765063106223e-07,
+          "rms": 1.9031378321100303e-07
+        },
+        "world_position_error_m": {
+          "max": 4.390386917929464e-06,
+          "median": 2.2245909679802743e-07,
+          "p95": 1.5526051518656968e-06,
+          "rms": 6.970571022482622e-07
+        },
+        "world_rotation_error_degrees": {
+          "max": 0.00041867295223873646,
+          "median": 4.043092516757248e-05,
+          "p95": 0.0002014800740720731,
+          "rms": 8.942448339979148e-05
+        },
+        "worst_position": {
+          "frame": 15,
+          "bone": "mixamorig:RightToe_End"
+        },
+        "worst_rotation": {
+          "frame": 21,
+          "bone": "mixamorig:RightFoot"
+        },
+        "per_bone": [
+          {
+            "name": "mixamorig:Hips",
+            "max_world_position_error_m": 1.210876242395657e-07,
+            "max_world_rotation_error_degrees": 1.680972064678751e-05
+          },
+          {
+            "name": "mixamorig:Spine",
+            "max_world_position_error_m": 1.861277229590897e-07,
+            "max_world_rotation_error_degrees": 1.750858129483579e-05
+          },
+          {
+            "name": "mixamorig:Spine1",
+            "max_world_position_error_m": 1.8065796998811353e-07,
+            "max_world_rotation_error_degrees": 1.7616144788659075e-05
+          },
+          {
+            "name": "mixamorig:Spine2",
+            "max_world_position_error_m": 2.6433817533712763e-07,
+            "max_world_rotation_error_degrees": 1.8397457119910236e-05
+          },
+          {
+            "name": "mixamorig:Neck",
+            "max_world_position_error_m": 2.8326336875982095e-07,
+            "max_world_rotation_error_degrees": 2.1294578923856722e-05
+          },
+          {
+            "name": "mixamorig:Head",
+            "max_world_position_error_m": 4.0775482800318815e-07,
+            "max_world_rotation_error_degrees": 2.2106066258460312e-05
+          },
+          {
+            "name": "mixamorig:HeadTop_End",
+            "max_world_position_error_m": 5.099401318520837e-07,
+            "max_world_rotation_error_degrees": 2.2106066258460312e-05
+          },
+          {
+            "name": "mixamorig:LeftShoulder",
+            "max_world_position_error_m": 2.838578012967544e-07,
+            "max_world_rotation_error_degrees": 2.706947436949516e-05
+          },
+          {
+            "name": "mixamorig:LeftArm",
+            "max_world_position_error_m": 2.8976371643789253e-07,
+            "max_world_rotation_error_degrees": 2.016115265259302e-05
+          },
+          {
+            "name": "mixamorig:LeftForeArm",
+            "max_world_position_error_m": 3.8738955123302733e-07,
+            "max_world_rotation_error_degrees": 1.918767865504239e-05
+          },
+          {
+            "name": "mixamorig:LeftHand",
+            "max_world_position_error_m": 5.240040026331655e-07,
+            "max_world_rotation_error_degrees": 3.227995690034935e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb1",
+            "max_world_position_error_m": 4.946277223155944e-07,
+            "max_world_rotation_error_degrees": 6.42666736177599e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb2",
+            "max_world_position_error_m": 5.175683900897459e-07,
+            "max_world_rotation_error_degrees": 4.043092516757248e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb3",
+            "max_world_position_error_m": 4.862150365442422e-07,
+            "max_world_rotation_error_degrees": 4.723411219760249e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb4",
+            "max_world_position_error_m": 4.871418681372602e-07,
+            "max_world_rotation_error_degrees": 5.329700347183433e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex1",
+            "max_world_position_error_m": 5.358961096720759e-07,
+            "max_world_rotation_error_degrees": 9.356889948410105e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex2",
+            "max_world_position_error_m": 4.850267823272462e-07,
+            "max_world_rotation_error_degrees": 6.77442724539589e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex3",
+            "max_world_position_error_m": 4.801792194965945e-07,
+            "max_world_rotation_error_degrees": 7.754572125852018e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex4",
+            "max_world_position_error_m": 5.021543982254122e-07,
+            "max_world_rotation_error_degrees": 7.754572125852018e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle1",
+            "max_world_position_error_m": 5.777580342706027e-07,
+            "max_world_rotation_error_degrees": 4.6207893333224865e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle2",
+            "max_world_position_error_m": 6.065282757383753e-07,
+            "max_world_rotation_error_degrees": 9.46986184847453e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle3",
+            "max_world_position_error_m": 6.824077562680119e-07,
+            "max_world_rotation_error_degrees": 4.830296044110891e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle4",
+            "max_world_position_error_m": 6.732520736409881e-07,
+            "max_world_rotation_error_degrees": 4.8227566591903905e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing1",
+            "max_world_position_error_m": 5.601358194534165e-07,
+            "max_world_rotation_error_degrees": 3.4013340911111306e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing2",
+            "max_world_position_error_m": 5.516200788297235e-07,
+            "max_world_rotation_error_degrees": 2.7959351693268442e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing3",
+            "max_world_position_error_m": 5.70376646088134e-07,
+            "max_world_rotation_error_degrees": 3.068524200034341e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing4",
+            "max_world_position_error_m": 5.548976651475948e-07,
+            "max_world_rotation_error_degrees": 3.068524200034341e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky1",
+            "max_world_position_error_m": 6.025729701626282e-07,
+            "max_world_rotation_error_degrees": 4.205075765863378e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky2",
+            "max_world_position_error_m": 6.231622760008041e-07,
+            "max_world_rotation_error_degrees": 0.00011865341293467818
+          },
+          {
+            "name": "mixamorig:LeftHandPinky3",
+            "max_world_position_error_m": 5.770137165803515e-07,
+            "max_world_rotation_error_degrees": 6.265901572905976e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky4",
+            "max_world_position_error_m": 5.328552024063168e-07,
+            "max_world_rotation_error_degrees": 6.265901572905976e-05
+          },
+          {
+            "name": "mixamorig:RightShoulder",
+            "max_world_position_error_m": 2.7807360309775956e-07,
+            "max_world_rotation_error_degrees": 2.0573127388125016e-05
+          },
+          {
+            "name": "mixamorig:RightArm",
+            "max_world_position_error_m": 2.825615509893464e-07,
+            "max_world_rotation_error_degrees": 2.254051150848963e-05
+          },
+          {
+            "name": "mixamorig:RightForeArm",
+            "max_world_position_error_m": 2.8861825812257984e-07,
+            "max_world_rotation_error_degrees": 2.3900912817860238e-05
+          },
+          {
+            "name": "mixamorig:RightHand",
+            "max_world_position_error_m": 3.7769773018257665e-07,
+            "max_world_rotation_error_degrees": 3.3448534683185086e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb1",
+            "max_world_position_error_m": 3.300633416425956e-07,
+            "max_world_rotation_error_degrees": 4.9425984876420024e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb2",
+            "max_world_position_error_m": 3.47813987464424e-07,
+            "max_world_rotation_error_degrees": 5.737541072678212e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb3",
+            "max_world_position_error_m": 4.097502808001128e-07,
+            "max_world_rotation_error_degrees": 8.963851244489213e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb4",
+            "max_world_position_error_m": 4.421736947090353e-07,
+            "max_world_rotation_error_degrees": 0.00010529305264742485
+          },
+          {
+            "name": "mixamorig:RightHandIndex1",
+            "max_world_position_error_m": 3.0809263455996186e-07,
+            "max_world_rotation_error_degrees": 3.491351107025161e-05
+          },
+          {
+            "name": "mixamorig:RightHandIndex2",
+            "max_world_position_error_m": 3.2536144973622384e-07,
+            "max_world_rotation_error_degrees": 6.030294940027998e-05
+          },
+          {
+            "name": "mixamorig:RightHandIndex3",
+            "max_world_position_error_m": 3.674325042383296e-07,
+            "max_world_rotation_error_degrees": 0.00010674187307967466
+          },
+          {
+            "name": "mixamorig:RightHandIndex4",
+            "max_world_position_error_m": 4.061231100177572e-07,
+            "max_world_rotation_error_degrees": 0.00010674187307967466
+          },
+          {
+            "name": "mixamorig:RightHandMiddle1",
+            "max_world_position_error_m": 3.430594200999074e-07,
+            "max_world_rotation_error_degrees": 5.2642315057565996e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle2",
+            "max_world_position_error_m": 3.7065264637619355e-07,
+            "max_world_rotation_error_degrees": 7.498636142384058e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle3",
+            "max_world_position_error_m": 4.0173304885344983e-07,
+            "max_world_rotation_error_degrees": 9.051021226717984e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle4",
+            "max_world_position_error_m": 3.891079149520007e-07,
+            "max_world_rotation_error_degrees": 9.051021226717984e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing1",
+            "max_world_position_error_m": 3.0022725634142986e-07,
+            "max_world_rotation_error_degrees": 3.264688228898904e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing2",
+            "max_world_position_error_m": 3.3241829672335864e-07,
+            "max_world_rotation_error_degrees": 6.209580879887387e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing3",
+            "max_world_position_error_m": 3.3480954920025227e-07,
+            "max_world_rotation_error_degrees": 0.00011590669076362253
+          },
+          {
+            "name": "mixamorig:RightHandRing4",
+            "max_world_position_error_m": 3.024726816179474e-07,
+            "max_world_rotation_error_degrees": 0.00011590669076362253
+          },
+          {
+            "name": "mixamorig:RightHandPinky1",
+            "max_world_position_error_m": 3.88578838173331e-07,
+            "max_world_rotation_error_degrees": 7.323301363888449e-05
+          },
+          {
+            "name": "mixamorig:RightHandPinky2",
+            "max_world_position_error_m": 3.764909938458296e-07,
+            "max_world_rotation_error_degrees": 0.00010418207890209083
+          },
+          {
+            "name": "mixamorig:RightHandPinky3",
+            "max_world_position_error_m": 3.701171131708936e-07,
+            "max_world_rotation_error_degrees": 6.758269567183854e-05
+          },
+          {
+            "name": "mixamorig:RightHandPinky4",
+            "max_world_position_error_m": 3.4766738846603974e-07,
+            "max_world_rotation_error_degrees": 6.758269567183854e-05
+          },
+          {
+            "name": "mixamorig:LeftUpLeg",
+            "max_world_position_error_m": 1.5907622693723795e-07,
+            "max_world_rotation_error_degrees": 4.721592540307885e-05
+          },
+          {
+            "name": "mixamorig:LeftLeg",
+            "max_world_position_error_m": 1.6681160956352438e-06,
+            "max_world_rotation_error_degrees": 5.0490567886116705e-05
+          },
+          {
+            "name": "mixamorig:LeftFoot",
+            "max_world_position_error_m": 1.8004698201354467e-06,
+            "max_world_rotation_error_degrees": 0.00024732870123889063
+          },
+          {
+            "name": "mixamorig:LeftToeBase",
+            "max_world_position_error_m": 1.964953436238376e-06,
+            "max_world_rotation_error_degrees": 0.00017902219293074493
+          },
+          {
+            "name": "mixamorig:LeftToe_End",
+            "max_world_position_error_m": 2.6406114549056803e-06,
+            "max_world_rotation_error_degrees": 0.0001809276849220318
+          },
+          {
+            "name": "mixamorig:RightUpLeg",
+            "max_world_position_error_m": 1.414606561772389e-07,
+            "max_world_rotation_error_degrees": 8.58204587594436e-05
+          },
+          {
+            "name": "mixamorig:RightLeg",
+            "max_world_position_error_m": 3.434981117991208e-06,
+            "max_world_rotation_error_degrees": 5.7074628347693466e-05
+          },
+          {
+            "name": "mixamorig:RightFoot",
+            "max_world_position_error_m": 1.8240751987293698e-06,
+            "max_world_rotation_error_degrees": 0.00041867295223873646
+          },
+          {
+            "name": "mixamorig:RightToeBase",
+            "max_world_position_error_m": 2.9670572094157573e-06,
+            "max_world_rotation_error_degrees": 0.0003192883845786341
+          },
+          {
+            "name": "mixamorig:RightToe_End",
+            "max_world_position_error_m": 4.390386917929464e-06,
+            "max_world_rotation_error_degrees": 0.00031632798005870865
+          }
+        ],
+        "rest_world_rotation_error_degrees": {
+          "max": 0.0004107907130839049,
+          "median": 3.878068544127764e-05,
+          "p95": 0.00016746448648459364,
+          "rms": 8.334905768593776e-05
+        },
+        "rest_world_matrix_max_abs_element_error": 2.0989069846710784e-05,
+        "passed": true
+      },
+      {
+        "id": "right_turn_90",
+        "source_file": "right turn 90.fbx",
+        "frame_count": 29,
+        "bone_count": 65,
+        "compared_bone_frames": 1885,
+        "max_time_error_s": 1.1102230246251565e-16,
+        "rest_position_error_m": {
+          "max": 2.9709805851326097e-07,
+          "median": 1.8603683445488334e-07,
+          "p95": 2.4797765063106223e-07,
+          "rms": 1.9031378321100303e-07
+        },
+        "world_position_error_m": {
+          "max": 4.478931311516204e-06,
+          "median": 2.2270222583725644e-07,
+          "p95": 1.6385201485803875e-06,
+          "rms": 6.843778884109305e-07
+        },
+        "world_rotation_error_degrees": {
+          "max": 0.00042406710545853614,
+          "median": 3.8584744042613e-05,
+          "p95": 0.00022418175444218142,
+          "rms": 9.212996764259462e-05
+        },
+        "worst_position": {
+          "frame": 14,
+          "bone": "mixamorig:RightToe_End"
+        },
+        "worst_rotation": {
+          "frame": 27,
+          "bone": "mixamorig:RightFoot"
+        },
+        "per_bone": [
+          {
+            "name": "mixamorig:Hips",
+            "max_world_position_error_m": 1.1685711231307584e-07,
+            "max_world_rotation_error_degrees": 1.3583877523055673e-05
+          },
+          {
+            "name": "mixamorig:Spine",
+            "max_world_position_error_m": 1.6147157106936105e-07,
+            "max_world_rotation_error_degrees": 1.317573467405415e-05
+          },
+          {
+            "name": "mixamorig:Spine1",
+            "max_world_position_error_m": 2.1222469841800893e-07,
+            "max_world_rotation_error_degrees": 1.3440127948415592e-05
+          },
+          {
+            "name": "mixamorig:Spine2",
+            "max_world_position_error_m": 2.1352405493637842e-07,
+            "max_world_rotation_error_degrees": 1.3741633299998513e-05
+          },
+          {
+            "name": "mixamorig:Neck",
+            "max_world_position_error_m": 3.6438688124413767e-07,
+            "max_world_rotation_error_degrees": 1.3682572006761414e-05
+          },
+          {
+            "name": "mixamorig:Head",
+            "max_world_position_error_m": 5.07312848596753e-07,
+            "max_world_rotation_error_degrees": 1.3520431113130134e-05
+          },
+          {
+            "name": "mixamorig:HeadTop_End",
+            "max_world_position_error_m": 5.161555423216301e-07,
+            "max_world_rotation_error_degrees": 1.3520431113130134e-05
+          },
+          {
+            "name": "mixamorig:LeftShoulder",
+            "max_world_position_error_m": 2.606879522570228e-07,
+            "max_world_rotation_error_degrees": 2.0547220149921877e-05
+          },
+          {
+            "name": "mixamorig:LeftArm",
+            "max_world_position_error_m": 3.080285636274806e-07,
+            "max_world_rotation_error_degrees": 1.824308495928887e-05
+          },
+          {
+            "name": "mixamorig:LeftForeArm",
+            "max_world_position_error_m": 3.513603345317994e-07,
+            "max_world_rotation_error_degrees": 2.0928756130142575e-05
+          },
+          {
+            "name": "mixamorig:LeftHand",
+            "max_world_position_error_m": 4.5674872007098864e-07,
+            "max_world_rotation_error_degrees": 1.6804442173163546e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb1",
+            "max_world_position_error_m": 4.300489076751356e-07,
+            "max_world_rotation_error_degrees": 4.8026171773208664e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb2",
+            "max_world_position_error_m": 4.4514254321377363e-07,
+            "max_world_rotation_error_degrees": 3.620343531134408e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb3",
+            "max_world_position_error_m": 4.6833218986953407e-07,
+            "max_world_rotation_error_degrees": 3.54451995428772e-05
+          },
+          {
+            "name": "mixamorig:LeftHandThumb4",
+            "max_world_position_error_m": 4.6639132456351156e-07,
+            "max_world_rotation_error_degrees": 3.471369984053819e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex1",
+            "max_world_position_error_m": 4.1735223307762227e-07,
+            "max_world_rotation_error_degrees": 8.961583448063744e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex2",
+            "max_world_position_error_m": 3.744170426651074e-07,
+            "max_world_rotation_error_degrees": 6.034541701261669e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex3",
+            "max_world_position_error_m": 3.524048203467787e-07,
+            "max_world_rotation_error_degrees": 7.335878510630482e-05
+          },
+          {
+            "name": "mixamorig:LeftHandIndex4",
+            "max_world_position_error_m": 3.3948021633578753e-07,
+            "max_world_rotation_error_degrees": 7.335878510630482e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle1",
+            "max_world_position_error_m": 5.022032417040479e-07,
+            "max_world_rotation_error_degrees": 4.664049717291391e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle2",
+            "max_world_position_error_m": 5.452170242835908e-07,
+            "max_world_rotation_error_degrees": 8.930062583849594e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle3",
+            "max_world_position_error_m": 6.203579208903021e-07,
+            "max_world_rotation_error_degrees": 4.542406337512311e-05
+          },
+          {
+            "name": "mixamorig:LeftHandMiddle4",
+            "max_world_position_error_m": 5.608648609524499e-07,
+            "max_world_rotation_error_degrees": 4.542406337512311e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing1",
+            "max_world_position_error_m": 5.24280161252852e-07,
+            "max_world_rotation_error_degrees": 1.794318084834337e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing2",
+            "max_world_position_error_m": 5.114893548902017e-07,
+            "max_world_rotation_error_degrees": 2.9085905166987944e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing3",
+            "max_world_position_error_m": 5.493568422143908e-07,
+            "max_world_rotation_error_degrees": 2.1022038915465885e-05
+          },
+          {
+            "name": "mixamorig:LeftHandRing4",
+            "max_world_position_error_m": 4.557461006631856e-07,
+            "max_world_rotation_error_degrees": 2.1022038915465885e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky1",
+            "max_world_position_error_m": 5.193149670607511e-07,
+            "max_world_rotation_error_degrees": 2.9031315180442608e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky2",
+            "max_world_position_error_m": 4.907888954249068e-07,
+            "max_world_rotation_error_degrees": 0.00011635515224957712
+          },
+          {
+            "name": "mixamorig:LeftHandPinky3",
+            "max_world_position_error_m": 5.211750321768216e-07,
+            "max_world_rotation_error_degrees": 6.743930921932207e-05
+          },
+          {
+            "name": "mixamorig:LeftHandPinky4",
+            "max_world_position_error_m": 5.058492543800242e-07,
+            "max_world_rotation_error_degrees": 6.743930921932207e-05
+          },
+          {
+            "name": "mixamorig:RightShoulder",
+            "max_world_position_error_m": 3.649846587588645e-07,
+            "max_world_rotation_error_degrees": 1.6522182104730003e-05
+          },
+          {
+            "name": "mixamorig:RightArm",
+            "max_world_position_error_m": 3.3295389660229577e-07,
+            "max_world_rotation_error_degrees": 2.2414217764706687e-05
+          },
+          {
+            "name": "mixamorig:RightForeArm",
+            "max_world_position_error_m": 2.6913513063285553e-07,
+            "max_world_rotation_error_degrees": 2.359074944281584e-05
+          },
+          {
+            "name": "mixamorig:RightHand",
+            "max_world_position_error_m": 3.964553099391857e-07,
+            "max_world_rotation_error_degrees": 2.9460978529992013e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb1",
+            "max_world_position_error_m": 4.1040694767877003e-07,
+            "max_world_rotation_error_degrees": 4.552042430261925e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb2",
+            "max_world_position_error_m": 3.7025450062133825e-07,
+            "max_world_rotation_error_degrees": 6.504797372182896e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb3",
+            "max_world_position_error_m": 4.4195861738943974e-07,
+            "max_world_rotation_error_degrees": 9.763697507674516e-05
+          },
+          {
+            "name": "mixamorig:RightHandThumb4",
+            "max_world_position_error_m": 4.5499165450358215e-07,
+            "max_world_rotation_error_degrees": 0.0001104006047346076
+          },
+          {
+            "name": "mixamorig:RightHandIndex1",
+            "max_world_position_error_m": 3.18030925485217e-07,
+            "max_world_rotation_error_degrees": 3.2473772339957464e-05
+          },
+          {
+            "name": "mixamorig:RightHandIndex2",
+            "max_world_position_error_m": 3.5947753488529585e-07,
+            "max_world_rotation_error_degrees": 5.7605015546045335e-05
+          },
+          {
+            "name": "mixamorig:RightHandIndex3",
+            "max_world_position_error_m": 4.3902521588821224e-07,
+            "max_world_rotation_error_degrees": 0.00011159715957689592
+          },
+          {
+            "name": "mixamorig:RightHandIndex4",
+            "max_world_position_error_m": 4.686571502120775e-07,
+            "max_world_rotation_error_degrees": 0.00011159715957689592
+          },
+          {
+            "name": "mixamorig:RightHandMiddle1",
+            "max_world_position_error_m": 3.98309290130855e-07,
+            "max_world_rotation_error_degrees": 4.879282730412959e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle2",
+            "max_world_position_error_m": 4.5001933412617707e-07,
+            "max_world_rotation_error_degrees": 7.2221670050471e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle3",
+            "max_world_position_error_m": 4.323577386611016e-07,
+            "max_world_rotation_error_degrees": 8.093276041298543e-05
+          },
+          {
+            "name": "mixamorig:RightHandMiddle4",
+            "max_world_position_error_m": 4.1456247217166573e-07,
+            "max_world_rotation_error_degrees": 8.093703181266256e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing1",
+            "max_world_position_error_m": 3.436339483302593e-07,
+            "max_world_rotation_error_degrees": 3.056644778143962e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing2",
+            "max_world_position_error_m": 3.5767357432646836e-07,
+            "max_world_rotation_error_degrees": 6.334938087987615e-05
+          },
+          {
+            "name": "mixamorig:RightHandRing3",
+            "max_world_position_error_m": 3.3854586762156465e-07,
+            "max_world_rotation_error_degrees": 0.00011855224952269832
+          },
+          {
+            "name": "mixamorig:RightHandRing4",
+            "max_world_position_error_m": 3.1665395949102413e-07,
+            "max_world_rotation_error_degrees": 0.00011853723714674628
+          },
+          {
+            "name": "mixamorig:RightHandPinky1",
+            "max_world_position_error_m": 4.3218872656079674e-07,
+            "max_world_rotation_error_degrees": 7.286392006197081e-05
+          },
+          {
+            "name": "mixamorig:RightHandPinky2",
+            "max_world_position_error_m": 4.586751435417983e-07,
+            "max_world_rotation_error_degrees": 0.00012106869377510914
+          },
+          {
+            "name": "mixamorig:RightHandPinky3",
+            "max_world_position_error_m": 4.248798307333275e-07,
+            "max_world_rotation_error_degrees": 6.562252906315075e-05
+          },
+          {
+            "name": "mixamorig:RightHandPinky4",
+            "max_world_position_error_m": 4.0848203748325627e-07,
+            "max_world_rotation_error_degrees": 6.556121180010656e-05
+          },
+          {
+            "name": "mixamorig:LeftUpLeg",
+            "max_world_position_error_m": 1.4745355327458138e-07,
+            "max_world_rotation_error_degrees": 5.199650936426558e-05
+          },
+          {
+            "name": "mixamorig:LeftLeg",
+            "max_world_position_error_m": 1.948937299270941e-06,
+            "max_world_rotation_error_degrees": 5.2838421083655396e-05
+          },
+          {
+            "name": "mixamorig:LeftFoot",
+            "max_world_position_error_m": 1.873748919999362e-06,
+            "max_world_rotation_error_degrees": 0.00024296514070272087
+          },
+          {
+            "name": "mixamorig:LeftToeBase",
+            "max_world_position_error_m": 1.93346800778215e-06,
+            "max_world_rotation_error_degrees": 0.00014911604409104557
+          },
+          {
+            "name": "mixamorig:LeftToe_End",
+            "max_world_position_error_m": 2.2458375488100464e-06,
+            "max_world_rotation_error_degrees": 0.00015060734357321548
+          },
+          {
+            "name": "mixamorig:RightUpLeg",
+            "max_world_position_error_m": 1.4581428381873448e-07,
+            "max_world_rotation_error_degrees": 8.012057516482154e-05
+          },
+          {
+            "name": "mixamorig:RightLeg",
+            "max_world_position_error_m": 2.1352914583488165e-06,
+            "max_world_rotation_error_degrees": 4.4855663183825554e-05
+          },
+          {
+            "name": "mixamorig:RightFoot",
+            "max_world_position_error_m": 8.830344612694539e-07,
+            "max_world_rotation_error_degrees": 0.00042406710545853614
+          },
+          {
+            "name": "mixamorig:RightToeBase",
+            "max_world_position_error_m": 2.9208933313322604e-06,
+            "max_world_rotation_error_degrees": 0.00034111476823820135
+          },
+          {
+            "name": "mixamorig:RightToe_End",
+            "max_world_position_error_m": 4.478931311516204e-06,
+            "max_world_rotation_error_degrees": 0.00033863915953146975
+          }
+        ],
+        "rest_world_rotation_error_degrees": {
+          "max": 0.0004107907130839049,
+          "median": 3.878068544127764e-05,
+          "p95": 0.00016746448648459364,
+          "rms": 8.334905768593776e-05
+        },
+        "rest_world_matrix_max_abs_element_error": 2.0989069846710784e-05,
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "raw_rest_reference": {
+      "file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\blender\\raw_rest_reference.json",
+      "sampler": "H:\\GDP\\inkwave\\splatink\\tools\\mixamo_retarget.py",
+      "sampler_sha256": "d11707d8541123160b59e8efc3505008bfd576bd557cbd0809fbbef6ee5a895f"
+    },
+    "compared_bone_frames": 10270
+  },
+  "blender_manifest": {
+    "schema": "mixamo_blender_manifest_v1",
+    "archive_before": {
+      "path": "E:\\backup\\Locomotion Pack.zip",
+      "size_bytes": 1023751,
+      "mtime_ns": 1791052982894419200,
+      "sha256": "e838c2f95645d2202b88ae972adb9560aefae0bfcb13e2082a4e37b4b70aac86"
+    },
+    "blender_version": "5.2.0 LTS",
+    "blender_build_hash": "fbe6228777e7",
+    "blender_binary": "C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+    "command_argv": [
+      "C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+      "--background",
+      "--factory-startup",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "H:/GDP/inkwave/splatink/tools/mixamo_blender_check.py",
+      "--",
+      "--compare-raw",
+      "H:/GDP/inkwave/splatink/.tools/mixamo-turn-prototype/raw_source.json",
+      "--rest-sampler",
+      "H:/GDP/inkwave/splatink/tools/mixamo_retarget.py"
+    ],
+    "script": "H:\\GDP\\inkwave\\splatink\\tools\\mixamo_blender_check.py",
+    "script_sha256": "c7cb14ba2a040c4dd2a480beacb5d8269ae968150a0cdb5dde7e40124b023c7e",
+    "import_options": {
+      "use_manual_orientation": false,
+      "global_scale": 1.0,
+      "bake_space_transform": false,
+      "use_anim": true,
+      "anim_offset": 0.0,
+      "ignore_leaf_bones": false,
+      "force_connect_children": false,
+      "automatic_bone_orientation": false,
+      "primary_bone_axis": "Y",
+      "secondary_bone_axis": "X",
+      "use_prepost_rot": true,
+      "use_image_search": false
+    },
+    "sample_hz": 30,
+    "method": "Blender FBX import and evaluated dependency-graph world matrices; original 65 bones; no .blend input or output; no Godot",
+    "sources": [
+      {
+        "id": "left_turn",
+        "archive_member": "left turn.fbx",
+        "source_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\source\\left turn.fbx",
+        "size_bytes": 443713,
+        "sha256": "e13a33a7c689450f73497cebfbcbac521080ce9c3961a486a47300a3312fe0e3",
+        "zip_crc32": "53662be9"
+      },
+      {
+        "id": "right_turn",
+        "archive_member": "right turn.fbx",
+        "source_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\source\\right turn.fbx",
+        "size_bytes": 443713,
+        "sha256": "a6fe1af5d5ab01c0c53fe6d43f0ca737d71fe59ce172253df582047344b0a41d",
+        "zip_crc32": "334b02b2"
+      },
+      {
+        "id": "left_turn_90",
+        "archive_member": "left turn 90.fbx",
+        "source_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\source\\left turn 90.fbx",
+        "size_bytes": 365857,
+        "sha256": "332fc63d7cbde778d8f11ee2bbd671e9019f8e14e91585c009eae19ba2bffe50",
+        "zip_crc32": "23423ae0"
+      },
+      {
+        "id": "right_turn_90",
+        "archive_member": "right turn 90.fbx",
+        "source_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\source\\right turn 90.fbx",
+        "size_bytes": 365857,
+        "sha256": "f3fa0f6eea08278a21b47cb21f99b0355eef1537e34d26285684774f6071d493",
+        "zip_crc32": "be83b81f"
+      }
+    ],
+    "clips": [
+      {
+        "id": "left_turn",
+        "reference_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\blender\\left_turn.json",
+        "source_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\source\\left turn.fbx",
+        "source_sha256": "e13a33a7c689450f73497cebfbcbac521080ce9c3961a486a47300a3312fe0e3",
+        "bone_count": 65,
+        "frame_count": 50,
+        "duration_s": 1.6333333333333333,
+        "blender_action": "Armature|mixamo.com|Layer0",
+        "action_frame_range": [
+          0.0,
+          49.0
+        ]
+      },
+      {
+        "id": "right_turn",
+        "reference_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\blender\\right_turn.json",
+        "source_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\source\\right turn.fbx",
+        "source_sha256": "a6fe1af5d5ab01c0c53fe6d43f0ca737d71fe59ce172253df582047344b0a41d",
+        "bone_count": 65,
+        "frame_count": 50,
+        "duration_s": 1.6333333333333333,
+        "blender_action": "Armature|mixamo.com|Layer0",
+        "action_frame_range": [
+          0.0,
+          49.0
+        ]
+      },
+      {
+        "id": "left_turn_90",
+        "reference_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\blender\\left_turn_90.json",
+        "source_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\source\\left turn 90.fbx",
+        "source_sha256": "332fc63d7cbde778d8f11ee2bbd671e9019f8e14e91585c009eae19ba2bffe50",
+        "bone_count": 65,
+        "frame_count": 29,
+        "duration_s": 0.9333333333333333,
+        "blender_action": "Armature|mixamo.com|Layer0",
+        "action_frame_range": [
+          0.0,
+          28.0
+        ]
+      },
+      {
+        "id": "right_turn_90",
+        "reference_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\blender\\right_turn_90.json",
+        "source_file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\source\\right turn 90.fbx",
+        "source_sha256": "f3fa0f6eea08278a21b47cb21f99b0355eef1537e34d26285684774f6071d493",
+        "bone_count": 65,
+        "frame_count": 29,
+        "duration_s": 0.9333333333333333,
+        "blender_action": "Armature|mixamo.com|Layer0",
+        "action_frame_range": [
+          0.0,
+          28.0
+        ]
+      }
+    ],
+    "raw_comparison": {
+      "file": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\blender\\raw_comparison.json",
+      "sha256": "810eee7d65e26c0238a0a496e265bb345a79856d151d7c3871d821f70dfd70d5",
+      "raw_reference": "H:\\GDP\\inkwave\\splatink\\.tools\\mixamo-turn-prototype\\raw_source.json",
+      "raw_reference_sha256": "59eb88f550066941aaa4ab54c4521940b0e84bd8bcae5915976917b564414d6f",
+      "passed": true,
+      "compared_bone_frames": 10270,
+      "rest_sampler": "H:\\GDP\\inkwave\\splatink\\tools\\mixamo_retarget.py",
+      "rest_sampler_sha256": "d11707d8541123160b59e8efc3505008bfd576bd557cbd0809fbbef6ee5a895f",
+      "rest_reference_sha256": "7ec01246cfa916e200b916b095ade5fed236ba0dc55702dce00154edd7fbf110"
+    },
+    "archive_after": {
+      "path": "E:\\backup\\Locomotion Pack.zip",
+      "size_bytes": 1023751,
+      "mtime_ns": 1791052982894419200,
+      "sha256": "e838c2f95645d2202b88ae972adb9560aefae0bfcb13e2082a4e37b4b70aac86"
+    },
+    "archive_unchanged": true
+  },
+  "tools_sha256": {
+    "mixamo_retarget.py": "d11707d8541123160b59e8efc3505008bfd576bd557cbd0809fbbef6ee5a895f",
+    "mixamo_contact_correct.py": "2fa660e4431437a423880657b6df6c4575a194f2faaef4af7fa9f757b2a6d797",
+    "mixamo_blender_check.py": "c7cb14ba2a040c4dd2a480beacb5d8269ae968150a0cdb5dde7e40124b023c7e"
+  },
+  "accepted_for_production": false,
+  "verification_scope": "experimental fixed-duration pose overlay; not production DB/controller integration or seamless entry",
+  "runtime_tools_sha256": {
+    "scripts/animation/experiments/mixamo_turn_prototype.gd": "c6351e91c64d258749159b28126d1747f090a869c24a44c7c575b671dc32684a",
+    "tools/verify_mixamo_turns.gd": "f349837389e30c97deb9899794159f5299b5181428bc0b191f65d3e31d13fdd9",
+    "tools/verify_mixamo_turn_detail.gd": "79e2480df8a3c27e825fd7fbe1d684ea66d1f76eaaf7ab2637f63d2d331e7017",
+    "tools/mixamo_make_preview_video.ps1": "56af82257efc0bd7a2129f1a8fa06d1a9b05d818529e53a1ac3a5c840319df95"
+  },
+  "root_engine_log_sha256": {
+    "pc-mixamo-turn-plane.log": "e52cc168e649a85488dafe16df1b9f815a1a690a47cba6aec63687c8c3c66a1e",
+    "pc-mixamo-turn-plane.log.stdout": "dfa1aab36d0d28573a6df44c0f1029c1e56787ec26bd6867b4c99cf4f982e7bb",
+    "pc-mixamo-turn-native.log": "0976e1605e51fd6718d166b676825873a643a22aa741db336499e8dd286b3dbe",
+    "pc-mixamo-turn-native.log.stdout": "7c42c58ba6b5dba9c21b416b8297f506f8b34c361b4934664e520a8d1bf6cf78",
+    "pc-mixamo-detail-left90.log": "3530820d7a72b1f1dcea557bdb387920defb5c90b0cc497a14b46e6193c38363",
+    "pc-mixamo-detail-left90.log.stdout": "d42fcf215a2afe0f2162ee7738fb10945c60011387eb1e495a919820f1db6209",
+    "pc-mixamo-detail-right180.log": "044afa25d48deeecaa1ded7af3e95673bf9c864444c8f5b87084d654b4cdb63d",
+    "pc-mixamo-detail-right180.log.stdout": "d51fd529c650b3bc46565fbd8ec49f9eef2b5f683814a84de757ab91ec9c93ff"
+  },
+  "native_runtime_contract": {
+    "accepted_for_production": false,
+    "actual_fk_contacts": 1834,
+    "checks": 985355,
+    "failures": 0,
+    "limits": "standing turns at original duration; inferred proxy contacts; source-hold entry measured, no authored running pivot/stop/start",
+    "native_providers": {
+      "blaster": {
+        "native_error": "",
+        "native_requested": true,
+        "pose_bucket": 234,
+        "provider": "native MMAnimationLibrary exact contiguous search",
+        "query_count": 624
+      },
+      "charger": {
+        "native_error": "",
+        "native_requested": true,
+        "pose_bucket": 234,
+        "provider": "native MMAnimationLibrary exact contiguous search",
+        "query_count": 468
+      },
+      "dualies": {
+        "native_error": "",
+        "native_requested": true,
+        "pose_bucket": 234,
+        "provider": "native MMAnimationLibrary exact contiguous search",
+        "query_count": 780
+      },
+      "roller": {
+        "native_error": "",
+        "native_requested": true,
+        "pose_bucket": 234,
+        "provider": "native MMAnimationLibrary exact contiguous search",
+        "query_count": 312
+      },
+      "shooter": {
+        "native_error": "",
+        "native_requested": true,
+        "pose_bucket": 234,
+        "provider": "native MMAnimationLibrary exact contiguous search",
+        "query_count": 156
+      },
+      "slosher": {
+        "native_error": "",
+        "native_requested": true,
+        "pose_bucket": 234,
+        "provider": "native MMAnimationLibrary exact contiguous search",
+        "query_count": 936
+      },
+      "splatling": {
+        "native_error": "",
+        "native_requested": true,
+        "pose_bucket": 234,
+        "provider": "native MMAnimationLibrary exact contiguous search",
+        "query_count": 1092
+      }
+    },
+    "native_requested": true,
+    "upper_global_basis_error": 4.29815202096506e-07,
+    "upper_global_position_m": 4.7898600996632e-07,
+    "world_muzzle_error_m": 0.0
+  },
+  "final_pose_solver": "shortest arcs retain raw axial twist; signed raw-knee plane transported from raw endpoint to constrained endpoint",
+  "macos_validation": {
+    "date": "2026-10-04",
+    "engine": "Godot 4.7.1.stable.official.a13da4feb",
+    "runner": "Root; serialized Mac engine calls; animation agent only reviewed fetched evidence",
+    "isolated_root": "/Users/ryanliu/splatink-build/20261004-mixamo-turns",
+    "base_stage": "/Users/ryanliu/splatink-build/20261004-zstd-lan/stage",
+    "fresh_imports": 2,
+    "candidate": {
+      "file": ".tools/mixamo-turn-prototype/pc-candidate.tar.gz",
+      "size_bytes": 249655,
+      "sha256": "025f4406fedd911bbe563f9f39b79b496bc962b2b3c2ec8d9eb2816c70a80702",
+      "file_count": 23,
+      "immutable": true,
+      "note": "Post-validation metadata added only to working-tree docs/provenance; frozen tar/manifest/runtime/curves were not rebuilt or changed."
+    },
+    "helper": {
+      "file": "tools/run_macos_mixamo_contracts.sh",
+      "sha256": "14ceb72351f99a331fa796f070e5c2d9c8f0d6e3f42c2961179603adeedffd94",
+      "gpu_enabled": false
+    },
+    "scope": "Headless 87-bone pose/mask/upper-body/muzzle/contact/continuity and real native-query contract; five separate Metal static overview captures. No Mac continuous video, actual-controller integration, seamless entry, or new package export.",
+    "portable": {
+      "accepted_for_production": false,
+      "actual_fk_contacts": 1834,
+      "checks": 985341,
+      "failures": 0,
+      "limits": "standing turns at original duration; inferred proxy contacts; source-hold entry measured, no authored running pivot/stop/start",
+      "native_providers": {
+        "blaster": {
+          "native_error": "",
+          "native_requested": false,
+          "pose_bucket": 0,
+          "provider": "portable source pose matcher",
+          "query_count": 0
+        },
+        "charger": {
+          "native_error": "",
+          "native_requested": false,
+          "pose_bucket": 0,
+          "provider": "portable source pose matcher",
+          "query_count": 0
+        },
+        "dualies": {
+          "native_error": "",
+          "native_requested": false,
+          "pose_bucket": 0,
+          "provider": "portable source pose matcher",
+          "query_count": 0
+        },
+        "roller": {
+          "native_error": "",
+          "native_requested": false,
+          "pose_bucket": 0,
+          "provider": "portable source pose matcher",
+          "query_count": 0
+        },
+        "shooter": {
+          "native_error": "",
+          "native_requested": false,
+          "pose_bucket": 0,
+          "provider": "portable source pose matcher",
+          "query_count": 0
+        },
+        "slosher": {
+          "native_error": "",
+          "native_requested": false,
+          "pose_bucket": 0,
+          "provider": "portable source pose matcher",
+          "query_count": 0
+        },
+        "splatling": {
+          "native_error": "",
+          "native_requested": false,
+          "pose_bucket": 0,
+          "provider": "portable source pose matcher",
+          "query_count": 0
+        }
+      },
+      "native_requested": false,
+      "upper_global_basis_error": 3.78149081825541e-07,
+      "upper_global_position_m": 4.7898600996632e-07,
+      "world_muzzle_error_m": 0.0,
+      "case_count": 56,
+      "mode_maxima": {
+        "source_yaw_pelvis9": {
+          "actual_fk_contact_error_m": 0.00101738970261067,
+          "maximum_60hz_local_step_rad": 0.207602843642235,
+          "entry_from_source_hold_step_rad": 0.650464534759521
+        },
+        "fixed_authority_leg8": {
+          "actual_fk_contact_error_m": 1.33313690753312e-07,
+          "maximum_60hz_local_step_rad": 0.304479986429214,
+          "entry_from_source_hold_step_rad": 1.64681220054626
+        }
+      }
+    },
+    "native": {
+      "accepted_for_production": false,
+      "actual_fk_contacts": 1834,
+      "checks": 985355,
+      "failures": 0,
+      "limits": "standing turns at original duration; inferred proxy contacts; source-hold entry measured, no authored running pivot/stop/start",
+      "native_providers": {
+        "blaster": {
+          "native_error": "",
+          "native_requested": true,
+          "pose_bucket": 234,
+          "provider": "native MMAnimationLibrary exact contiguous search",
+          "query_count": 624
+        },
+        "charger": {
+          "native_error": "",
+          "native_requested": true,
+          "pose_bucket": 234,
+          "provider": "native MMAnimationLibrary exact contiguous search",
+          "query_count": 468
+        },
+        "dualies": {
+          "native_error": "",
+          "native_requested": true,
+          "pose_bucket": 234,
+          "provider": "native MMAnimationLibrary exact contiguous search",
+          "query_count": 780
+        },
+        "roller": {
+          "native_error": "",
+          "native_requested": true,
+          "pose_bucket": 234,
+          "provider": "native MMAnimationLibrary exact contiguous search",
+          "query_count": 312
+        },
+        "shooter": {
+          "native_error": "",
+          "native_requested": true,
+          "pose_bucket": 234,
+          "provider": "native MMAnimationLibrary exact contiguous search",
+          "query_count": 156
+        },
+        "slosher": {
+          "native_error": "",
+          "native_requested": true,
+          "pose_bucket": 234,
+          "provider": "native MMAnimationLibrary exact contiguous search",
+          "query_count": 936
+        },
+        "splatling": {
+          "native_error": "",
+          "native_requested": true,
+          "pose_bucket": 234,
+          "provider": "native MMAnimationLibrary exact contiguous search",
+          "query_count": 1092
+        }
+      },
+      "native_requested": true,
+      "upper_global_basis_error": 4.29815202096506e-07,
+      "upper_global_position_m": 4.7898600996632e-07,
+      "world_muzzle_error_m": 0.0,
+      "case_count": 56,
+      "mode_maxima": {
+        "source_yaw_pelvis9": {
+          "actual_fk_contact_error_m": 0.00101732206530869,
+          "maximum_60hz_local_step_rad": 0.207602843642235,
+          "entry_from_source_hold_step_rad": 0.650474071502686
+        },
+        "fixed_authority_leg8": {
+          "actual_fk_contact_error_m": 1.92178049474023e-07,
+          "maximum_60hz_local_step_rad": 0.304479986429214,
+          "entry_from_source_hold_step_rad": 1.64660620689392
+        }
+      }
+    },
+    "gpu_overview": {
+      "runner": "Root via separate tools/run_macos_mixamo_visual.sh",
+      "rendering_api": "Metal 4.0",
+      "rendering_method": "Forward Mobile",
+      "device": "Apple M2 Max (Apple8)",
+      "native_requested": true,
+      "captures": 5,
+      "failures": 0,
+      "preview_fractions": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "continuous_sequence": false,
+      "review": "Root and animation agent reviewed overview 050; clothing/legs/weapons visible; small figures/label overlap limit visual judgment."
+    },
+    "evidence_sha256": {
+      "shots/mac-mixamo/mac-mixamo-import-1.log": "bc093a2a456b4523e1aa104bf744981a89f2bff0d3bed4473df714a646ae50af",
+      "shots/mac-mixamo/mac-mixamo-import-1.log.stdout": "ea8bea2e0b72edd2ea6d2012a7146496cf7bfbbd320501bd4f558311c7e84170",
+      "shots/mac-mixamo/mac-mixamo-import-2.log": "e377d58b31f94e0b70ac4276fcc989d93df143b0bacf9760b918145a54c71fd0",
+      "shots/mac-mixamo/mac-mixamo-import-2.log.stdout": "957e03a9442ed564bd70943f9bf869f193447f4396b7b46b3996c44242632cb3",
+      "shots/mac-mixamo/mac-mixamo-turn-native.json": "b47877fa89f7da00965477b4118c201308741b85bca38827c552be8b741c7be5",
+      "shots/mac-mixamo/mac-mixamo-turn-native.log": "8bc6bd0575b27d29e3a0e015bdd280d13995b8ba94a2dc2cbb9b1231192475f7",
+      "shots/mac-mixamo/mac-mixamo-turn-native.log.stdout": "8bc6bd0575b27d29e3a0e015bdd280d13995b8ba94a2dc2cbb9b1231192475f7",
+      "shots/mac-mixamo/mac-mixamo-turn-portable.json": "a1afa2b251027f5397cdc25bbb3eed2ca494e8252ebfe0bab4f6020422d279bd",
+      "shots/mac-mixamo/mac-mixamo-turn-portable.log": "b0d9810e1b69e6c2c95f32311ba6112041bd3167ec3d532abd815617c8b05b57",
+      "shots/mac-mixamo/mac-mixamo-turn-portable.log.stdout": "b0d9810e1b69e6c2c95f32311ba6112041bd3167ec3d532abd815617c8b05b57",
+      "shots/mac-mixamo/mac-mixamo-visual-native.log": "8d47651c90c742889d35589e371b7270cff6e17f8583c4a6348743b0cb0d1357",
+      "shots/mac-mixamo/mac-mixamo-visual-native.log.stdout": "8d47651c90c742889d35589e371b7270cff6e17f8583c4a6348743b0cb0d1357",
+      "shots/mac-mixamo/mixamo-turn-000.png": "e77d49f9406c91402e3c6ddfff5340f3c9bd55cda20b9062eeb01cdf5f85f764",
+      "shots/mac-mixamo/mixamo-turn-025.png": "b88152e6b6d9e82c2668cdd606eda6b931347914026fe3d4e72fe9dc72221ef2",
+      "shots/mac-mixamo/mixamo-turn-050.png": "8269431e8bfd7941d697ac0c8c38ec4a6eb8ea144f3495da3813f5540afdb309",
+      "shots/mac-mixamo/mixamo-turn-075.png": "1d7ca4d27e6349cef7cdc405059352f15c6b6bce37d6d0e52a554dadc1aea192",
+      "shots/mac-mixamo/mixamo-turn-100.png": "c7f29e84eb33ff178870f39322ac1fad28d4689279444ad2d52fda7a93704165"
+    },
+    "diagnostic_scan": {
+      "files": 10,
+      "error_warning_unicode_matches": 0,
+      "checked_by": [
+        "Root after fetch",
+        "animation agent local evidence scan"
+      ]
+    },
+    "accepted_for_production": false
+  }
+}

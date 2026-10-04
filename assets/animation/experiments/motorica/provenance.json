@@ -1,0 +1,32 @@
+{
+  "experiment_only": true,
+  "accepted_for_production": false,
+  "source_origins": [
+    {
+      "original": "F:\\Downloads\\godot-motion-matching-demo-master\\godot-motion-matching-demo-master\\animation\\motorica\\running\\forward\\Run_Turns_StartStop_L_variation_1.fbx",
+      "isolated_copy": "H:\\GDP\\inkwave\\splatink\\.tools\\motorica-locomotion\\source\\Run_Turns_StartStop_L_variation_1.fbx",
+      "size_bytes": 1447520,
+      "sha256": "9149f1c3d9c7e9528654b13ee30938dc870abf08ef34002cff43fcb8c7d09bab",
+      "source_unchanged": true
+    },
+    {
+      "original": "F:\\Downloads\\godot-motion-matching-demo-master\\godot-motion-matching-demo-master\\animation\\motorica\\running\\forward\\Run_Turns_L_variation_1.fbx",
+      "isolated_copy": "H:\\GDP\\inkwave\\splatink\\.tools\\motorica-locomotion\\source\\Run_Turns_L_variation_1.fbx",
+      "size_bytes": 1174912,
+      "sha256": "9ef0639f0a3d8a188755341a8eeb366cb05b6f7ae330519b97285d1a7489019e",
+      "source_unchanged": true
+    },
+    {
+      "original": "F:\\Downloads\\godot-motion-matching-demo-master\\godot-motion-matching-demo-master\\animation\\motorica\\running\\forward\\Run_Turns_180.fbx",
+      "isolated_copy": "H:\\GDP\\inkwave\\splatink\\.tools\\motorica-locomotion\\source\\Run_Turns_180.fbx",
+      "size_bytes": 1071856,
+      "sha256": "49da698058455a09dc645becdbc295396eb331011dcd4f926148402f9754086d",
+      "source_unchanged": true
+    }
+  ],
+  "body_sha256": "ca43f303d96cd17990f91fbbf48378132ee4dca39e3f38df4b61ce9d19dc7ce3",
+  "frozen_parser_sha256": "d11707d8541123160b59e8efc3505008bfd576bd557cbd0809fbbef6ee5a895f",
+  "exporter_sha256": "9a2361050fc469f292e9c7b15c577c7b08116578d26e1cf78819b30841933e5f",
+  "godot_executed_by_exporter": false,
+  "verified": "offline source/root/FK diagnostics only; actual Godot rig/upper-body/aim/contact/entry validation pending"
+}

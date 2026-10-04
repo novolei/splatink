@@ -1,0 +1,2 @@
+# Development and reference projects are loaded explicitly by verification tools.
+# Keep the Godot editor from importing this directory into the game.

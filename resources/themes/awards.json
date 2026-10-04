@@ -1,0 +1,90 @@
+{
+  "turf": {
+    "mvp": {
+      "label": "MVP",
+      "metal": "gold",
+      "icon": "star",
+      "desc": "Best all-round score on the winning team"
+    },
+    "turf": {
+      "label": "TURF KING",
+      "metal": "gold",
+      "icon": "crown",
+      "desc": "Most turf inked in the match"
+    },
+    "splats": {
+      "label": "TOP SPLATTER",
+      "metal": "silver",
+      "icon": "splat",
+      "desc": "Most splats in the match"
+    },
+    "inker": {
+      "label": "TOP INKER",
+      "metal": "silver",
+      "icon": "roller",
+      "desc": "Most turf inked on their team"
+    },
+    "untouchable": {
+      "label": "UNTOUCHABLE",
+      "metal": "bronze",
+      "icon": "shield",
+      "desc": "Never got splatted"
+    },
+    "survivor": {
+      "label": "SURVIVOR",
+      "metal": "bronze",
+      "icon": "buoy",
+      "desc": "Splatted the fewest times"
+    },
+    "pure": {
+      "label": "PURE PAINTER",
+      "metal": "bronze",
+      "icon": "brush",
+      "desc": "Top-3 turf without splatting anyone"
+    }
+  },
+  "boss": {
+    "mvp": {
+      "label": "MVP",
+      "metal": "gold",
+      "icon": "star",
+      "desc": "Best all-round score against HULLBREAKER"
+    },
+    "heavy": {
+      "label": "HEAVY HITTER",
+      "metal": "gold",
+      "icon": "pow",
+      "desc": "Dealt the most damage to the boss"
+    },
+    "crit": {
+      "label": "SHELL CRACKER",
+      "metal": "silver",
+      "icon": "crit",
+      "desc": "Most weak-point hits"
+    },
+    "brood": {
+      "label": "BROOD BUSTER",
+      "metal": "silver",
+      "icon": "splat",
+      "desc": "Popped the most crablets"
+    },
+    "unsinkable": {
+      "label": "UNSINKABLE",
+      "metal": "bronze",
+      "icon": "anchor",
+      "desc": "Never got splatted"
+    },
+    "survivor": {
+      "label": "SURVIVOR",
+      "metal": "bronze",
+      "icon": "buoy",
+      "desc": "Splatted the fewest times"
+    },
+    "cleaner": {
+      "label": "CLEANUP CREW",
+      "metal": "bronze",
+      "icon": "roller",
+      "desc": "Painted over the most boss ink"
+    }
+  }
+}

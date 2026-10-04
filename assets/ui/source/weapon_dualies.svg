@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iw-ico " viewBox="0 0 64 64" aria-hidden="true"><g stroke="#15121c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <g transform="translate(15 16)">
+        <path d="M9 21 L6 36.5 Q5.6 39 8 39 L13 39 Q15 39 15.5 37 L18 22 Z" fill="#2b2735"/>
+        <path d="M17 4 L23 -1.5 L26 4 Z" fill="#ff8a14"/>
+        <rect x="3" y="4" width="33" height="12" rx="5" fill="#e4e8ef"/>
+        <rect x="34.5" y="7" width="8" height="6.5" rx="2" fill="#2b2735"/>
+        <path d="M5 16.5 L32 16.5 L30 21.5 L7 21.5 Z" fill="#2b2735"/>
+      </g>
+      <path d="M11 25 L7.5 41.5 Q7 44 9.5 44 L15 44 Q17 44 17.5 42 L20.5 26 Z" fill="#2b2735"/>
+      <path d="M19 8 L25.5 2 L28.5 8 Z" fill="#ff8a14"/>
+      <rect x="4.5" y="8" width="35" height="13" rx="5.5" fill="#e4e8ef"/>
+      <rect x="38" y="11" width="9" height="7" rx="2.2" fill="#2b2735"/>
+      <path d="M6.5 21 L35 21 L32.5 26 L9 26 Z" fill="#2b2735"/>
+      <rect x="15" y="12" width="9" height="4" rx="2" fill="#ff8a14"/>
+    </g>
+    <path d="M9 12.5 L30 12.5" stroke="#fff" stroke-opacity=".6" stroke-width="2.6" stroke-linecap="round"/></svg>

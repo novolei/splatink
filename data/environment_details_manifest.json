@@ -1,0 +1,45 @@
+{
+  "source": "INKWAVE original environment",
+  "maps": [
+    {
+      "id": "tidewater",
+      "meshes": 19,
+      "bytes": 13197580,
+      "foam": [
+        470,
+        660
+      ],
+      "marina": false
+    },
+    {
+      "id": "kelpline",
+      "meshes": 19,
+      "bytes": 13315660,
+      "foam": [
+        460,
+        700
+      ],
+      "marina": false
+    },
+    {
+      "id": "halyard",
+      "meshes": 19,
+      "bytes": 12054068,
+      "foam": [
+        920,
+        1360
+      ],
+      "marina": true
+    },
+    {
+      "id": "cargo",
+      "meshes": 13,
+      "bytes": 12598028,
+      "foam": [
+        740,
+        770
+      ],
+      "marina": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dqlk4uuodkequ"
+path="res://.godot/imported/paint_downsample.glsl-94a2a0634632908f344b9714d94ecc07.res"
+
+[deps]
+
+source_file="res://assets/shaders/paint_downsample.glsl"
+dest_files=["res://.godot/imported/paint_downsample.glsl-94a2a0634632908f344b9714d94ecc07.res"]
+
+[params]
+

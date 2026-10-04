@@ -1,0 +1,26 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const source=await fs.readFile(path.join(root,'src/core/renderer.js'),'utf8');
+const grade=source.match(/fragmentShader: \/\* glsl \*\/`([\s\S]*?)`,/)[1];
+let body=grade.slice(grade.indexOf('      vec4 c ='),grade.lastIndexOf('      gl_FragColor ='));
+body=body.replace('texture2D(tDiffuse, vUv)','texture(source_color, uv)').replaceAll('vUv','uv');
+body=body.replace('      c.rgb *= uExposure;','      if(p.size_hurt_flash.x<0.0){out_color=c;return;}\n      c.rgb *= uExposure;');
+const module=await fs.readFile(path.join(root,'vendor/three/build/three.module.js'),'utf8');
+const all=JSON.parse(module.match(/var tonemapping_pars_fragment = ("[^\r\n]+?");/)[1]);
+const neutral=all.slice(all.indexOf('vec3 NeutralToneMapping'),all.indexOf('vec3 CustomToneMapping'));
+const screen=await fs.readFile(path.join(root,'splatink/assets/shaders/fx_screen.gdshader'),'utf8');
+const fields=[...screen.matchAll(/uniform\s+(float|int|vec[234])\s+(\w+)[^;]*;/g)].map(m=>({type:m[1],name:m[2]}));
+const macros=fields.map((f,i)=>`#define ${f.name} ${f.type==='int'?`int(screen_uniform_block.values[${i}].x)`:f.type==='float'?`screen_uniform_block.values[${i}].x`:`screen_uniform_block.values[${i}].${'xyzw'.slice(0,Number(f.type.slice(3)))}`}`).join('\n');
+let screenBody=screen.slice(screen.indexOf('  vec4 read_scene'));
+screenBody=screenBody.replace('void fragment()', 'void main()').replace('vec2(SCREEN_UV.x, 1.0 - SCREEN_UV.y)','vec2(gl_FragCoord.x/p.size_hurt_flash.x, 1.0-gl_FragCoord.y/p.size_hurt_flash.y)').replace('COLOR = vec4(col, 1.0);','out_color = vec4(NeutralToneMapping(col), 1.0);');
+const screenHeader=`#[fragment]\n#version 450\nlayout(set=0,binding=0)uniform sampler2D tDiffuse;\nlayout(set=0,binding=1)uniform sampler2D tLens;\nlayout(set=0,binding=2,std140)uniform ScreenParams{vec4 values[${fields.length}];}screen_uniform_block;\nlayout(push_constant,std430)uniform Params{vec4 size_hurt_flash;vec4 sat_vib_contrast_lift;vec4 shadow_exposure;vec4 high_vignette;}p;\nlayout(location=0)out vec4 out_color;\n#define toneMappingExposure 0.94\n`;
+const declarations=`#[fragment]\n#version 450\nlayout(set=0,binding=0)uniform sampler2D source_color;\nlayout(location=0)out vec4 out_color;\nlayout(push_constant,std430)uniform Params{vec4 size_hurt_flash;vec4 sat_vib_contrast_lift;vec4 shadow_exposure;vec4 high_vignette;}p;\n#define uSat p.sat_vib_contrast_lift.x\n#define uVib p.sat_vib_contrast_lift.y\n#define uContrast p.sat_vib_contrast_lift.z\n#define uLift p.sat_vib_contrast_lift.w\n#define uShadowTint p.shadow_exposure.xyz\n#define uExposure p.shadow_exposure.w\n#define uHighTint p.high_vignette.xyz\n#define uVignette p.high_vignette.w\n#define uHurt p.size_hurt_flash.z\n#define uFlash p.size_hurt_flash.w\n#define uAspect (p.size_hurt_flash.x/p.size_hurt_flash.y)\n#define toneMappingExposure 0.94\n`;
+const vertex='#[vertex]\n#version 450\nvoid main(){vec2 p=vec2(gl_VertexIndex==1?2.0:0.0,gl_VertexIndex==2?2.0:0.0);gl_Position=vec4(p*2.0-1.0,0.0,1.0);}\n';
+await fs.writeFile(path.join(root,'splatink/assets/shaders/source_grade.glsl'),'// Original INKWAVE HDR grade and Three.js NeutralToneMapping.\n'+vertex+declarations+neutral+'\nvoid main(){vec2 uv=gl_FragCoord.xy/abs(p.size_hurt_flash.xy);\n'+body+'\nout_color=vec4(NeutralToneMapping(c.rgb),c.a);}\n');
+// Negative height requests the original linear grade, before screen FX and the output curve.
+const gradeFile=path.join(root,'splatink/assets/shaders/source_grade.glsl');
+await fs.writeFile(gradeFile,(await fs.readFile(gradeFile,'utf8')).replace('out_color=vec4(NeutralToneMapping(c.rgb),c.a);','out_color=vec4(p.size_hurt_flash.y<0.0?c.rgb:NeutralToneMapping(c.rgb),c.a);'));
+await fs.writeFile(path.join(root,'splatink/assets/shaders/source_screen_hdr.glsl'),'// Original screenfx FRAG, graded linear HDR -> Neutral output.\n'+vertex+screenHeader+macros+'\n'+neutral+'\n'+screenBody);
+await fs.writeFile(path.join(root,'splatink/data/screen_uniforms.json'),JSON.stringify(fields));

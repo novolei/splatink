@@ -1,0 +1,11 @@
+{
+  "source": "LobbySet._envRT / PMREMGenerator.fromScene size128 blur0.04",
+  "path": "res://assets/textures/lobby/lobby_pmrem.rgba16f.bin",
+  "width": 384,
+  "height": 512,
+  "format": "rgba16f",
+  "max_mip": 7,
+  "intensity": 0.6,
+  "flip_y": false,
+  "team_dependent": true
+}

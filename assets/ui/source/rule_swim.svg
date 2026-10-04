@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" aria-hidden="true">
+    <path fill="#ff8a14" d="M99.5 57.5C100.3 59.9 104.7 63.8 101.7 65.5C98.8 67.2 89.1 66.6 81.8 67.6C74.6 68.7 65.7 71.2 58.1 71.6C50.5 72 42.6 70.9 36.3 70C30 69.1 24 68.4 20.6 66.5C17.2 64.6 15.7 61.1 15.9 58.5C16.1 55.8 18.3 52.7 21.7 50.5C25.2 48.4 29.6 46.5 36.7 45.7C43.8 44.9 56.7 45.8 64.3 45.7C71.9 45.6 76.9 44.3 82.3 45.2C87.8 46.1 94.1 49.2 96.9 51.3C99.8 53.3 98.7 55.1 99.5 57.5Z"/>
+    <g transform="translate(40 26) scale(.62)" style="color:var(--a)"><svg x="0" y="0" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><g stroke="#15121c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.4">
+    <path d="M22 44 Q19 53 13 58 Q20 61 26 50 Z" fill="#ff8a14"/>
+    <path d="M29 46 Q28.5 55 25 61 Q32.5 61 33 48 Z" fill="#ff8a14"/>
+    <path d="M35 46 Q35.5 55 39 61 Q31.5 61 31 48 Z" fill="#ff8a14"/>
+    <path d="M42 44 Q45 53 51 58 Q44 61 38 50 Z" fill="#ff8a14"/>
+    <path d="M32 3 C36.5 3 50.5 17.5 55.5 24.5 C57.5 27.8 55.5 31 51.5 30.2 L46 29.4 L46 39.5 C46 46.5 41.5 49 32 49 C22.5 49 18 46.5 18 39.5 L18 29.4 L12.5 30.2 C8.5 31 6.5 27.8 8.5 24.5 C13.5 17.5 27.5 3 32 3 Z" fill="#ff8a14"/>
+  </g>
+  <path d="M25 13 Q29 8.5 32 8" stroke="#fff" stroke-opacity=".55" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <g class="iw-squid-eyes">
+    <ellipse cx="26" cy="36" rx="4.6" ry="5.6" fill="#fff" stroke="#15121c" stroke-width="2.4"/>
+    <ellipse cx="38" cy="36" rx="4.6" ry="5.6" fill="#fff" stroke="#15121c" stroke-width="2.4"/>
+    <ellipse cx="27" cy="37" rx="2.2" ry="3" fill="#15121c"/>
+    <ellipse cx="37" cy="37" rx="2.2" ry="3" fill="#15121c"/>
+  </g></svg></g>
+    <path d="M18 42 L32 42 M12 50 L30 50 M20 58 L34 58" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+    <g transform="translate(88 14)"><rect width="16" height="34" rx="8" fill="#fff" stroke="#15121c" stroke-width="2.5"/><rect x="3" y="12" width="10" height="19" rx="5" fill="#ff8a14"/><path d="M8 -2 L8 8 M4 3 L8 -2 L12 3" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </svg>

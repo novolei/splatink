@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://ducunbcfu1anu"
+path="res://.godot/imported/source_screen_hdr.glsl-f35845e94a9f51f6c9557396d4e431c1.res"
+
+[deps]
+
+source_file="res://assets/shaders/source_screen_hdr.glsl"
+dest_files=["res://.godot/imported/source_screen_hdr.glsl-f35845e94a9f51f6c9557396d4e431c1.res"]
+
+[params]
+

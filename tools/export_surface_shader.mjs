@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const source=await fs.readFile(path.join(root,'src/world/levelMaterial.js'),'utf8');
+const start=source.indexOf('  vec2 fu = vFaceUv;'),end=source.indexOf('  gBaseRough = rough;',start);
+let code=source.slice(start,end);
+const replacements={vFaceUv:'UV',vFaceData:'face_data',vFaceFlags:'face_flags',vFaceTan:'face_tangent',vWPos:'world_pos',vWNorm:'world_normal',uTLt:'tints',uTLs:'stairs',uTL:'slots',tAlbedo:'t_albedo',tNormal:'t_normal',tOrm:'t_orm',uTexSize:'512.0',uMurA:'mural_rect',uMurB:'mural_place',uMurC:'mural_fx'};
+for(const[a,b]of Object.entries(replacements))code=code.replace(new RegExp('\\b'+a+'\\b','g'),b);
+code=code.replaceAll('diffuseColor.rgb','COLOR.rgb').replace('texture2D(uMural, muv)','texture(mural_atlas, vec2(muv.x, 1.0-muv.y))');
+code=code.replace(/#ifdef GRATE([\s\S]*?)#endif/g,'if(grate){$1}');
+const globals=`// Original levelMaterial.js surface detail, including stair relief, drainage, coping, weathering and stage-owned surface slots.\nvec3 gTexMod=vec3(1.0);float gTexPaint=1.0;vec3 gTexN=vec3(0.0,0.0,1.0);vec4 gTexORM=vec4(1.0,.8,0.0,.5);float gTexStr=0.0;vec4 gStair=vec4(0.0);float gTexKeep=0.0;float gTexAlpha=1.0;float gInk=0.0;vec3 gInkCol=vec3(0.0);float gInkH=0.0;vec2 gInkD=vec2(0.0);float gRib=0.0;float gFresh=0.0;\n`;
+await fs.writeFile(path.join(root,'splatink/assets/shaders/source_surface_fragment.gdshaderinc'),globals+code);
